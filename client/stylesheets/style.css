@@ -1,4 +1,11 @@
 /*Base styles =======================================*/
+#iron-router-progress.spinner:before {
+    border-color : #1992b6;
+}
+#iron-router-progress {
+    background-color : #1992b6;
+    box-shadow       : 0 0 5px white;
+}
 
 body {
     width: 100%;
