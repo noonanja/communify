@@ -273,17 +273,26 @@ a:focus {
 	.span_1_of_4 {
 		width: 100%; 
 	}
+	#LI_1 {
+		text-align: center;
+	}
 }
 
-h3 {
+.titles {
 	text-align: center;
+	white-space:nowrap;
 }
 
-li {
+
+#LI_1 {
 	color:white;
+	list-style-type:none;
+	padding-left: 10px;
+	
 }
 
-a {
+
+#A_5 {
 	color:white;
 }
 
