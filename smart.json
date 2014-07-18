@@ -3,6 +3,7 @@
     "bootstrap-3": {},
     "font-awesome": {},
     "iron-router": {},
-    "iron-router-progress": {}
+    "iron-router-progress": {},
+    "spin": {}
   }
 }

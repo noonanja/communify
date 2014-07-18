@@ -1,17 +1,20 @@
 Router.configure({
-  loadingTemplate: 'loading', // HTML loading template
-  notFoundTemplate: 'notFound' // URL not found
+  logInTemplate: 'logIn', // HTML loading template
+  notFoundTemplate: 'notFound', // URL not found
+  loadingTemplate: 'loading'//,
+  // waitOn: function() { 
+  //   return [Meteor.subscribe('notifications')]
+  // }
 });
-
 
 
 var requireLogin = function(pause) {
   if (! Meteor.user()) {
     if (Meteor.loggingIn()) {
-      this.render(this.loadingTemplate);
+      this.render('home');
     }
     else {
-      this.render('home');
+      this.render('logInTemplate');
     }
     pause();
   }
