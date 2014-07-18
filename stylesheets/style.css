@@ -122,19 +122,6 @@ a:focus {
     color: #176e61;
 }
 
-.light {
-    font-weight: 400;
-}
-
-.navbar {
-    margin-bottom: 0;
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-}
-
-.navbar-brand {
-    font-weight: 700;
-}
 
 .navbar-brand:focus {
     outline: 0;
@@ -190,14 +177,16 @@ a:focus {
 }
 
 .container {
-  width: auto;
+   width: auto;
 /*  max-width: 880px;
-*/  padding: 0 15px;
+*/ padding: 0 15px;
+   padding-left: 35px;
 }
 
 @media(min-width:767px){
     .container{
         margin: 0px 50px;
+
     }
 }
 
