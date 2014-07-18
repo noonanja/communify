@@ -91,6 +91,14 @@ p {
 .form-control {
     text-align: center;
 }
+
+#search {
+    display: inline-table;
+}
+
+.searchbar {
+    display: table;
+}
 /**/
 
 p {
@@ -122,6 +130,12 @@ a:focus {
     color: #176e61;
 }
 
+.container > .navbar-header, 
+.container-fluid > .navbar-header, 
+.container > .navbar-collapse, 
+.container-fluid > .navbar-collapse {
+    text-align: -webkit-center;
+}
 
 .navbar-brand:focus {
     outline: 0;
@@ -180,7 +194,7 @@ a:focus {
    width: auto;
 /*  max-width: 880px;
 */ padding: 0 15px;
-   padding-left: 35px;
+padding-left: 35px;
 }
 
 @media(min-width:767px){
@@ -240,7 +254,7 @@ a:focus {
 
 /*  GRID OF FOUR   ============================================================================= */
 
-	
+
 .span_4_of_4 {
 	width: 100%; 
 }
