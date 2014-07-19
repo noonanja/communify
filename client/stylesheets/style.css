@@ -257,6 +257,11 @@ padding-left: 35px;
 	margin: 0px;
 }
 
+.listing:hover {
+  cursor: pointer;
+  color: rgb(21,137,34) !important;
+}
+
 /*  GROUPING  ============================================================================= */
 
 
