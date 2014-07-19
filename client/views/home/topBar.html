@@ -1,25 +1,23 @@
 <template name = "topBar"> 
-
-<nav class="navbar navbar-custom navbar-static-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header page-scroll searchbar">
-                {{>search}}
-            </div>
-
-            <!-- Collect the Home, Locate, and Login buttons -->
-            <div class="navbar-collapse navbar-right">
-                <ul class="nav navbar-nav">
-
-                    <li class="page-scroll">
-                        <a> {{> loginButtons align="right"}} </a>
-                    </li>
-                    
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
     
+	<nav class="navbar navbar-default" role="navigation">
+		<div class = "container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				{{>search}}		
+			</div>
+			<div class="collapse navbar-collapse" id="example-navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Sign In</a></li>
+					</ul> 
+			</div>
+		</div>
+   </nav>
+    
+
 </template>
 
