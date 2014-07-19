@@ -1,4 +1,4 @@
-Template.application.helpers({
+Template.listingsList.helpers({
 	forSale: function() {
 		return ForSale.find(); 
 	},
