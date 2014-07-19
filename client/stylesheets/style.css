@@ -121,6 +121,35 @@ label {
 .accounts-dialog input[type=password] {
   font-size: 12px;
 }
+
+#map-canvas {  
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 50%;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  margin-top: 0px;
+}
+
+input,
+button,
+select,
+textarea {
+  font-size: large;
+}
+
+h6,
+.h6 {
+  font-size: 14px;
+}
+
+#A_18, #A_19 {
+  color: #FFFFFF;
+}
+
+
 /* Styles for the Top Bar  ============================================================================= */
 
 /*Search styles*/
