@@ -168,5 +168,36 @@ if (Listings.find().count() === 0) {
     for (i in communityData) {
         Listings.insert(communityData[i]);
     }
-  
+
 }
+
+
+
+if (Posts.find().count() === 0) { 
+    Posts.insert({
+        title: 'Selling Iguana',
+        price: 500,
+        author: 'Sacha Greif'
+    });
+    Posts.insert({
+        title: 'MGMT101 textbook',
+        author: 'Tom Coleman'
+    });
+    Posts.insert({
+        title: 'The Meteor Book',
+        author: 'Steve Aoki'
+    }); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
