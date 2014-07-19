@@ -168,4 +168,5 @@ if (Listings.find().count() === 0) {
     for (i in communityData) {
         Listings.insert(communityData[i]);
     }
+  
 }
