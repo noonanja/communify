@@ -1,4 +1,8 @@
 /*Base styles =======================================*/
+#iron-router-progress {
+    background-color : rgb(25,109,182);
+    box-shadow       : 0 0 5px white;
+}
 
 body {
     width: 100%;
