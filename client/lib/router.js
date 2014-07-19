@@ -1,53 +1,40 @@
-// Router.configure({
-//   layoutTemplate: 'layout',
-//   loadingTemplate: 'loading',
-//   logInTemplate: 'logIn', // HTML loading template
-//   notFoundTemplate: 'notFound', // URL not found
-//   waitOn: function() { return Meteor.subscribe('forSale'); }
-// });
+var requireLogin = function(pause) {
+  if (! Meteor.user()) {
+    if (Meteor.loggingIn())
+      this.render(this.loadingTemplate);
+    else
+      this.render('accessDenied');
 
-// Router.onBeforeAction('loading');
-// Router.onBeforeAction(requireLogin, {only: 'listings'}); // Application requires user login
-// Router.onBeforeAction('loading');
-
-// Router.map(function() {
-//   this.route('home', {path: '/'});  
-//   this.route('listingPage', {
-//     path: '/listings/:_id',
-//     data: function() { return Posts.findOne(this.params._id); }
-//   });
-// });
-
-
-// var requireLogin = function(pause) {
-//   if (! Meteor.user()) {
-//     if (Meteor.loggingIn())
-//       this.render(this.loadingTemplate);
-//     else
-//       this.render('accessDenied');
-
-//     pause();
-//   }
-// }
+    pause();
+  }
+}
+Router.onBeforeAction(requireLogin, {only: 'listingPage'}); // Application requires user login
 
 Router.configure({
 	layoutTemplate: 'layout',
 	loadingTemplate: 'loading',
-	// waitOn: function() { return Meteor.subscribe('Listings');} 
+	notFoundTemplate: 'notFound', // URL not found
+	waitOn: function() { return Meteor.subscribe('listings'); } 
+});
 
-
+listingPageController = RouteController.extend({
+  template: 'listingPage',
+  // waitOn: function() {
+  //   return Meteor.subscribe('posts', this.findOptions());
+  // },
+  data: function() {
+    listings = { listing: Listings.find({title: this.params.title}) };
+    return listings;
+  }
+    
 });
 
 Router.map(function() {
 	this.route('home', {path: '/'});
 
 	this.route('listingPage', {
-		path: '/listings/:_id',
-		data: function() { 
-			return function() {
-				Listings.findOne(this.params._id);
-			} 
-		}
+		path: '/listings/:title',
+		controller: listingPageController
 	});
 
 });

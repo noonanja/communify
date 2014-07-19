@@ -1,8 +1,5 @@
-// Template.postPage.helpers({
-//   title: function() {
-
-//     	var listing = Listings.find({title: this.title});
-    	
-//     	return name;
-//         }
-// });
+Template.listingPage.helpers({
+    listingItem: function() {
+        return this.listing
+    }
+})
