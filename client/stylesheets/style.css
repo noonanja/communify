@@ -152,7 +152,12 @@ h6,
   color: #FFFFFF;
 }
 
-
+input,
+optgroup,
+select,
+textarea {
+  color: black;
+} 
 /* Styles for the Top Bar  ============================================================================= */
 
 /*Search styles*/
