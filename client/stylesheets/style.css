@@ -3,6 +3,9 @@
     background-color : rgb(25,109,182);
     box-shadow       : 0 0 5px white;
 }
+#iron-router-progress.spinner:before {
+    border-color : rgb(25,109,182);
+}
 
 body {
     width: 100%;
