@@ -1,11 +1,4 @@
 /*Base styles =======================================*/
-#iron-router-progress.spinner:before {
-    border-color : #1992b6;
-}
-#iron-router-progress {
-    background-color : #1992b6;
-    box-shadow       : 0 0 5px white;
-}
 
 body {
     width: 100%;
@@ -51,9 +44,10 @@ p {
     display: table;
     width: 100%;
     height: auto;
-    padding: 14% 0;
+    padding: 100px 0;
     text-align: center;
     color: #fff;
+    background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
     background-color: gray;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -76,7 +70,7 @@ p {
 
 @media(min-width:767px) {
     .intro {
-        height: 70%;
+        height: 100%;
         padding: 0;
     }
 
@@ -247,6 +241,38 @@ padding-left: 35px;
 .input-group {
 	width: 200px;
 	
+}
+
+@media (min-width: 500px)  {
+    .navbar-header {
+        float: left;
+    }
+  	.navbar-right {
+		float: right!important;
+	}
+    .navbar-toggle {
+        display: none;
+    }
+    .navbar-collapse.collapse {
+        display: block!important;
+        height: auto!important;
+        padding-bottom: 0;
+        overflow: visible!important;
+    }
+    .navbar-nav {
+        float: left;
+		margin: 0;
+	}
+	.navbar-nav>li {
+        float: left;
+    }
+    .collapse.in{
+  		display:none;
+	}
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+ border-color: transparent;
 }
 
 /*  SECTIONS  ============================================================================= */
