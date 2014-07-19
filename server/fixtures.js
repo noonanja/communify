@@ -119,15 +119,17 @@ var jobsData = [ {
 } 
 ];
 
-for (i in forSaleData) {
-    ForSale.insert(forSaleData[i]);
-};
-for (i in housingData) {
-    Housing.insert(housingData[i]);
-};
-for (i in jobsData) {
-    Jobs.insert(jobsData[i]);
-};
-for (i in communityData) {
-    Community.insert(communityData[i]);
+if (ForSale.find().count() === 0) {
+    for (i in forSaleData) {
+        ForSale.insert(forSaleData[i]);
+    };
+    for (i in housingData) {
+        Housing.insert(housingData[i]);
+    };
+    for (i in jobsData) {
+        Jobs.insert(jobsData[i]);
+    };
+    for (i in communityData) {
+        Community.insert(communityData[i]);
+    }
 }
