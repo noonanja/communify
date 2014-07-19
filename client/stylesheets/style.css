@@ -83,8 +83,40 @@ p {
     }
 }
 
+.accounts-dialog {
+	margin: -5px 0px -10px -180px;
+}
 
+#login-buttons .login-close-text {
+	float: right;
+} 
+.accounts-dialog label {
+  font-size: 100%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
 
+#login-buttons .login-button,
+.accounts-dialog .login-button {
+	font-size: 100%;
+}
+	
+.accounts-dialog .additional-link {
+  font-size: 90%;
+}
+
+label {
+  display: inline-grid;
+}
+
+#login-buttons input[type=text],
+.accounts-dialog input[type=text],
+#login-buttons input[type=email],
+.accounts-dialog input[type=email],
+#login-buttons input[type=password],
+.accounts-dialog input[type=password] {
+  font-size: 12px;
+}
 /* Styles for the Top Bar  ============================================================================= */
 
 /*Search styles*/
