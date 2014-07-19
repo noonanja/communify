@@ -1,14 +1,14 @@
 Template.listingsList.helpers({
 	forSale: function() {
-		return ForSale.find(); 
+		return Listings.find({category: 'forSale'});
 	},
 	jobs: function() {
-		return Jobs.find(); 
+		return Listings.find({category: 'housing'}); 
 	},
 	housing: function() {
-		return Housing.find(); 
+		return Listings.find({category: 'jobs'}); 
 	},
 	community: function() {
-		return Community.find(); 
+		return Listings.find({category: 'community'}); 
 	}
 });

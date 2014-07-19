@@ -33,7 +33,7 @@
 Router.configure({
 	layoutTemplate: 'layout',
 	loadingTemplate: 'loading',
-	waitOn: function() { return Meteor.subscribe('forSale');} 
+	// waitOn: function() { return Meteor.subscribe('Listings');} 
 
 
 });
@@ -45,10 +45,7 @@ Router.map(function() {
 		path: '/listings/:_id',
 		data: function() { 
 			return function() {
-				forSale.findOne(this.params._id);
-				Housing.findOne(this.params._id);
-				Community.findOne(this.params._id);
-				Jobs.findOne(this.params._id);
+				Listings.findOne(this.params._id);
 			} 
 		}
 	});
