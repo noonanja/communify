@@ -1,10 +1,15 @@
 <template name="layout">
-	<!-- <div class="container"> -->
-		<!-- <div id="main"> -->
-	    {{>topBar}}	
-			{{> yield}}
-		<!-- </div> -->
-	<!-- </div> -->
+    {{> yield region="topBar"}}
+  
+ 
+ <div class="main">
+    {{> yield}}
+  </div>
+
+  <div class="bottom">
+    {{> yield region="footer"}}
+  </div>
+
 </template>
 
-<!-- I'm pretty sure yield is used to tell meteor where to render stuff -->
+<!-- In this template are three areas that the Iron-Router renders in. One 'Main-Yield' and two 'Named-Yields' or 'Regions' with the names 'menu' and 'footer'. The names are important if we want to specify what template we want to render where. We now want that the Iron-Router to use our layout and to render the template 'myMenu' to the yield with the name 'menu' and the template 'myFooter' to the yield named 'footer'. -->

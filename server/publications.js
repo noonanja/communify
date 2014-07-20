@@ -5,6 +5,9 @@ Meteor.publish('listings', function() {
 Listings.allow({
   insert: function () {
     return false;
+  },
+  update: function() {
+  	return false;
   }
 });
 
@@ -15,6 +18,11 @@ Meteor.publish('posts', function(title) {
     //  else {
       return Posts.find({flagged: false, category: title});
     //}
+});
+
+Posts.allow({
+  update: ownsDocument,
+  remove: ownsDocument
 });
 
 

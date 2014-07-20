@@ -197,7 +197,7 @@ if (Posts.find().count() === 0) {
 
     });
     Posts.insert({
-        category: 'Bikes',
+        category: 'Events',
         author: 'Steve Aoki',
         title: 'Yard Sale',
         date: now,
@@ -206,17 +206,86 @@ if (Posts.find().count() === 0) {
         image: null,
         flagged: false
     }); 
+    Posts.insert({
+        category: 'Human Research Subjects',
+        author: 'J Money',
+        title: 'Yard Sale',
+        date: now,
+        price: null,
+        text: "I'm selling my YARD SALE boyz",
+        image: null,
+        flagged: false
+    }); 
+    Posts.insert({
+        category: 'Activities',
+        author: 'Joe',
+        title: 'Yard Sale',
+        date: now,
+        price: null,
+        text: "I'm selling my YARD SALE boyz",
+        image: null,
+        flagged: false
+    }); 
+    Posts.insert({
+        category: 'House Sales',
+        author: 'The Maine',
+        title: 'Yard Sale',
+        date: now,
+        price: null,
+        text: "I'm selling my YARD SALE boyz",
+        image: null,
+        flagged: false
+    }); 
+    Posts.insert({
+        category: 'Housing Wanted',
+        author: 'Lebron',
+        title: 'Yard Sale',
+        date: now,
+        price: null,
+        text: "I'm selling my YARD SALE boyz",
+        image: null,
+        flagged: false
+    }); 
+    Posts.insert({
+        category: 'Groups',
+        author: 'Jeff',
+        title: 'Yard Sale',
+        date: now,
+        price: null,
+        text: "I'm selling my YARD SALE boyz",
+        image: null,
+        flagged: false
+    }); 
+    Posts.insert({
+        category: 'Needed',
+        author: 'Oprah',
+        title: 'Yard Sale',
+        date: now,
+        price: null,
+        text: "I'm selling my YARD SALE boyz",
+        image: null,
+        flagged: false
+    }); 
+    Posts.insert({
+        category: 'Animals',
+        author: 'Randy Johnson',
+        title: 'Yard Sale',
+        date: now,
+        price: null,
+        text: "I'm selling my YARD SALE boyz",
+        image: null,
+        flagged: false
+    }); 
+    Posts.insert({
+        category: 'Animals',
+        author: 'Tom',
+        title: 'Yard Sale',
+        date: now,
+        price: null,
+        text: "I'm selling my YARD SALE boyz",
+        image: null,
+        flagged: false
+    }); 
+
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
