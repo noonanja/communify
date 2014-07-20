@@ -13,6 +13,7 @@ body {
     font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #fff;
     background-color: #000;
+    
 }
 
 html {
@@ -158,6 +159,43 @@ select,
 textarea {
   color: black;
 } 
+
+body { padding-top:30px; }
+.form-control { margin-bottom: 10px; }
+
+.col-xs-1,
+.col-xs-2,
+.col-xs-3,
+.col-xs-4,
+.col-xs-5,
+.col-xs-6,
+.col-xs-7,
+.col-xs-8,
+.col-xs-9,
+.col-xs-10,
+.col-xs-11,
+.col-xs-12 {
+  float: inherit; 
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.col-xs-12 {
+  width: 40%;
+}
+
+body {
+	padding-top: 0px;
+}
+.navbar-collapse {
+	padding-left: -30px;
+	float:right;
+}
+#login-buttons {
+	padding-right: 15px;
+}
+
 /* Styles for the Top Bar  ============================================================================= */
 
 /*Search styles*/
