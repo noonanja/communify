@@ -173,19 +173,38 @@ if (Listings.find().count() === 0) {
 
 
 
-if (Posts.find().count() === 0) { 
+if (Posts.find().count() === 0) {
+    var now = new Date().getTime(); 
     Posts.insert({
+        category: 'Animals',
+        author: '50 Cent',
         title: 'Selling Iguana',
+        date: now,
         price: 500,
-        author: 'Sacha Greif'
+        text: "I'm selling my mofo Iguanna boyz", 
+        image: null, 
+        flagged: false
     });
     Posts.insert({
-        title: 'MGMT101 textbook',
-        author: 'Tom Coleman'
+        category: 'Events',
+        author: 'Tom Coleman',
+        title: 'MGMT101 textbook', 
+        date: now,
+        price: 200,
+        text: "I'm selling my mofo textbook boyz",
+        image: null,
+        flagged: false
+
     });
     Posts.insert({
-        title: 'The Meteor Book',
-        author: 'Steve Aoki'
+        category: 'Bikes',
+        author: 'Steve Aoki',
+        title: 'Yard Sale',
+        date: now,
+        price: null,
+        text: "I'm selling my YARD SALE boyz",
+        image: null,
+        flagged: false
     }); 
 }
 

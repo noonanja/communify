@@ -2,31 +2,14 @@
 {{#each listingItem}}
 
 
-<div id="masthead">  
-  <div class="container">
-      <div class="row">
-        <div class="col-md-7">
-          <h1> Communify Penn
-          </h1>
-        </div>
-      </div> 
-  </div><!--/container-->
-</div><!--/masthead-->
+{{> listingPageHeader}}
 
 <!--main-->
 <div class="container">
 	<div class="row">
-      <!--left-->
-      <div class="col-md-3" id="leftCol">
-        <ul class="nav nav-stacked" id="sidebar">
-          <h3 class= "sidebarHeader"> CATEGORIES LIST </h3>
-          <li><a href="#sec0">For Sale</a></li>
-          <li><a href="#sec1">Housing</a></li>
-          <li><a href="#sec2">Community</a></li>
-          <li><a href="#sec3">Jobs</a></li>
-        </ul>
-      </div><!--/left-->
-      
+   
+      {{>leftBar}}
+   
       <!--right-->
       <div class="col-md-9">
         <h2 id="sec1"> 

@@ -14,19 +14,23 @@ Router.configure({
 	layoutTemplate: 'layout',
 	loadingTemplate: 'loading',
 	notFoundTemplate: 'notFound', // URL not found
-	waitOn: function() { return Meteor.subscribe('listings'); } 
+	waitOn: function() { 
+    return [Meteor.subscribe('listings'), Meteor.subscribe('posts')]
+  ; } 
 });
 
 listingPageController = RouteController.extend({
   template: 'listingPage',
-  // waitOn: function() {
-  //   return Meteor.subscribe('posts', this.findOptions());
-  // },
   data: function() {
-    listings = { listing: Listings.find({title: this.params.title}) };
+    listings = {listing: Listings.find({title: this.params.title}) };
     return listings;
-  }
-    
+  }, 
+  findOptions: function() {
+    return this.params.title;
+  },
+  waitOn: function() {
+    return Meteor.subscribe('posts', this.findOptions());
+  },
 });
 
 Router.map(function() {

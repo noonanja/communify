@@ -1,3 +1,5 @@
-Template.postsList.helpers({ posts: function() {
-return Posts.find(); }
-});
+// on the client
+Template.postsList.helpers({ 
+	posts: function() {
+		return Posts.find({category: this.title});}
+	});

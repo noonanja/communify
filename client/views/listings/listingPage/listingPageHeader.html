@@ -1,0 +1,18 @@
+<template name = "listingPageHeader">
+<div id="masthead">  
+  <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <h1> Communify Penn
+          </h1>
+        
+      {{#if currentUser}}
+            <li class="{{activeRouteClass 'postSubmit'}}">
+              <a href="{{pathFor 'postSubmit'}}">Submit Post</a>
+            </li>
+      {{/if}}
+      </div> 
+      </div>
+  </div><!--/container-->
+</div><!--/masthead-->
+</template>

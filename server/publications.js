@@ -8,6 +8,13 @@ Listings.allow({
   }
 });
 
-Meteor.publish('posts', function() { 
-	        return Posts.find();
+// on the server
+Meteor.publish('posts', function(title) {
+    // if(isAdmin(this.userId)) {
+    //      return Posts.find({category: title}); }
+    //  else {
+      return Posts.find({flagged: false, category: title});
+    //}
 });
+
+
