@@ -2,14 +2,22 @@
     {{> yield region="topBar"}}
     {{> errors}}
 
- <div class="main">
-    {{> yield}}
-  </div>
+<!-- In this template are three areas that the Iron-Router renders in. One 'Main-Yield' and two 'Named-Yields' or 'Regions' with the names 'menu' and 'footer'. The names are important if we want to specify what template we want to render where. We now want that the Iron-Router to use our layout and to render the template 'myMenu' to the yield with the name 'menu' and the template 'myFooter' to the yield named 'footer'. -->
 
-  <div class="bottom">
+
+<!-- Wrap all page content here -->
+<div id="wrap">
+  <div class="container">
+    
+    <div class="main">
+    {{> yield}}
+	</div>
+  </div> <!-- /container -->
+</div> <!-- /wrap -->
+      
+<div id="footer">
+      <div class="bottom">
     {{> yield region="footer"}}
   </div>
-
+</div>
 </template>
-
-<!-- In this template are three areas that the Iron-Router renders in. One 'Main-Yield' and two 'Named-Yields' or 'Regions' with the names 'menu' and 'footer'. The names are important if we want to specify what template we want to render where. We now want that the Iron-Router to use our layout and to render the template 'myMenu' to the yield with the name 'menu' and the template 'myFooter' to the yield named 'footer'. -->
