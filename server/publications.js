@@ -26,3 +26,7 @@ Posts.allow({
 });
 
 
+Meteor.publish('singlePost', function(id) {
+  return id && Posts.find(id);
+});
+

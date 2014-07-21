@@ -17,10 +17,10 @@ Template.postSubmit.events({
         throwError(error.reason);
         
         if (error.error === 302)
-          Router.go('listingPage', {title: error.details})
+          Router.go('postPage', {_id: error.details})
       } else {
-        Router.go('listingPage', {title: title});
+        Router.go('postPage', {_id: id});
       }
     });
   }
-});   
+});
