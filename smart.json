@@ -4,6 +4,7 @@
     "font-awesome": {},
     "iron-router": {},
     "iron-router-progress": {},
-    "spin": {}
+    "spin": {},
+    "accounts-entry": {}
   }
 }
