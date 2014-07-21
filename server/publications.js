@@ -16,7 +16,7 @@ Meteor.publish('posts', function(title) {
     // if(isAdmin(this.userId)) {
     //      return Posts.find({category: title}); }
     //  else {
-      return Posts.find({flagged: false, category: title});
+      return title && Posts.find({flagged: false, category: title});
     //}
 });
 
