@@ -10,14 +10,7 @@ return !! userId; }
 Meteor.methods({
   post: function(postAttributes) {
     var user = Meteor.user()
-      // , postWithSameLink = Posts.findOne({url: postAttributes.url});
-      // check that there are no previous posts with the same link
-    // if (postAttributes.url && postWithSameLink) {
-    //   throw new Meteor.Error(302, 
-    //     'This link has already been posted', 
-    //     postWithSameLink._id);
-    // }
-    
+     
     // ensure the user is logged in
     if (!user)
       throw new Meteor.Error(401, "You need to login to post new listings");
@@ -35,8 +28,7 @@ Meteor.methods({
     	               'authors','emails','description','price'), {
       userId: user._id, 
       username: user.username, 
-      submitted: new Date().getTime(),
-      commentsCount: 0,
+      submitted: new Date().getTime()
     });
     
     var postId = Posts.insert(post);

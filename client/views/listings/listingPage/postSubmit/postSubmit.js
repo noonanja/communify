@@ -23,4 +23,4 @@ Template.postSubmit.events({
       }
     });
   }
-});
+});   
