@@ -1,25 +1,49 @@
 <template name="postSubmit">
   <form class="main">
+    
     <div class="control-group">
-        <label class="control-label" for="url">URL</label>
+        <label class="control-label" for="title">Title of Post</label>
         <div class="controls">
-            <input name="url" type="text" value="" placeholder="Your URL"/>
+            <input name="title" type="text" value="" placeholder=""/>
         </div>
     </div>
 
     <div class="control-group">
-        <label class="control-label" for="title">Title</label>
+        <label class="control-label" for="authors">Reply-To Name(s)</label>
         <div class="controls">
-            <input name="title" type="text" value="" placeholder="Name your post"/>
+            <input name="authors" type="text" value="" placeholder=""/>
         </div>
     </div>
 
     <div class="control-group">
-        <label class="control-label" for="message">Message</label>
+        <label class="control-label" for="emails">Reply-To Email(s)</label>
         <div class="controls">
-            <textarea name="message" type="text" value=""></textarea>
+            <input name="emails" type="text" value="" placeholder=""/>
         </div>
-    </div> 
+    </div>
+
+
+    <div class="control-group">
+        <label class="control-label" for="category">Category for Post</label>
+        <div class="controls">
+            <input name="category" type="text" value="" placeholder=""/>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label" for="price">Price</label>
+        <div class="controls">
+            <input name="price" type="text" value="" placeholder=""/>
+        </div>
+    </div>
+
+   <div class="control-group">
+        <label class="control-label" for="description">Description</label>
+        <div class="controls">
+            <textarea name="description" type="text" value=""></textarea>
+        </div>
+    </div>
+
 
     <div class="control-group">
         <div class="controls">
@@ -28,3 +52,4 @@
     </div>
   </form>
 </template>
+

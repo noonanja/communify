@@ -11,7 +11,7 @@ body {
     width: 100%;
     height: 100%;
     font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    color: black;
+    color: rgb(26,41,119);
 }
 
 html {
@@ -52,7 +52,7 @@ p {
     height: auto;
     padding: 100px 0;
     text-align: center;
-    color: #fff;
+    color: white;
     background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
     background-color: gray;
     -webkit-background-size: cover;
@@ -67,7 +67,14 @@ p {
 }
 
 .brand-heading {
-    font-size: 40px;
+    font-size: 70px;
+    color: rgb(66,139,202);
+    display: inline-table;
+}
+
+.Penn {
+  color: rgb(26,41,119);
+  font-size: 80px;
 }
 
 .intro-text {
@@ -81,7 +88,7 @@ p {
     }
 
     .brand-heading {
-        font-size: 100px;
+        font-size: 80px;
     }
 
     .intro-text {
@@ -448,6 +455,9 @@ padding-left: 35px;
 
 .span_1_of_4 {
 	width: 23.8%; 
+  border-right-style: dotted;
+  border-color: gray;
+  border-width: 1px;
 }
 
 
@@ -474,6 +484,10 @@ padding-left: 35px;
 .titles {
 	text-align: center;
 	white-space:nowrap;
+  border-bottom-style: dotted;
+  
+  border-bottom-color: gray;
+  border-width: 1px;
 }
 
 
@@ -484,9 +498,8 @@ padding-left: 35px;
 	
 }
 
-
 #A_5 {
-	color: black;
+	color: rgb(26,41,119);
 }
 
 
@@ -514,6 +527,11 @@ padding-left: 35px;
     margin: 0px;
     
 } 
+@media(max-width: 998px) {
+  .sidebarHeader {
+    color: rgb(26,41,119);
+  }
+}
 
 .listingPageHeader {
   display: -webkit-inline-box;
@@ -528,6 +546,26 @@ font-size: 16px;
 padding-top: 12px;
 }
 
+.submitPost {
+  list-style: none;
+  text-align: right;
+  padding-right: 15px;
+}
+
+.submitPost a {
+  color: white;
+  text-decoration: none;
+}
+
+.glyphicon-plus {
+  color: rgb(26,41,119);
+}
+
+.alert-error {
+color: #b94a48;
+background-color: #f2dede;
+border-color: #eed3d7;
+}
 
 
 .grid-block, .main, .post, .comments li, .comment-form {

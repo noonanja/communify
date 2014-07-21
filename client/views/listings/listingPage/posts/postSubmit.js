@@ -3,9 +3,12 @@ Template.postSubmit.events({
     e.preventDefault();
     
     var post = {
-      url: $(e.target).find('[name=url]').val(),
+      category: $(e.target).find('[name=category]').val(),
       title: $(e.target).find('[name=title]').val(),
-      message: $(e.target).find('[name=message]').val()
+      authors: $(e.target).find('[name=authors]').val(),
+      emails: $(e.target).find('[name=emails]').val(),
+      description: $(e.target).find('[name=description]').val(),
+      price: $(e.target).find('[name=price]').val(),
     }
     
     Meteor.call('post', post, function(error, id) {
@@ -14,10 +17,10 @@ Template.postSubmit.events({
         throwError(error.reason);
         
         if (error.error === 302)
-          Router.go('postPage', {_id: error.details})
+          Router.go('listingPage', {title: error.details})
       } else {
-        Router.go('postPage', {_id: id});
+        Router.go('listingPage', {title: title});
       }
     });
   }
-});
+});   
