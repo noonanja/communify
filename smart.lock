@@ -6,8 +6,7 @@
       "iron-router": {},
       "iron-router-progress": {},
       "spin": {},
-      "accounts-entry": {},
-      "pages": {}
+      "accounts-entry": {}
     },
     "packages": {
       "bootstrap-3": {
@@ -34,11 +33,6 @@
         "git": "https://github.com/Differential/accounts-entry.git",
         "tag": "v0.8.0",
         "commit": "cf7f7d0ecc285824bc2748e305f5d693df99b4ae"
-      },
-      "pages": {
-        "git": "https://github.com/alethes/meteor-pages.git",
-        "tag": "v1.0.20",
-        "commit": "717cbac89f02d2f1bb160b24c997050ce2dee45e"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
