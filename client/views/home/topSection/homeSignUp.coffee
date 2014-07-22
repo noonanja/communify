@@ -1,4 +1,4 @@
-AccountsEntry.homeSignUpHelpers = {
+AccountsEntry.signUpHelpers = {
   showEmail: ->
     fields = AccountsEntry.settings.passwordSignupFields
 
@@ -153,6 +153,6 @@ AccountsEntry.signUpEvents = {
         return
 }
 
-Template.signUp.helpers(AccountsEntry.homeSignUpHelpers)
+Template.signUp.helpers(AccountsEntry.signUpHelpers)
 
-Template.signUp.events(AccountsEntry.homeSignUpEvents)
+Template.signUp.events(AccountsEntry.signUpEvents)
