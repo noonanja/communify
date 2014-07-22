@@ -15,14 +15,18 @@
            -> {{title}} </div>
         </h2>
         <p>
-
+  
           {{> postItemPostPage}}
-
+ {{#each posts}}
+      {{> postItemPostPage}}
+    {{/each}}
         </p>
   
         </div><!--/right-->
   	</div><!--/row-->
 </div><!--/container-->
+
+
 
 </template>
 

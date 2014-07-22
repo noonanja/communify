@@ -9,7 +9,7 @@ Posts.allow({
 // We want to make sure that users can only edit certain fields
 Posts.deny({
   update: function(userId, post, fieldNames) {
-    // may only edit the following two fields:
+    // may only edit the following fields:
     return (_.without(fieldNames, 'emails','authors',
               'description','price','title','category').length > 0);
   }
@@ -19,7 +19,7 @@ Posts.deny({
 Meteor.methods({
   post: function(postAttributes) {
     var user = Meteor.user()
-    console.log(this._id);
+    
     // Assure the post has not been posted
     postWithSameID = Posts.findOne({_id: postAttributes._id}); 
     // ensure the user is logged in
