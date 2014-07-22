@@ -44,16 +44,16 @@
               <div class="form-group">
                 
                 {{#if showUsername}}
-                  <input type="email" class="form-control" value='{{emailAddress}}' placeholder="School Email">
+                  <input type="email" class="form-control" id="signUpForm" value='{{emailAddress}}' placeholder="School Email">
                 {{else}}
-                  <input autofocus type="email" class="form-control" value='{{emailAddress}}' placeholder="School Email">
+                  <input autofocus type="email" class="form-control" id="signUpForm"  value='{{emailAddress}}' placeholder="School Email">
                 {{/if}}
               </div>
             {{/if}}
 
             <div class="form-group">
               
-              <input type="password" class="form-control" value='' placeholder="Password">
+              <input type="password" class="form-control" id="signUpForm" value='' placeholder="Password">
             </div>
 
             {{#if showSignupCode}}
@@ -62,10 +62,9 @@
                 <input name="signupCode" type="string" class="form-control" value=''>
               </div>
             {{/if}}
-
             <button type="submit" class="submit btn btn-block btn-default">Sign Up</button>
           </form>
-          <p class="entry-signin-cta">{{t9n "ifYouAlreadyHaveAnAccount"}} <a href="/sign-in">{{t9n "signin"}}</a>.</p>
+          <p class="entry-signin-cta">{{t9n "ifYouAlreadyHaveAnAccount"}} <a href="/sign-in" class = "signIn">{{t9n "signin"}}</a>.</p>
         {{/if}}
         {{#if both}}
           <p class="entry-agreement">{{t9n "clickAgree"}}

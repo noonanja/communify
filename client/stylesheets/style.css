@@ -1,6 +1,45 @@
+/* HOME STYLING */
+
 /* SIGN UP BUTTON STYLING */
+.signIn {
+	color:white;
+	text-decoration: underline;
+	
+	
+}
+.signIn:hover {
+	color: #428bca;
+}
+
 .entry-form button.submit {
   font-size: 20px;
+  width: 150px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  padding: 8px 0px 8px 0px;
+  
+}
+
+.form-control { 
+	margin-bottom: 0px;
+	text-align: center;
+	width: 250px; 
+	display: -webkit-inline-box;
+	
+}
+#signUpForm {
+	height: 25px;
+	font-size:12px;
+}
+
+.btn-block {
+	width: 200px;
+	display: table-row-group;
+	
+}	
+.entry-signin-cta {
+	color: white;
+	text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 /* LISTING PAGE TITLE OF POSTS */
@@ -125,6 +164,7 @@ p {
     font-size: 70px;
     color: rgb(66,139,202);
     display: inline-table;
+    
 }
 
 .Penn {
@@ -133,7 +173,9 @@ p {
 }
 
 .intro-text {
-    font-size: 18px;
+    font-size: 30px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+
 }
 
 @media(min-width:767px) {
@@ -223,19 +265,6 @@ textarea {
 body { 
 	padding-top:30px; 
 }
-.form-control { 
-	margin-bottom: 0px;
-	text-align: center;
-	width: 400px; 
-	display: -webkit-inline-box;
-}
-
-.btn-block {
-	width: 200px;
-	display: -webkit-inline-box;
-	
-}	
-
 
 .col-xs-1,
 .col-xs-2,
