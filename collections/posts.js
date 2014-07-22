@@ -52,7 +52,8 @@ Meteor.methods({
     var postId = Posts.insert(post);
     
     // update the count for this category (Listing title)
-    Listings.update(post.category, {$inc: {count: 1}});
+    var id = Listings.findOne({title: post.category})._id;
+    Listings.update(id, {$inc: {count: 1}});
     
     return postId;
   }
