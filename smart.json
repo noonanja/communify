@@ -4,7 +4,6 @@
     "iron-router": {},
     "iron-router-progress": {},
     "spin": {},
-    "accounts-entry": {},
-    "pages": {}
+    "accounts-entry": {}
   }
 }
