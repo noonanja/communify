@@ -1,19 +1,16 @@
 <template name = "listingPageHeader">
   <div id="masthead">  
     <div class="container">
-      <div class="row">
-        <div class="col-md-7">
-          <h1> classify Penn
-          </h1>
-        </div> 
-         {{#if currentUser}}
-          <li class="{{activeRouteClass 'postSubmit'}} submitPost">
+    	<div class="navbar-header">
+				{{>search}}		
+			</div>
+        {{#if currentUser}}
+        <ul class="{{activeRouteClass 'postSubmit'}} submitPost">
             <button type="button" class="btn btn-success btn-lg">
             <span class="glyphicon glyphicon-plus"></span><a href="{{pathFor 'postSubmit'}}"> Submit Listing </a>
             </button>
-          </li>
+          </ul>
           {{/if}}
-      </div>
     </div><!--/container-->
   </div><!--/masthead-->
 </template>

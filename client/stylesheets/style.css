@@ -1,9 +1,29 @@
-/* Sticky footer */
+/* LISTING PAGE TITLE OF POSTS */
+.col-md-9 {
+	text-align: center;
+	
+}
+.listingPageHeader {
+	font-size: 24px;
+}
 
+/* NAV BAR FOR LISTING PAGE */
+.navbar-header-listingPage {
+	font-size: 30px;
+	font-weight: bold;
+}
+#listingPage {
+	margin-top: -30px;
+}
+.entry {
+	background: transparent;
+}
+
+/* Sticky footer */
 
 /* Wrapper for page content to push down footer */
 #wrap {
-  min-height: 80%;
+  min-height: 85%;
   height: auto;
   /* Negative indent footer by its height */
   margin: 0 auto -60px;
@@ -83,7 +103,7 @@ p {
     padding: 100px 0;
     text-align: center;
     color: white;
-    background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
+    background: url('/resources/background.jpg') no-repeat bottom center scroll;
     background-color: gray;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -195,8 +215,22 @@ textarea {
   color: black;
 } 
 
-body { padding-top:30px; }
-.form-control { margin-bottom: 10px; }
+body { 
+	padding-top:30px; 
+}
+.form-control { 
+	margin-bottom: 0px;
+	text-align: center;
+	width: 400px; 
+	display: -webkit-inline-box;
+}
+
+.btn-block {
+	width: 200px;
+	display: -webkit-inline-box;
+	
+}	
+
 
 .col-xs-1,
 .col-xs-2,
@@ -369,6 +403,7 @@ padding-left: 35px;
 
 .navbar {
 	border-radius: 0;
+	margin-bottom: -10px;
 } 
 .container > .navbar-header {
 	margin-right: 0px;
@@ -377,7 +412,7 @@ padding-left: 35px;
 
 .container {
 	width:auto;
-	padding-left: 15px;
+	padding: 0px;
 	margin-top: 10px;
 }
 
@@ -431,9 +466,6 @@ padding-left: 35px;
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
  border-color: transparent;
-}
-.container {
-	padding-right: 0px; 
 }
 
 
@@ -696,7 +728,7 @@ border-color: #eed3d7;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
-  padding: 10px;
+  padding: 0px;
   margin-bottom: 10px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
