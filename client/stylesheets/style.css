@@ -1,10 +1,8 @@
-/* HOME STYLING */
-
 /* SIGN UP BUTTON STYLING */
+
 .signIn {
 	color:white;
 	text-decoration: underline;
-	
 	
 }
 .signIn:hover {
@@ -144,7 +142,7 @@ p {
     display: table;
     width: 100%;
     height: auto;
-    padding: 100px 0;
+    padding: 00px 0;
     text-align: center;
     color: white;
     background: url('/resources/background.jpg') no-repeat bottom center scroll;
@@ -307,6 +305,7 @@ body {
 .navbar-right {
 	padding-top: 5px;
 }
+
 
 /* Styles for the Top Bar  ============================================================================= */
 
@@ -584,7 +583,7 @@ padding-left: 35px;
 	border-bottom-color: gray;
 	border-width: 1px;
 	margin-bottom: 10px;
-	margin-left: -9px;
+	margin-left: -10px;
 	padding-bottom: 3px;
 }
 
