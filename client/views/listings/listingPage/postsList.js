@@ -1,5 +1,12 @@
 // on the client
-Template.postsList.helpers({ 
-	posts: function() {
-		return Posts.find({category: this.title});}
-	});
+
+// Template.postsList.helpers({ 
+//     postsWithRank: function() {
+// 	   Posts.find({category: this.title}).rewind();
+// 	   return Posts.find({category: this.title}).map(function(post, index, cursor) {
+// 		 post._rank = index;
+// 		 return post;
+// 	   });
+// 	}
+
+// });

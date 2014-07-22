@@ -3,12 +3,8 @@ Meteor.publish('listings', function() {
 });
 
 // on the server
-Meteor.publish('posts', function(title) {
-    // if(isAdmin(this.userId)) {
-    //      return Posts.find({category: title}); }
-    //  else {
-      return Posts.find({flagged: false, category: title});
-    //}
+Meteor.publish('posts', function(options) {
+  return Posts.find({}, options);
 });
 
 Meteor.publish('singlePost', function(id) {

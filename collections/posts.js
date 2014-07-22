@@ -35,7 +35,7 @@ Meteor.methods({
       throw new Meteor.Error(422, 'Please choose a category for this listing');
     
     // check that there are no previous posts with the same link
-    if (postAttributes.url && postWithSameLink) {
+    if (postAttributes._id && postWithSameID) {
       throw new Meteor.Error(302, 
         'This link has already been posted', 
         postWithSameID._id);
