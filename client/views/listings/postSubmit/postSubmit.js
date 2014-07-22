@@ -10,7 +10,8 @@ Template.postSubmit.events({
       description: $(e.target).find('[name=description]').val(),
       price: $(e.target).find('[name=price]').val(),
     }
-    
+
+    Session.set('category', post.category);
     Meteor.call('post', post, function(error, id) {
       if (error) {
         // display the error to the user
@@ -24,5 +25,7 @@ Template.postSubmit.events({
     });
   }
 });
+
+
 
 

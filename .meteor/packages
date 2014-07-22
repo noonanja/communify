@@ -5,13 +5,12 @@
 
 standard-app-packages
 bootstrap-3
-font-awesome
 less
-accounts-ui-unstyled
-accounts-password
 iron-router
 iron-router-progress
 spin
 coffeescript
 accounts-base
 accounts-entry
+accounts-ui-unstyled
+accounts-password

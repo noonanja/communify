@@ -45,14 +45,15 @@ Meteor.methods({
     	               'authors','emails','description','price'), {
       userId: user._id, 
       username: user.username, 
-      submitted: new Date().getTime()
+      submitted: new Date().getTime(), 
+      flagged: false
     });
     
     var postId = Posts.insert(post);
     
     // update the count for this category (Listing title)
     Listings.update(post.category, {$inc: {count: 1}});
-
+    
     return postId;
   }
 });
