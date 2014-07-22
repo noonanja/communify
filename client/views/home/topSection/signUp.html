@@ -28,8 +28,8 @@
 
         
 
-
-
+     <!-- Don't show if signed in -->
+     {{#unless currentUser}}
 
         {{#if passwordLoginService}}
           <form class="entry-form {{signupClass}}" id='signUp'>
@@ -80,12 +80,17 @@
             </p>
           {{/unless}}
         {{/if}}
+
+      <!-- Don't show if signed in -->
+      
+       
+      {{else}}
+      <div style = "height: 100px"> </div>
+      
+      {{/unless}}
+
       </div>
     </div>
   </div>
-
-
-
-
 </template>
 
