@@ -1,3 +1,8 @@
+/* SIGN UP BUTTON STYLING */
+.entry-form button.submit {
+  font-size: 20px;
+}
+
 /* LISTING PAGE TITLE OF POSTS */
 .col-md-9 {
 	text-align: center;
