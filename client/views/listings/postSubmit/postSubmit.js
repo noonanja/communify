@@ -25,8 +25,4 @@ Template.postSubmit.events({
   }
 });
 
-Template.postSubmit.helpers({
-  postContext: function() {    
-    return this._id;
-  }
-});
+
