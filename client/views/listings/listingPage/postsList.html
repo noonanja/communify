@@ -1,7 +1,13 @@
 <template name="postsList">
-  <div class="posts">
+  {{> postsPaging}}
+  <div class="posts"> 
     {{#each posts}}
       {{> postItem}}
     {{/each}}
   </div>
 </template>
+
+
+
+
+
