@@ -1,32 +1,37 @@
 <template name ="listingsList">
-	
-	<div class="section group" style = "list-style: none">
+
+	<div class="section group" style = "list-style: none" id = "listing_section">
 		<div class="col span_1_of_4">
 			<h3 class ="titles">For Sale</h3>
-			{{#each forSale}}
-			  {{> listing}}
-			{{/each}}
-			
+			<div class = "containerListing">
+				{{#each forSale}}
+			  		{{> listing}}
+				{{/each}}
+			</div>
 		</div>
 		<div class="col span_1_of_4">
 			<h3 class ="titles">Housing</h3>
-			{{#each housing}}
-			  {{> listing}}
-			{{/each}}
-
-
+			<div class = "containerListing">
+				{{#each housing}}
+			  		{{> listing}}
+				{{/each}}
+			</div>
 		</div>
 		<div class="col span_1_of_4">
-			<h3 class ="titles">Community</h3>
-			{{#each community}}
-			  {{> listing}}
-			{{/each}}
+			<h3 class ="titles" id="community">&nbsp;Community</h3>
+			<div class = "containerListing">
+				{{#each community}}
+			  		{{> listing}}
+				{{/each}}
+			</div>
 		</div>
 		<div class="col span_1_of_4" id="col_4">
 			<h3 class ="titles">Jobs</h3>
-			{{#each jobs}}
-			  {{> listing}}
-			{{/each}}
+			<div class = "containerListing">
+				{{#each jobs}}
+			  		{{> listing}}
+				{{/each}}
+			</div>
 		</div>
 	</div>
 
