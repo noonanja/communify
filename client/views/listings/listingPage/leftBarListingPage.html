@@ -1,13 +1,66 @@
 <template name ="leftBarListingPage">
-<!--left-->
-      <div class="col-md-3" id="leftCol">
-        <ul class="nav nav-stacked" id="sidebar">
-          <h3 class= "sidebarHeader"> CATEGORIES LIST </h3>
-          <li><a href="#sec0">For Sale</a></li>
-          <li><a href="#sec1">Housing</a></li>
-          <li><a href="#sec2">Community</a></li>
-          <li><a href="#sec3">Jobs</a></li>
+  <!--left-->
+  <div class="col-md-3" id="leftCol">
+    <div class="section1 group1" style = "list-style: none">
+     <div class="col_listing span_1_of_4_listing">
+      <div class="dropdown">
+        <button type="button" id="dropdownMenu1" data-toggle="dropdown">
+          For Sale
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+          <li role="presentation">
+            {{#each forSale}}
+            <a role="menuitem" tabindex="-1" href="#">{{> listing}}</a>
+            {{/each}}
+          </li>
         </ul>
-      </div><!--/left-->
-      
+      </div>					
+    </div>
+    <div class="col_listing span_1_of_4_listing">
+      <div class="dropdown">
+        <button type="button" id="dropdownMenu1" data-toggle="dropdown">
+          Housing
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+          <li role="presentation">
+            {{#each housing}}
+            <a role="menuitem" tabindex="-1" href="#">{{> listing}}</a>
+            {{/each}}
+          </li>
+        </ul>
+      </div>					
+    </div>
+    <div class="col_listing span_1_of_4_listing">
+      <div class="dropdown">
+        <button type="button" id="dropdownMenu1" data-toggle="dropdown">
+          Community
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+          <li role="presentation">
+            {{#each community}}
+            <a role="menuitem" tabindex="-1" href="#">{{> listing}}</a>
+            {{/each}}
+          </li>
+        </ul>
+      </div>					
+    </div>
+    <div class="col_listing span_1_of_4_listing">
+      <div class="dropdown">
+        <button type="button" id="dropdownMenu1" data-toggle="dropdown">
+          Jobs
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+          <li role="presentation">
+            {{#each jobs}}
+            <a role="menuitem" tabindex="-1" href="#">{{> listing}}</a>
+            {{/each}}
+          </li>
+        </ul>
+      </div>							</div>
+    </div>
+  </div> <!--/left -->     
 </template>      

@@ -2,12 +2,19 @@
 
     <section class="intro">
         <div class="intro-body">
+        	<div class = "container">
+			<div class="navbar-header">
+				{{> search }}
+			</div>
+			<ul class="nav navbar-nav navbar-right">
+				{{> loginButtons }}
+			</ul> 	
+		</div>
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <h1 class="brand-heading">classify <i class ="Penn">Penn</i></h1>
-                        <p class="intro-text">all things Penn.</p>
-                        
+                        <p class="intro-text">all things Penn.</p>      
 						{{> signUp}}
                     </div>
                 </div>
