@@ -6,4 +6,18 @@ Template.postsList.helpers({
 		 return post;
 	   });
 	},
+	hasMore: function() {
+		return Posts.find({category: this.title}).count() === this.limit;
+	}
 });
+
+// Template.postsList.events({ 
+// 	'click #load': function() {		
+// 		var count = Session.get('limit');
+// 		var newCount = count + 7;
+// 		Session.set('limit', newCount);
+// 		if (newCount >
+// 		Meteor.subscribe('posts', {sort: {submitted: -1, _id: -1}
+// 			             , title: this.title, limit: newCount});
+//      }, 
+// });
