@@ -19,23 +19,15 @@
 
 
        <p>
-        <div class="posts"> 
-          {{#each postsWithRank}}
-           {{> postItem}}
-          {{/each}}
-
-          {{#if nextPath}}
-          <a class="load-more" href="{{nextPath}}">Load more</a>
-          {{/if}}
+        <div class="posts">
+         {{> postsList}}
+         
         </div>
+         
       </p>
-
-
-
     </div><!--/right-->
   </div><!--/row-->
 </div><!--/container-->
-
 
 
 </template>
