@@ -1,3 +1,9 @@
+
+.posts {
+  margin-left: 10px;
+  margin-right: 10px; 
+}
+
 @media (min-width: 992px) {
   #leftCol {
     height: 230px;
@@ -13,11 +19,10 @@
   }
 }
 
-
-
 .categoryHeading {
   text-align: center;
   margin-bottom: 10px;
+  letter-spacing: 2px;
 }
 
 #listing_section {
@@ -126,6 +131,7 @@
 #masthead {
   margin-top: 10px;
   margin-bottom: 20px;
+
 }
 
 
@@ -134,9 +140,7 @@
   font-weight: bold;
 }
 
-.btn-lg {
-  margin-top: 10px;
-}
+  
 #login-sign-in-link {
   color:black;
 }
@@ -147,6 +151,10 @@
 }
 .btn {
   padding: 8px 12px 8px 12px;
+}
+
+.btn-lg {
+  padding: 8px 100px 8px 100px;
 }
 
 #srch-term {
@@ -513,14 +521,10 @@ body {
 
 .navbar-form {
   border: none;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-  margin-right:0;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 400px;
+  
 }
 
 .input-group {
@@ -720,9 +724,7 @@ body {
   font-size:25px;
   font-weight: bold;
 
-
 }
-
 .section {
   clear: both;
   padding: 0px;
@@ -730,12 +732,12 @@ body {
 }
 
 /*  COLUMN SETUP  */
-.col {
+.col_footer {
   display: block;
   float:left;
-  margin: 1% 0 1% 1.6%;
+  margin: 0% 0 0% 0%;
 }
-.col:first-child { margin-left: 0; }
+.col_footer:first-child {  }
 
 
 /*  GROUPING  */
@@ -773,7 +775,7 @@ body {
   }
   .span_1_of_2 {
     width: 100%; 
-    margin-bottom: -15px;
+    margin-bottom: -10px;
   }
 
   #footer_links {
@@ -914,3 +916,29 @@ border-color: #eed3d7;
     display: block;
     float: right;
     margin-top: 7px; }
+
+    .btn-lg {
+  margin-top: 10px;
+  display: -webkit-box;
+  
+}
+.form-control-listing { 
+  width: 100%; 
+}
+
+#srch-term-listing {
+  padding: 18px 10px 18px 10px;
+  width:100%;
+
+}
+.input-group-listing {
+  width: 80%;
+  vertical-align: center;
+  display:table-row-group;
+  max-width: 400px;
+  
+}
+
+.navbar-form {
+  max-width: 400px;
+}
