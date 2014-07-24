@@ -1,1 +1,5 @@
-// Session.setDefault('limit', 7);
+// Template.listingPage.helpers({ 
+//     title: function() {
+// 		 return Session.get('category');
+// 	}
+// });

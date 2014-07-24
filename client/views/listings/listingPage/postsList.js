@@ -6,8 +6,4 @@ Template.postsList.helpers({
 		 return post;
 	   });
 	},
-	hasMore: function() {
-		return Posts.find({category: this.title}).count() === this.limit;
-	}
 });
-
