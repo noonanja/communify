@@ -27,9 +27,3 @@ Template.postItem.helpers({
   }
 });
 
-// Template.postItem.events({
-//   'click .upvotable': function(e) {
-//     e.preventDefault();
-//     Meteor.call('upvote', this._id);
-//   }
-// });

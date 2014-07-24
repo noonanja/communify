@@ -1,6 +1,7 @@
 Meteor.subscribe('listings');
 
 
+
   
 
 

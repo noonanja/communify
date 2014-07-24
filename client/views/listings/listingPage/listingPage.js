@@ -1,1 +1,3 @@
-// Session.setDefault('limit', 7);
+Meteor.startup(function(){
+    Session.setDefault('limit', 10);
+});

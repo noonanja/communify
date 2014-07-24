@@ -853,6 +853,23 @@ background-color: #f2dede;
 border-color: #eed3d7;
 }
 
+.load-more {
+  display: block;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.05);
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+  margin-bottom: 10px; }
+  .load-more:hover {
+    cursor: pointer;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.1); }
+
 
 .grid-block, .main, .post, .comments li, .comment-form {
   
