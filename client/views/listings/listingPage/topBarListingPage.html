@@ -2,13 +2,13 @@
     
 	<nav class="navbar navbar-default" role="navigation">
 		<div class = "container">
-			<div class="navbar-header">
-				<a href="{{pathFor 'home'}}" id = "classify"> classify Penn </a>
+			<div class="navbar-header-listingPage">
+				<a href="{{pathFor 'home'}}"> classify Penn </a>
 			</div>
-			<ul class="nav navbar-nav navbar-right">
+			<div class="nav navbar-nav navbar-right" id="listingPage">
 				{{> loginButtons }}
-			</ul> 
-	</div>		
+			</div> 
+		</div>
    </nav>
     
 </template>
