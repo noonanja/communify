@@ -1,10 +1,6 @@
 {
   "packages": {
     "bootstrap-3": {},
-    "iron-router": {},
-    "iron-router-progress": {},
-    "spin": {},
-    "accounts-entry": {},
-    "paginated-subscription": {}
+    "font-awesome": {}
   }
 }
