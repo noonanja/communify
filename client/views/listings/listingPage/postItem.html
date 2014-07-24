@@ -1,0 +1,9 @@
+<template name="postItem">
+   <!-- Since our animation (from sorting and limiting number displayed) will affect our DOM element’s CSS attributes and classes, we’ll add a dynamic {{attributes}} helper. -->
+	<div class="post" {{attributes}}>
+		<div class="post-content">
+			<h3><a href="{{pathFor 'postPage'}}">{{title}}</a></h3>
+			{{#if ownPost}} Edit {{/if}}
+		</div>
+	</div>
+</template>

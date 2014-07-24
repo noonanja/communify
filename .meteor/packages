@@ -4,10 +4,14 @@
 # but you can also edit it by hand.
 
 standard-app-packages
-autopublish
-insecure
 bootstrap-3
-font-awesome
 less
+iron-router
+iron-router-progress
+spin
+coffeescript
+accounts-base
+accounts-entry
 accounts-ui-unstyled
 accounts-password
+paginated-subscription

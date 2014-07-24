@@ -1,0 +1,18 @@
+<template name="layout">
+    {{> yield region="topBar"}}
+    {{> errors}}
+<div id="wrap">
+  <div class="container">
+    
+    <div class="main">
+    {{> yield}}
+	</div>
+  </div> <!-- /container -->
+</div> <!-- /wrap -->
+      
+<div id="footer">
+      <div class="bottom">
+    {{> yield region="footer"}}
+  </div>
+</div>
+</template>

@@ -1,0 +1,55 @@
+<template name="postSubmit">
+{{postContext}}
+  <form class="main">
+    <div class="control-group">
+        <label class="control-label" for="title">Title of Post</label>
+        <div class="controls">
+            <input name="title" type="text" value="" placeholder=""/>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label" for="authors">Reply-To Name(s)</label>
+        <div class="controls">
+            <input name="authors" type="text" value="" placeholder=""/>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label" for="emails">Reply-To Email(s)</label>
+        <div class="controls">
+            <input name="emails" type="text" value="" placeholder=""/>
+        </div>
+    </div>
+
+
+    <div class="control-group">
+        <label class="control-label" for="category">Category for Post</label>
+        <div class="controls">
+            <input name="category" type="text" value="" placeholder=""/>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label" for="price">Price</label>
+        <div class="controls">
+            <input name="price" type="text" value="" placeholder=""/>
+        </div>
+    </div>
+
+   <div class="control-group">
+        <label class="control-label" for="description">Description</label>
+        <div class="controls">
+            <textarea name="description" type="text" value=""></textarea>
+        </div>
+    </div>
+
+
+    <div class="control-group">
+        <div class="controls">
+            <input type="submit" value="Submit" class="btn btn-primary"/>
+        </div>
+    </div>
+  </form>
+</template>
+

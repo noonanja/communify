@@ -1,0 +1,14 @@
+<template name="postsList">
+    {{#each postsWithRank}}
+      {{> postItem}}
+    {{/each}}
+
+    {{#if hasMore}}
+          <a class="load-more" id="load">Load more</a>
+    {{/if}}
+</template>
+
+
+
+
+
