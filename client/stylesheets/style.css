@@ -29,6 +29,7 @@
 body {
     overflow-x: hidden;
     font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+    min-width: 770px;
 }
 
 .text-muted {
@@ -192,8 +193,10 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default {
+    margin-bottom: -51px;
+    padding: 0px 0;
     border-color: transparent;
-    background-color: transparent;/*rgba(0,0,0,.5);*/
+    background-color: transparent;
 }
 
 .navbar-default .navbar-brand {
@@ -254,7 +257,8 @@ fieldset[disabled] .btn-xl.active {
 
 @media(min-width:768px) {
     .navbar-default {
-        padding: 10px 0;
+        margin-bottom: -50px;
+        padding: 0px 0;
         border: 0;
         background-color: transparent;/*rgba(0,0,0,.5);*/
         -webkit-transition: padding .3s;
