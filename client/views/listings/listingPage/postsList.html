@@ -4,11 +4,11 @@
     {{/each}}
 
     {{#if moreResults}}
-          <a class="load-more" id="loadMore">Load more</a>
+      {{> loadMore}}
     {{/if}}
 </template>
 
 
-
-
-
+<template name="loadMore">
+  <a class="load-more">Load more</a>
+</template>
