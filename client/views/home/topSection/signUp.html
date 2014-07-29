@@ -1,5 +1,5 @@
-<template name = "signUp">
-	<div class="container">
+<template name='signUp'>
+  <div class="container">
     <div class="row">
       {{#if logo}}
         <div class="entry-logo">
@@ -7,30 +7,9 @@
         </div>
       {{/if}}
       <div class="entry col-md-4 col-md-offset-4">
-        {{#if otherLoginServices}}  
-          <div class="entry-social">
-            {{#each loginServices}}
-              {{> entrySocial}}
-            {{/each}}
-            {{#if passwordLoginService}}
-              <div class="email-option">
-                <strong class="line-thru">OR</strong>
-                <a data-toggle="collapse" href="#signUp">
-                  {{t9n "signUpWithYourEmailAddress"}}
-                </a>
-              </div>
-            {{/if}}
-          </div>
-        {{else}}
-            
-        {{/if}}
-        {{> entryError}}
-
+        <h3 id = "signUpTitle">{{t9n "createAccount"}}</h3>
         
-
-     <!-- Don't show if signed in -->
-     {{#unless currentUser}}
-
+        {{> entryError}}
         {{#if passwordLoginService}}
           <form class="entry-form {{signupClass}}" id='signUp'>
             {{#if showUsername}}
@@ -44,16 +23,16 @@
               <div class="form-group">
                 
                 {{#if showUsername}}
-                  <input type="email" class="form-control" id="signUpForm" value='{{emailAddress}}' placeholder="School Email">
+                  <input type="email" class="form-control" value='{{emailAddress}}' placeholder = "Email">
                 {{else}}
-                  <input autofocus type="email" class="form-control" id="signUpForm"  value='{{emailAddress}}' placeholder="School Email">
+                  <input autofocus type="email" class="form-control" value='{{emailAddress}}' placeholder = "Email">
                 {{/if}}
               </div>
             {{/if}}
 
             <div class="form-group">
               
-              <input type="password" class="form-control" id="signUpForm" value='' placeholder="Password">
+              <input type="password" class="form-control" value='' placeholder = "Password">
             </div>
 
             {{#if showSignupCode}}
@@ -62,9 +41,10 @@
                 <input name="signupCode" type="string" class="form-control" value=''>
               </div>
             {{/if}}
-            <button type="submit" class="submit btn btn-block btn-default">Sign Up</button>
+
+            {{> entryExtraSignUpFields}}
+            <button type="submit" class="submit btn btn-block btn-default">{{t9n "signUp"}}</button>
           </form>
-          <p class="entry-signin-cta">{{t9n "ifYouAlreadyHaveAnAccount"}} <a href="/sign-in" class = "signIn">{{t9n "signin"}}</a>.</p>
         {{/if}}
         {{#if both}}
           <p class="entry-agreement">{{t9n "clickAgree"}}
@@ -79,17 +59,7 @@
             </p>
           {{/unless}}
         {{/if}}
-
-      <!-- Don't show if signed in -->
-      
-       
-      {{else}}
-      <div style = "height: 100px"> </div>
-      
-      {{/unless}}
-
       </div>
     </div>
   </div>
 </template>
-
