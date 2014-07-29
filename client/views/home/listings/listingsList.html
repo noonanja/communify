@@ -1,0 +1,63 @@
+<template name ="listingsList">
+
+		<!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Listings</h2>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-3">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">For Sale</h4>
+                    <p class="text-muted">
+                    {{#each forSale}}
+			  		  {{> listing}}
+				    {{/each}}
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-home fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Housing</h4>
+                    <p class="text-muted">
+                    {{#each housing}}
+			  		  {{> listing}}
+				    {{/each}}
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-users fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Community</h4>
+                    <p class="text-muted">
+                    {{#each community}}
+			  		  {{> listing}}
+				    {{/each}}
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-briefcase fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Jobs</h4>
+                    <p class="text-muted">
+                    {{#each jobs}}
+			  		  {{> listing}}
+				    {{/each}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
