@@ -335,7 +335,7 @@ p {
     padding: 000px 0;
     text-align: center;
     color: white;
-    background: url('/resources/background.jpg') no-repeat bottom center scroll;
+    background: url('/resources/upenn.jpg') no-repeat bottom center scroll;
     background-color: gray;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -520,6 +520,14 @@ body {
 }
 
 .navbar-form {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right:0;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
   border: none;
   margin-left: auto;
   margin-right: auto;
@@ -920,6 +928,8 @@ border-color: #eed3d7;
     .btn-lg {
   margin-top: 10px;
   display: -webkit-box;
+  margin-left: auto;
+  margin-right: auto;
   
 }
 .form-control-listing { 
