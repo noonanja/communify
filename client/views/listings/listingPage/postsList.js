@@ -12,13 +12,9 @@ Template.postsList.helpers({
 });
 
 
-Template.postsList.events({ 
-	'click #loadMore': function(event, template) {
-  	var count = Session.get('limit') + 10;
-    Session.set('limit', count);
-    }
-});
-
-// Template.postsList.rendered = function () {
-//   $("html, body").animate({ scrollTop: $("#loadMore").scrollTop() }, 1000);
-// };
+Template.loadMore.events({
+"click": function(event) {	
+  event.preventDefault();
+  Session.set("limit", Session.get("limit") + 10);
+   }   
+})
