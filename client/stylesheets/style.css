@@ -1,3 +1,7 @@
+.container {
+    width: auto;
+}
+
 #postListing {
     width: auto;
 }
@@ -6,14 +10,6 @@
     display: table;
     margin-left: auto;
     margin-right: auto;
-}
-
-.glyphicon-chevron-down {
-    font-size: 15px;
-}
-
-.containerListing {
-    white-space:nowrap;
 }
 
 /* SIGN IN/ SIGN UP SECTION */
@@ -255,8 +251,11 @@ fieldset[disabled] .btn-xl.active {
     background-color: #fec503;
 }
 
-@media(min-width:768px) {
-    .navbar-default {
+.navbar-brand {
+    float: left;
+    display: grid;
+}
+.navbar-default {
         margin-bottom: -50px;
         padding: 0px 0;
         border: 0;
@@ -266,26 +265,58 @@ fieldset[disabled] .btn-xl.active {
         transition: padding .3s;
     }
 
-    .navbar-default .navbar-brand {
+.navbar-default .navbar-brand {
         font-size: 2em;
         -webkit-transition: all .3s;
         -moz-transition: all .3s;
         transition: all .3s;
-    }
 
-    .navbar-default .navbar-nav>.active>a {
+}
+
+.navbar-default .navbar-nav>.active>a {
         border-radius: 3px;
-    }
+}
 
-    .navbar-default.navbar-shrink {
+.navbar-default.navbar-shrink {
         padding: 10px 0;
         background-color: #222;
-    }
-
-    .navbar-default.navbar-shrink .navbar-brand {
-        font-size: 1.5em;
-    }
 }
+
+.navbar-default.navbar-shrink .navbar-brand {
+        font-size: 1.5em;
+}
+
+@media (min-width: 300px) {
+.navbar-header {
+        float: left;
+}
+.navbar-toggle {
+    display: none;
+}
+.navbar-collapse {
+    border-top: 0 none;
+    box-shadow: none;
+    width: auto;
+}
+.navbar-collapse.collapse {
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+}
+.navbar-nav {
+    float: right !important;
+    margin: 0;
+}
+.navbar-nav>li {
+    float: left;
+}
+.navbar-nav>li>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+}
+
 
 section {
     padding: 50px 0;
