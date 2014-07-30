@@ -1,5 +1,13 @@
+@media (min-width: 768px) {
+    .container {
+        margin-left: 15px;
+        padding-left: 0px;
+    }
+}
+
 .container {
     width: auto;
+    margin-left: 15px;
 }
 
 #postListing {
@@ -25,7 +33,7 @@
 body {
     overflow-x: hidden;
     font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
-    min-width: 770px;
+    min-width: 800px;
 }
 
 .text-muted {
@@ -185,7 +193,11 @@ fieldset[disabled] .btn-xl.active {
     color: #fed136;
     background-color: #fff;
 }
-
+.logo {
+    font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
+    color: #fed136;
+    font-size: 2em;
+}
 .navbar-default {
     margin-bottom: -51px;
     padding: 0px 0;
@@ -281,7 +293,7 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default.navbar-shrink .navbar-brand {
-        font-size: 1.5em;
+        font-size: 2em;
 }
 
 @media (min-width: 300px) {
