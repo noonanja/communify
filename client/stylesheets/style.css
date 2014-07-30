@@ -1,3 +1,8 @@
+.background {
+    width: 200px;
+    height: 200px;
+}
+
 @media (min-width: 768px) {
     .container {
         margin-left: 15px;
@@ -61,7 +66,9 @@ a.active {
     outline: 0;
 }
 
-
+a {
+    color: #fed136;
+}
 
 a:hover,
 a:focus,
