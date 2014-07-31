@@ -1,5 +1,81 @@
-
 /* POST PAGE */ 
+
+.inputPost {
+    height: 35px;
+}
+.multi-column {
+    padding:0px;
+}
+.container-fluid {
+    padding:0px;
+}
+.dropdown-menu.multi-column {
+    width: 422px;
+}
+ 
+.dropdown-menu.multi-column .dropdown-menu {
+    display: block !important;
+    position: static !important;
+    margin: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+.dropdown-menu {
+    border-radius: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+}
+#listingDropdown {
+    color: black;
+
+}
+
+#listingDropdown:hover {
+    text-decoration: none;
+    
+}
+.dropdown {
+    list-style: none;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.nav-tabs .dropdown-menu, .nav-pills .dropdown-menu, .navbar .dropdown-menu {
+    margin-top: 0;
+}
+
+.buttonListings {
+    position:relative;
+    margin: -3px;
+    padding: 20px 40px 20px 40px;
+    background-color: white;
+    border: solid;
+    border-width: 1px;
+    border-color: rgb(230,230,230);
+    font-size: 15px;
+}
+.buttonListings:hover {
+    z-index: 10;
+    border-color: black;
+}
+
+.div2 {
+    padding-right: 20px;
+    display:table-cell;
+}
+
+.titleContainer {
+    background-color: white;
+    border: solid;
+    border-width: 1px;
+    border-color: rgb(230,230,230);
+    padding: 13px 18px 13px 18px;
+}
+
+.inputPost {
+    width: 300px;
+}
 
 .titlePost {
     margin-top: 48px;
@@ -9,7 +85,7 @@
     margin-right: auto;
     border: solid;
     border-width: 1px;
-    border-color: rgb(230,230,230)
+    border-color: rgb(230,230,230);
 
 }
 .mainPostPage {
@@ -28,6 +104,7 @@
     display: table;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 20px;
 }
 
 /* END OF POST PAGE */
@@ -97,14 +174,15 @@ a.active {
 }
 
 a {
-    color: #fed136;
+    color: black;
 }
 
 a:hover,
 a:focus,
 a:active,
 a.active {
-    color: #fec503;
+    color: black;
+    text-decoration: none;
 }
 
 h1,
@@ -1067,3 +1145,4 @@ border-color: #eed3d7;
     display: block;
     float: right;
     margin-top: 7px; }
+
