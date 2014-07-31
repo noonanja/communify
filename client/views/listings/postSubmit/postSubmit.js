@@ -11,7 +11,7 @@ Template.postSubmit.events({
       price: $(e.target).find('[name=price]').val(),
     }
 
-    Session.set('category', post.category);
+    
     Meteor.call('post', post, function(error, id) {
       if (error) {
         // display the error to the user
@@ -23,7 +23,17 @@ Template.postSubmit.events({
         Router.go('postPage', {_id: id});
       }
     });
+  }, 
+
+  'change .btn-file': function(event, template) {
+    console.log('uploading');
+    FS.Utility.eachFile(event, function(file) {
+      Images.insert(file, function (err, fileObj) {
+        //Inserted new doc with ID fileObj._id, and kicked off the data upload using HTTP
+      });
+    });
   }
+
 });
 
 

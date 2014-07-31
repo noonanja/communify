@@ -16,3 +16,5 @@ simple-form
 font-awesome
 iron-router
 iron-router-progress
+collectionFS
+cfs-filesystem
