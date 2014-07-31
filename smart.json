@@ -1,13 +1,14 @@
 {
   "packages": {
     "bootstrap-3": {},
+
     "iron-router": {
-      "version": "0.7.0"
+       "version": "0.7.0"
     },
+
     "iron-router-progress": {},
     "spin": {},
     "accounts-entry": {},
-    "font-awesome": {},
-    "collectionFS": {}
+    "font-awesome": {}
   }
 }
