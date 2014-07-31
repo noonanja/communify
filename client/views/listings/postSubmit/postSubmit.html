@@ -1,62 +1,149 @@
 <template name="postSubmit">
-{{postContext}}
-<div class = "titlePost">
-     <h3 class = "postPageTitle">Submit a Listing</h3>
-        <p class = "postPageTitle"> And put an end to asking everyone you know for everything</p>
+    {{postContext}}
+    <div class = "titlePost">
+       <h3 class = "postPageTitle">Submit a Listing</h3>
+       <p class = "postPageTitle"> And stop asking everyone you know for everything</p>
+   </div>
+   <div class="mainPostPage"> 
+
+     <div class="control-group">
+        <div class="div2">
+            <div class = "sub1-2">
+                Category
+            </div>
         </div>
-  <form class="mainPostPage">
-   
-    <div class="control-group">
-        <label class="control-label" for="title"></label>
-        <div class="controls">
-            Category
-            <input name="title" type="text" value="" placeholder=""/>
+        <div class="div3">
+            <div class="div4">
+                <button class = "buttonListings dropdown">
+                  <a href="#" data-toggle="dropdown" class="dropdown-toggle" id ="listingDropdown"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;For Sale</a>
+                  <div class="dropdown-menu multi-column">
+              <div class="container-fluid">
+                <div class="row-fluid">
+                  <div class="span6">
+                    <ul class="dropdown-menu" id="menu1">
+                        <li>
+                        {{#each forSale1}}
+                        <a role="menuitem" tabindex="-1" href="#">{{> listingPostSubmit}}</a>
+                        {{/each}}  
+                    </li>
+                    </ul>
+                  </div>
+                  <div class="span6">
+                    <ul class="dropdown-menu" id="menu1">
+                      <li>
+                      {{#each forSale2}}
+                        <a role="menuitem" tabindex="-1" href="#">{{> listingPostSubmit}}</a>
+                        {{/each}}
+                    </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            </button>
+            <button class = "buttonListings dropdown">
+                  <a href="#" data-toggle="dropdown" class="dropdown-toggle" id ="listingDropdown"><i class="fa fa-home"></i>&nbsp;&nbsp;Housing</a>
+                  <ul class="dropdown-menu" id="menu1">
+                    <li role="presentation">
+                        {{#each housing}}
+                        <a role="menuitem" tabindex="-1" href="#">{{> listingPostSubmit}}</a>
+                        {{/each}}
+                    </li>
+                </ul>
+            </button>
+            <button class = "buttonListings dropdown">
+                  <a href="#" data-toggle="dropdown" class="dropdown-toggle" id ="listingDropdown"><i class="fa fa-users"></i>&nbsp;&nbsp;Community</a>
+                  <ul class="dropdown-menu" id="menu1">
+                    <li role="presentation">
+                        {{#each community}}
+                        <a role="menuitem" tabindex="-1" href="#">{{> listingPostSubmit}}</a>
+                        {{/each}}
+                    </li>
+                </ul>
+            </button>
+            <button class = "buttonListings dropdown">
+                  <a href="#" data-toggle="dropdown" class="dropdown-toggle" id ="listingDropdown"><i class="fa fa-briefcase"></i>&nbsp;&nbsp;Jobs</a>
+                  <ul class="dropdown-menu" id="menu1">
+                    <li role="presentation">
+                        {{#each jobs}}
+                        <a role="menuitem" tabindex="-1" href="#">{{> listingPostSubmit}}</a>
+                        {{/each}}
+                    </li>
+                </ul>
+            </button>
         </div>
     </div>
+</div>
 
-    <div class="control-group">
-        <label class="control-label" for="authors">Reply-To Name(s)</label>
-        <div class="controls">
-            <input name="authors" type="text" value="" placeholder=""/>
+<div class="control-group">
+        <div class="div2">
+            <div class = "sub1-2">
+                Title
+            </div>
         </div>
+        <div class="div3">
+            <input name="emails" type="text" value="" placeholder=" Acct. 102 Textbook, Roommate Wanted..." class = "inputPost"/>
     </div>
+</div>
 
-    <div class="control-group">
-        <label class="control-label" for="emails">Reply-To Email(s)</label>
-        <div class="controls">
-            <input name="emails" type="text" value="" placeholder=""/>
+<div class="control-group">
+        <div class="div2">
+            <div class = "sub1-2">
+                Description
+            </div>
         </div>
+        <div class="div3">
+            <input name="emails" type="text" value="" placeholder="" class = "inputPost"/>
     </div>
+</div>
 
-
-
-    <div class="control-group">
-        <label class="control-label" for="category">Category for Post</label>
-        <div class="controls">
-            <input name="category" type="text" value="" placeholder=""/>
+<div class="control-group">
+        <div class="div2">
+            <div class = "sub1-2">
+                Price
+            </div>
         </div>
+        <div class="div3">
+            <input name="emails" type="text" value="" placeholder="" class = "inputPost"/>
     </div>
+</div>
 
-    <div class="control-group">
-        <label class="control-label" for="price">Price</label>
-        <div class="controls">
-            <input name="price" type="text" value="" placeholder=""/>
+<div class="control-group">
+        <div class="div2">
+            <div class = "sub1-2">
+                Reply-To Name
+            </div>
         </div>
+        <div class="div3">
+            <input name="emails" type="text" value="" placeholder="" class = "inputPost"/>
     </div>
+</div>
 
-   <div class="control-group">
-        <label class="control-label" for="description">Description</label>
-        <div class="controls">
-            <textarea name="description" type="text" value=""></textarea>
+<div class="control-group">
+        <div class="div2">
+            <div class = "sub1-2">
+                Reply-To Email
+            </div>
         </div>
+        <div class="div3">
+            <input name="emails" type="text" value="" placeholder="" class = "inputPost"/>
     </div>
+</div>
 
+<div class="control-group">
+<div class="fileinput fileinput-new" data-provides="fileinput">
+  <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
+    <img data-src="holder.js/100%x100%" alt="...">
+  </div>
+  <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
+  <div>
+    <span class="btn btn-default btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+    <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+  </div>
+</div>
+</div>
 
-    <div class="control-group">
-        <div class="controls">
-            <input type="submit" value="Submit" class="btn btn-primary"/>
-        </div>
-    </div>
-  </form>
+</div> 
 </template>
 

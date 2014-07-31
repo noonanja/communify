@@ -1,4 +1,5 @@
 Template.postSubmit.events({
+  
   'submit form': function(e) {
     e.preventDefault();
     
@@ -23,9 +24,34 @@ Template.postSubmit.events({
         Router.go('postPage', {_id: id});
       }
     });
-  }
+  }, 
+  
+  // 'click .button': function(e) {
+  //  e.preventDefault();
+  //  thisdata = $(this).attr('data-info');
+  //  console.log(thisdata);
+  // }
+
 });
 
+
+Template.postSubmit.helpers({
+  forSale1: function() {
+    return Listings.find({category: 'forSale'}, {limit: 8});
+  },
+  forSale2: function() {
+    return Listings.find({category: 'forSale'}, {skip: 8});
+  },
+  jobs: function() {
+    return Listings.find({category: 'jobs'}); 
+  },
+  housing: function() {
+    return Listings.find({category: 'housing'}); 
+  },
+  community: function() {
+    return Listings.find({category: 'community'}); 
+  }
+});
 
 
 

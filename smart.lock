@@ -3,11 +3,14 @@
   "dependencies": {
     "basePackages": {
       "bootstrap-3": {},
-      "iron-router": {},
+      "iron-router": {
+        "version": "0.7.0"
+      },
       "iron-router-progress": {},
       "spin": {},
       "accounts-entry": {},
-      "font-awesome": {}
+      "font-awesome": {},
+      "angular-bootstrap": {}
     },
     "packages": {
       "bootstrap-3": {
@@ -17,8 +20,8 @@
       },
       "iron-router": {
         "git": "https://github.com/EventedMind/iron-router.git",
-        "tag": "v0.8.0",
-        "commit": "d1ffb3f06ea4c112132b030f2eb1a70b81675ecb"
+        "tag": "v0.7.0",
+        "commit": "05f34bc48c4cad9fdaa366c1ddcabe6980232ece"
       },
       "iron-router-progress": {
         "git": "https://github.com/Multiply/iron-router-progress.git",
@@ -40,10 +43,15 @@
         "tag": "v4.1.0",
         "commit": "ce6b1e92715d1938babc5d69c655c17e387f5926"
       },
+      "angular-bootstrap": {
+        "git": "https://github.com/ccll/meteor-angular-bootstrap.git",
+        "tag": "v0.1.2",
+        "commit": "ba277977a4ebc0b56e62facdfd336375db3ce44c"
+      },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
-        "tag": "v0.2.4",
-        "commit": "b40e9b0612329288d75cf52ad14a7da64bb8618f"
+        "tag": "v0.2.2",
+        "commit": "8bc53798fe5965669ae67c72f91829fcfdceabfd"
       },
       "accounts-t9n": {
         "git": "https://github.com/softwarerero/meteor-accounts-t9n.git",
@@ -54,6 +62,11 @@
         "git": "https://github.com/Differential/simple-form.git",
         "tag": "v0.1.8",
         "commit": "1ea0d3621b333e6f24f37e0e93efd3c081068716"
+      },
+      "bower": {
+        "git": "https://github.com/mquandalle/meteor-bower.git",
+        "tag": "v0.1.2",
+        "commit": "780b841593c355d1522982e50e7a59fe35d33fee"
       },
       "underscore-string-latest": {
         "git": "https://github.com/TimHeckel/meteor-underscore-string.git",
