@@ -8,6 +8,8 @@
     "spin": {},
     "accounts-entry": {},
     "font-awesome": {},
-    "collectionFS": {}
+    "fileCollection": {},
+    "numeral": {},
+    "jquery-cookie": {}
   }
 }

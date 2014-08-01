@@ -4,3 +4,7 @@ lib/router.js
 lib/router.js
 
 main.html
+
+client/stylesheets/style.css
+
+client/views/listings/postSubmit/postSubmit.html

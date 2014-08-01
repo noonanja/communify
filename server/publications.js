@@ -13,5 +13,3 @@ Meteor.publish('singlePost', function(id) {
 
 
 
-
-

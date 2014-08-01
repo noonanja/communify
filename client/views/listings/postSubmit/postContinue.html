@@ -1,0 +1,43 @@
+<template name="postContinue">
+    <div class="container panel panel-default">
+    <div class="panel-heading"><h4>Add Images</h4></div>
+    <div class="panel-body fileDrop">
+      <div class="row equal">
+        {{#each dataEntries}}
+          <div class="col-sm-6 col-lg-2">
+          <a href="{{link}}?download=true">{{shortFilename 16}}</a>
+            <button type="button" class="close del-file" aria-hidden="true">&times;</button>
+            <div class="thumbnail">
+              {{#if isImage}}
+                <a href="{{link}}"><img class="img-thumbnail" alt="[ preview of {{shortFilename 16}} will display here ]" src="{{link}}" width="150"></a>
+                <div class="caption text-center">{{shortFilename 16}}</div>
+              {{else}}
+                <span class="text-muted text-center">No preview</span>
+              {{/if}}
+            </div>
+            {{#if length}}
+              {{formattedLength}}
+            {{else}}
+              {{uploadStatus}}
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" min-width="60px" aria-valuenow="{{uploadProgress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{uploadProgress}}%;">
+                    <span class="text-muted">{{uploadProgress}}%</span>
+                </div>
+              </div>
+            {{/if}}
+          </div>
+        {{else}}
+          <div class="col-sm-12">
+            <div class="container">
+              <p class="lead text-info text-center ">No images added, drag some image files here to upload</p>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+
+</template>
+
+
+
