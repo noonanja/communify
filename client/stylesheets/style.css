@@ -1,5 +1,19 @@
-/* POST PAGE */ 
+/* Gallery ===========================*/
+@media(max-width:1200px) {
+  .equal, .equal > div[class*='col-'] {
+    /*something would fix this I think..*/
+  }     
+}
+.equal, .equal > div[class*='col-'] {
+    display: -webkit-inline-box;
+    flex: 1 0 auto;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
 
+
+/* POST PAGE  ===========================*/
 .inputPost {
     height: 35px;
 }

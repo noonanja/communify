@@ -1,4 +1,4 @@
-Template.postSubmit.events({
+Template.postContinue.events({
   'submit form': function(e) {
     e.preventDefault();
     
@@ -23,35 +23,45 @@ Template.postSubmit.events({
         Router.go('postPage', {_id: id});
       }
     });
-  }, 
-
-  'change .btn-file': function(event, template) {
-    console.log('uploading');
-    FS.Utility.eachFile(event, function(file) {
-      Images.insert(file, function (err, fileObj) {
-        //Inserted new doc with ID fileObj._id, and kicked off the data upload using HTTP
-      });
+  },
+  'click .del-file': function(e, t) {
+    return myFiles.remove({
+      _id: this._id
     });
-  }
-
+  } 
 });
 
-Template.postSubmit.helpers({
-  forSale1: function() {
-    return Listings.find({category: 'forSale'}, {limit: 8});
+Template.postContinue.helpers({ 
+  dataEntries: function() {
+    return myFiles.find();
+  }, 
+  isImage: function() {
+    return imageTypes[this.contentType] != null;
   },
-  forSale2: function() {
-    return Listings.find({category: 'forSale'}, {skip: 8});
+  link: function() {
+    return myFiles.baseURL + "/" + this.md5
   },
-  jobs: function() {
-    return Listings.find({category: 'jobs'}); 
-  },
-  housing: function() {
-    return Listings.find({category: 'housing'}); 
-  },
-  community: function() {
-    return Listings.find({category: 'community'}); 
+  shortFilename: function(w) {
+    if (w == null) {
+      w = 16;
+    }
+    return shorten(this.filename, w);
   }
 });
 
+var shorten;
+shorten = function(name, w) {
+  if (w == null) {
+    w = 16;
+  }
+  if (w % 2) {
+    w++;
+  }
+  w = (w - 2) / 2;
+  if (name.length > w) {
+    return name.slice(0, +w + 1 || 9e9) + '...' + name.slice(-w - 1);
+  } else {
+    return name;
+  }
+};
 

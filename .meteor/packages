@@ -6,7 +6,6 @@
 standard-app-packages
 bootstrap-3
 less
-spin
 coffeescript
 accounts-base
 accounts-entry
@@ -16,5 +15,6 @@ simple-form
 font-awesome
 iron-router
 iron-router-progress
-collectionFS
-cfs-filesystem
+fileCollection
+numeral
+jquery-cookie
