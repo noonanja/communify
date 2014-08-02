@@ -19,7 +19,7 @@ Template.postSubmit.helpers({
 Template.postSubmit.events({
   'click #continue': function(e) {
     e.preventDefault();
-    console.log($(e.target).find('[name=title]').val());
+    //console.log($(e.target).find('[name=title]').val());
     var post = {
       // category: $(e.target).find('[name=category]').val(),
       // title: $(e.target).find('[name=title]').val(),

@@ -1,3 +1,4 @@
+// static data for all of the listing categories
 var forSaleData = [ {
     title: 'Animals',
     count: 0,
@@ -168,13 +169,12 @@ if (Listings.find().count() === 0) {
     for (i in communityData) {
         Listings.insert(communityData[i]);
     }
-
 }
-
+// ===============================================================
 
 
 if (Posts.find().count() === 0) {
-    var now = new submitted().getTime(); 
+    var now = new Date().getTime();
     Posts.insert({
         category: 'Animals',
         author: '50 Cent',
@@ -286,6 +286,5 @@ if (Posts.find().count() === 0) {
         image: null,
         flagged: false
     }); 
-
 
 }

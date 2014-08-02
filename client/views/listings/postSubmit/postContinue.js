@@ -3,12 +3,15 @@ Template.postContinue.events({
     return myFiles.remove({
       _id: this._id
     });
-  } 
+  },
+  'click #submitPost': function(e, t) {
+    Router.go('postPage', {_id: this._id});
+  }
 });
 
 Template.gallery.helpers({ 
   dataEntries: function() {
-    return myFiles.find();
+    return myFiles.find({'metadata.postId': this._id});
   }, 
   isImage: function() {
     return imageTypes[this.contentType] != null;
@@ -39,4 +42,3 @@ shorten = function(name, w) {
     return name;
   }
 };
-
