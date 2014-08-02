@@ -1,4 +1,29 @@
 <template name="postContinue">
+<!--main-->
+<div class="container">
+  <div class="row">
+   
+   
+      <!--right-->
+      <div class="col-md-9">
+        <h2 id="sec1"> 
+          <div class="listingPageHeader">
+           <div style= "text-transform:capitalize">{{category}} </div> 
+           <div class="smallListings"> &nbsp; listings &nbsp;</div>
+           -> {{title}} </div>
+        </h2>
+        <p>
+  
+          {{> postItemPostContinue}}
+          {{> gallery }}
+        </p>
+  
+        </div><!--/right-->
+    </div><!--/row-->
+</div><!--/container-->
+</template>
+
+<template name="gallery">
     <div class="container panel panel-default">
     <div class="panel-heading"><h4>Add Images</h4></div>
     <div class="panel-body fileDrop">

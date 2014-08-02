@@ -6,7 +6,7 @@ Template.postContinue.events({
   } 
 });
 
-Template.postContinue.helpers({ 
+Template.gallery.helpers({ 
   dataEntries: function() {
     return myFiles.find();
   }, 
