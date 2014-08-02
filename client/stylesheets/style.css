@@ -1,4 +1,12 @@
 /* POST PAGE */ 
+.minWidthFix {
+    min-width: 825px;
+}
+#rightbar {
+    margin-left: auto;
+    margin-right: auto;
+    width: 780px;
+}
 .continue {
     margin-top: 30px;
     margin-left: 320px;
@@ -36,11 +44,6 @@
     bottom: 100px;
 
 }
-
-#rightbar{
-    padding-left:20%;
-    height:100%;
-    }
 
 .replyToEmail {
     margin-right: 374px;
@@ -190,6 +193,7 @@
     background-color: #f7f7f7;
     margin-left: auto;
     margin-right: auto;
+    min-width: 825px;
 }
 
 .postPageTitle {

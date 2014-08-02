@@ -1,5 +1,6 @@
 <template name="postSubmit">
     {{postContext}}
+  <div class = "minWidthFix">
     <div class = "titlePost">
        <h3 class = "postPageTitle">Submit a Listing</h3>
        <p class = "postPageTitle"> And stop asking everyone you know for everything you need</p>
@@ -10,14 +11,14 @@
         <div class="div3">
             <div class="div4">
                 Category
-                <button class = "buttonListings dropdown">
+                <button class = "buttonListings dropdown forSale">
                   <a href="#" data-toggle="dropdown" class="dropdown-toggle" id ="listingDropdown"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;For Sale</a>
                   <div class="dropdown-menu multi-column">
               <div class="container-fluid">
                 <div class="row-fluid">
                   <div class="span6">
                     <ul class="dropdown-menu" id="menu1">
-                        <li>
+                        <li class = "forSaleOption">
                         {{#each forSale1}}
                         <a role="menuitem" tabindex="-1" href="#">{{> listingPostSubmit}}</a>
                         {{/each}}  
@@ -38,7 +39,7 @@
             </div>
 
             </button>
-            <button class = "buttonListings dropdown">
+            <button class = "buttonListings dropdown housing">
                   <a href="#" data-toggle="dropdown" class="dropdown-toggle" id ="listingDropdown"><i class="fa fa-home"></i>&nbsp;&nbsp;Housing</a>
                   <ul class="dropdown-menu" id="menu1">
                     <li role="presentation">
@@ -48,7 +49,7 @@
                     </li>
                 </ul>
             </button>
-            <button class = "buttonListings dropdown">
+            <button class = "buttonListings dropdown community">
                   <a href="#" data-toggle="dropdown" class="dropdown-toggle" id ="listingDropdown"><i class="fa fa-users"></i>&nbsp;&nbsp;Community</a>
                   <ul class="dropdown-menu" id="menu1">
                     <li role="presentation">
@@ -58,7 +59,7 @@
                     </li>
                 </ul>
             </button>
-            <button class = "buttonListings dropdown">
+            <button class = "buttonListings dropdown jobs">
                   <a href="#" data-toggle="dropdown" class="dropdown-toggle" id ="listingDropdown"><i class="fa fa-briefcase"></i>&nbsp;&nbsp;Jobs</a>
                   <ul class="dropdown-menu" id="menu1">
                     <li role="presentation">
@@ -93,5 +94,19 @@
       </div>
       </div>
     </div>
-   
+  </div>
+
+<body>
+ 
+<p>First Paragraph</p>
+ 
+<script>
+$( " .forSaleOption " ).click(function() {
+  $( ".housing" ).slideUp();
+  $( ".community" ).slideUp();
+  $( ".jobs" ).slideUp();
+});
+</script>
+ 
+</body>
 </template>
