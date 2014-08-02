@@ -5,18 +5,17 @@
       <div class="row equal">
         {{#each dataEntries}}
           <div class="col-sm-6 col-lg-2">
-          <a href="{{link}}?download=true">{{shortFilename 16}}</a>
             <button type="button" class="close del-file" aria-hidden="true">&times;</button>
             <div class="thumbnail">
               {{#if isImage}}
                 <a href="{{link}}"><img class="img-thumbnail" alt="[ preview of {{shortFilename 16}} will display here ]" src="{{link}}" width="150"></a>
-                <div class="caption text-center">{{shortFilename 16}}</div>
+                <div class="caption text-center"><a href="{{link}}?download=true">{{shortFilename 16}}</a></div>
               {{else}}
                 <span class="text-muted text-center">No preview</span>
               {{/if}}
             </div>
             {{#if length}}
-              {{formattedLength}}
+              
             {{else}}
               {{uploadStatus}}
               <div class="progress">
@@ -35,6 +34,12 @@
         {{/each}}
       </div>
     </div>
+  </div>
+
+  <div class="control-group">
+        <div class="controls">
+            <input type="submit" value="Submit" class="btn btn-primary"/>
+        </div>
   </div>
 
 </template>
