@@ -5,12 +5,7 @@
        <p class = "postPageTitle"> And stop asking everyone you know for everything you need</p>
    </div>
 
-
 <div class="mainPostPage"> 
-    <div id="leftbar">
-        
-    </div>
-    
     <div id="rightbar">
         <div class="div3">
             <div class="div4">
@@ -81,20 +76,23 @@
                 Price
             <input name="emails" type="text" value="" placeholder="$25" class = "inputPost price"/>
         </div>
-        <div class="div3 descriptionDiv">
-          Description
-            <textarea name="emails" type="text" value="" placeholder="Used for one semester, in good condition" class = "inputPost descriptionInput"></textarea>
+        <div class="div3 descDiv">Description
+          <div class = "textArea"><textarea name="emails" type="text" value="" placeholder="Used for one semester, in good condition" class = "inputPost descriptionInput"></textarea></div>
         </div>
         <div class="div3">
           Reply-To
             <input name="emails" type="text" value="" placeholder="Jake Noonan" class = "inputPost replyName name"/>
             Reply-To Email
             <input name="emails" type="text" value="" placeholder="noonanja@wharton.upenn.edu" class = "inputPost replyEmail"/>
-        </div>
+
+</div>
+      <div class = "continue">
+        <button class = "buttonListings">
+            <a href="{{pathFor 'postContinue'}}" data-toggle="dropdown" class="dropdown-toggle" id ="listingDropdown">Continue</a>
+        </button>
       </div>
+      </div>
+        <button data-text-swap="Show">Hide</button>
     </div>
-
-
-
    
 </template>
