@@ -5,5 +5,18 @@
 			<h3><a href="{{pathFor 'postPage'}}">{{title}}</a></h3>
 			{{#if ownPost}} Edit Post {{/if}}
 		</div>
+		{{#each dataEntries}}
+          <div class="col-sm-6 col-lg-2">
+            <div class="thumbnail">
+              {{#if isImage}}
+                <a href="{{link}}"><img class="img-thumbnail" alt="[ preview of {{shortFilename 16}} will display here ]" src="{{link}}" width="150"></a>
+                <div class="caption text-center"><a href="{{link}}?download=true">{{shortFilename 16}}</a></div>
+              {{else}}
+                <span class="text-muted text-center">No preview</span>
+              {{/if}}
+            </div>
+	      </div>
+	     {{/each}}  
 	</div>
 </template>
+

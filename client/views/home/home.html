@@ -16,14 +16,14 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">{{> loginButtons}}</a>
+                        <a class="page-scroll">{{> loginButtons}}</a>
                     </li>
 
                     <li>
-                        <a class="page-scroll" href="#services">Listings</a>
+                        <a class="page-scroll" id="listingsScroll">Listings</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a class="page-scroll" id="contactScroll">Contact</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="{{pathFor 'postSubmit'}}">Post a Listing</a>
@@ -88,12 +88,13 @@
     
 </div>
 
-
+    <span id = "listings">
     {{> listingsList}}
-
+    </span>
     
+    <span id ="contact">
     {{> contact}}
-    
+    </span>
 
     {{> footer}}
 
