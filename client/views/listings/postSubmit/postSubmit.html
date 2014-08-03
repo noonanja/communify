@@ -20,16 +20,16 @@
                     <ul class="dropdown-menu" id="menu1">
                         <li class = "forSaleOption">
                         {{#each forSale1}}
-                        <a role="menuitem" tabindex="-1" href="#">{{> listingPostSubmit}}</a>
+                        <a role="menuitem" tabindex="-1" href="#" class =  "option">{{> listingPostSubmit}}</a>
                         {{/each}}  
                     </li>
                     </ul>
                   </div>
                   <div class="span6">
                     <ul class="dropdown-menu" id="menu1">
-                      <li>
+                      <li class = "forSaleOption">
                       {{#each forSale2}}
-                        <a role="menuitem" tabindex="-1" href="#">{{> listingPostSubmit}}</a>
+                        <a role="menuitem" tabindex="-1" href="#" class = "option">{{> listingPostSubmit}}</a>
                         {{/each}}
                     </li>
                     </ul>
@@ -42,9 +42,9 @@
             <button class = "buttonListings dropdown housing">
                   <a href="#" data-toggle="dropdown" class="dropdown-toggle" id ="listingDropdown"><i class="fa fa-home"></i>&nbsp;&nbsp;Housing</a>
                   <ul class="dropdown-menu" id="menu1">
-                    <li role="presentation">
+                    <li class = "housingOption">
                         {{#each housing}}
-                        <a role="menuitem" tabindex="-1" href="#">{{> listingPostSubmit}}</a>
+                        <a role="menuitem" tabindex="-1" href="#" class = "option">{{> listingPostSubmit}}</a>
                         {{/each}}
                     </li>
                 </ul>
@@ -52,9 +52,9 @@
             <button class = "buttonListings dropdown community">
                   <a href="#" data-toggle="dropdown" class="dropdown-toggle" id ="listingDropdown"><i class="fa fa-users"></i>&nbsp;&nbsp;Community</a>
                   <ul class="dropdown-menu" id="menu1">
-                    <li role="presentation">
+                    <li class = "communityOption">
                         {{#each community}}
-                        <a role="menuitem" tabindex="-1" href="#">{{> listingPostSubmit}}</a>
+                        <a role="menuitem" tabindex="-1" href="#" class = "option">{{> listingPostSubmit}}</a>
                         {{/each}}
                     </li>
                 </ul>
@@ -62,9 +62,9 @@
             <button class = "buttonListings dropdown jobs">
                   <a href="#" data-toggle="dropdown" class="dropdown-toggle" id ="listingDropdown"><i class="fa fa-briefcase"></i>&nbsp;&nbsp;Jobs</a>
                   <ul class="dropdown-menu" id="menu1">
-                    <li role="presentation">
+                    <li class = "jobsOption">
                         {{#each jobs}}
-                        <a role="menuitem" tabindex="-1" href="#">{{> listingPostSubmit}}</a>
+                        <a role="menuitem" tabindex="-1" href="#" class = "option">{{> listingPostSubmit}}</a>
                         {{/each}}
                     </li>
                 </ul>
@@ -98,13 +98,58 @@
 
 <body>
  
-<p>First Paragraph</p>
- 
 <script>
+var bool = false;
+$( ".option" ).click(function() {
+  if (!bool) {
+  var htmlString = $( this ).text();
+  $( this ).text( htmlString );
+  var div = document.createElement("div");
+  div.style.display = "inline";
+  div.style.marginLeft = "-15px";
+  div.style.padding = "22px 10px 22px 10px";
+  div.style.background = "white";
+  div.style.color = "rgb(230,230,230)";
+  div.style.border = "1px solid rgb(230,230,230)";
+  div.style.fontSize = "15px";
+  div.innerHTML = "&#9654;";
+  var div2 = document.createElement("div");
+  div2.style.display = "inline";
+  div2.style.marginLeft = "-12px";
+  div2.style.padding = "22px 45px 22px 45px";
+  div2.style.background = "white";
+  div2.style.border = "1px solid rgb(230,230,230)";
+  div2.style.borderLeft = "none";
+  div2.style.fontSize = "15px";
+  div2.innerHTML = htmlString;
+  $( ".div4" ).append(div);
+  $( ".div4" ).append( div2);
+  bool = !bool;
+  $( ".dropdown" ).css("background", "rgb(230,230,230)");
+  $( ".dropdown:hover .dropdown-menu" ).css("display", "none");
+} else {
+
+}
+});
 $( " .forSaleOption " ).click(function() {
   $( ".housing" ).slideUp();
   $( ".community" ).slideUp();
   $( ".jobs" ).slideUp();
+});
+$( " .housingOption " ).click(function() {
+  $( ".forSale" ).slideUp();
+  $( ".community" ).slideUp();
+  $( ".jobs" ).slideUp();
+});
+$( " .communityOption " ).click(function() {
+  $( ".forSale" ).slideUp();
+  $( ".housing" ).slideUp();
+  $( ".jobs" ).slideUp();
+});
+$( " .jobsOption " ).click(function() {
+  $( ".forSale" ).slideUp();
+  $( ".housing" ).slideUp();
+  $( ".community" ).slideUp();
 });
 </script>
  

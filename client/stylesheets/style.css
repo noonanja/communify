@@ -1,4 +1,9 @@
 /* POST PAGE */ 
+.rightCaret {
+    font-size: 40px;
+    color: gray;
+}
+
 .minWidthFix {
     min-width: 825px;
 }
