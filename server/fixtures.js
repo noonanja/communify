@@ -8,7 +8,7 @@ var forSaleData = [ {
     count: 0,
     category: 'forSale'
 }, {
-    title: 'Books and Textbooks',
+    title: 'Books',
     count: 0,
     category: 'forSale'
 }, {
@@ -171,120 +171,104 @@ if (Listings.find().count() === 0) {
     }
 }
 // ===============================================================
-
-
+ 
 if (Posts.find().count() === 0) {
-    var now = new Date().getTime();
-    Posts.insert({
-        category: 'Animals',
-        author: '50 Cent',
-        title: 'Selling Iguana',
-        submitted: now,
-        price: 500,
-        text: "I'm selling my mofo Iguanna boyz", 
-        image: null, 
-        flagged: false
-    });
-    Posts.insert({
-        category: 'Events',
-        author: 'Tom Coleman',
-        title: 'MGMT101 textbook', 
-        submitted: now,
-        price: 200,
-        text: "I'm selling my mofo textbook boyz",
-        image: null,
-        flagged: false
+  
+  var tomId = Meteor.users.insert({
+    profile: { name: 'Tom Coleman' }
+  });
+  for (var i = 0; i < 4; i++) {
+    var post = {
+      category: 'Animals',
+      authors: 'Jake Noonan',
+      title: 'Test post #' + i,
+      emails: 'noonanja@wharton.upenn.edu',
+      description: 'This is a description. Act quickly before this post is gone.',
+      price: null,
+      userId: tomId, 
+      // username: user.username, 
+      submitted: new Date().getTime(), 
+      flagged: false
+    }
+    Posts.insert(post);
+    // update the count for this category (Listing title)
+    var id = Listings.findOne({title: post.category})._id;
+    Listings.update(id, {$inc: {count: 1}});
+  };
 
-    });
-    Posts.insert({
-        category: 'Events',
-        author: 'Steve Aoki',
-        title: 'Yard Sale',
-        submitted: now,
-        price: null,
-        text: "I'm selling my YARD SALE boyz",
-        image: null,
-        flagged: false
-    }); 
-    Posts.insert({
-        category: 'Human Research Subjects',
-        author: 'J Money',
-        title: 'Yard Sale',
-        submitted: now,
-        price: null,
-        text: "I'm selling my YARD SALE boyz",
-        image: null,
-        flagged: false
-    }); 
-    Posts.insert({
-        category: 'Activities',
-        author: 'Joe',
-        title: 'Yard Sale',
-        submitted: now,
-        price: null,
-        text: "I'm selling my YARD SALE boyz",
-        image: null,
-        flagged: false
-    }); 
-    Posts.insert({
-        category: 'House Sales',
-        author: 'The Maine',
-        title: 'Yard Sale',
-        submitted: now,
-        price: null,
-        text: "I'm selling my YARD SALE boyz",
-        image: null,
-        flagged: false
-    }); 
-    Posts.insert({
-        category: 'Housing Wanted',
-        author: 'Lebron',
-        title: 'Yard Sale',
-        submitted: now,
-        price: null,
-        text: "I'm selling my YARD SALE boyz",
-        image: null,
-        flagged: false
-    }); 
-    Posts.insert({
-        category: 'Groups',
-        author: 'Jeff',
-        title: 'Yard Sale',
-        submitted: now,
-        price: null,
-        text: "I'm selling my YARD SALE boyz",
-        image: null,
-        flagged: false
-    }); 
-    Posts.insert({
-        category: 'Needed',
-        author: 'Oprah',
-        title: 'Yard Sale',
-        submitted: now,
-        price: null,
-        text: "I'm selling my YARD SALE boyz",
-        image: null,
-        flagged: false
-    }); 
-    Posts.insert({
-        category: 'Animals',
-        author: 'Randy Johnson',
-        title: 'Yard Sale',
-        submitted: now,
-        price: null,
-        text: "I'm selling my YARD SALE boyz",
-        image: null,
-        flagged: false
-    }); 
-    Posts.insert({
-        category: 'Animals',
-        author: 'Tom',
-        title: 'Yard Sale',
-        submitted: now,
-        price: null,
-        text: "I'm selling my YARD SALE boyz",
-        image: null,
-        flagged: false
-    }); 
+  for (var i = 0; i < 24; i++) {
+    var post = {
+      category: 'Subleases',
+      authors: 'Jake Noonan',
+      title: 'Test post #' + i,
+      emails: 'noonanja@wharton.upenn.edu',
+      description: 'This is a description. Act quickly before this post is gone.',
+      price: null,
+      userId: tomId, 
+      // username: user.username, 
+      submitted: new Date().getTime(), 
+      flagged: false
+    }
+    Posts.insert(post);
+    // update the count for this category (Listing title)
+    var id = Listings.findOne({title: post.category})._id;
+    Listings.update(id, {$inc: {count: 1}});
+  };
 
+  for (var i = 0; i < 11; i++) {
+    var post = {
+      category: 'Bikes',
+      authors: 'Jake Noonan',
+      title: 'Test post #' + i,
+      emails: 'noonanja@wharton.upenn.edu',
+      description: 'This is a description. Act quickly before this post is gone.',
+      price: null,
+      userId: tomId, 
+      // username: user.username, 
+      submitted: new Date().getTime(), 
+      flagged: false
+    }
+    var postId = Posts.insert(post);
+    // update the count for this category (Listing title)
+    var id = Listings.findOne({title: post.category})._id;
+    Listings.update(id, {$inc: {count: 1}});
+  };
+
+  for (var i = 0; i < 6; i++) {
+    var post = {
+      category: 'Events',
+      authors: 'Jake Noonan',
+      title: 'Test post #' + i,
+      emails: 'noonanja@wharton.upenn.edu',
+      description: 'This is a description. Act quickly before this post is gone.',
+      price: null,
+      userId: tomId, 
+      // username: user.username, 
+      submitted: new Date().getTime(), 
+      flagged: false
+    }
+    var postId = Posts.insert(post);
+    // update the count for this category (Listing title)
+    var id = Listings.findOne({title: post.category})._id;
+    Listings.update(id, {$inc: {count: 1}});
+  };
+
+  for (var i = 0; i < 102; i++) {
+    var post = {
+      category: 'Books',
+      authors: 'Jake Noonan',
+      title: 'Test post #' + i,
+      emails: 'noonanja@wharton.upenn.edu',
+      description: 'This is a description. Act quickly before this post is gone.',
+      price: null,
+      userId: tomId, 
+      // username: user.username, 
+      submitted: new Date().getTime(), 
+      flagged: false
+    }
+    var postId = Posts.insert(post);
+    // update the count for this category (Listing title)
+    var id = Listings.findOne({title: post.category})._id;
+    Listings.update(id, {$inc: {count: 1}});
+  };
 }

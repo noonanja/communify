@@ -1,4 +1,5 @@
 Template.home.events({
+  // Automatic scrolling
   'click #listingsScroll': function(e) {
   	e.preventDefault();
     $('html, body').animate({

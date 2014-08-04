@@ -1,12 +1,12 @@
 <template name="postsList">
     {{#each postsWithRank}}
    <!-- Since our animation (from sorting and limiting number displayed) will affect our DOM element’s CSS attributes and classes, we’ll add a dynamic {{attributes}} helper. -->
-	<div class="post" {{attributes}}>
-		<div class="post-content">
-			<h3><a href="{{pathFor 'postPage'}}">{{title}}</a></h3>
-			{{#if ownPost}} Edit Post {{/if}}
-		</div>
-		{{#each dataEntries}}
+  <div class="post" {{attributes}}>
+    <div class="post-content">
+      <h3><a href="{{pathFor 'postPage'}}">{{title}}</a></h3>
+      {{#if ownPost}} Edit Post {{/if}}
+    </div>
+    {{#each dataEntries}}
           <div class="col-sm-6 col-lg-2">
             <div class="thumbnail">
               {{#if isImage}}
@@ -16,9 +16,9 @@
                 <span class="text-muted text-center">No preview</span>
               {{/if}}
             </div>
-	      </div>
-	     {{/each}}  
-	</div>
+        </div>
+       {{/each}}  
+  </div>
 
     {{/each}}
 
