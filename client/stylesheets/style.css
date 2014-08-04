@@ -1,4 +1,5 @@
 /* POST PAGE */ 
+
 .rightCaret {
     font-size: 40px;
     color: gray;
@@ -139,7 +140,7 @@
 
 .buttonListings {
     position:relative;
-    margin: -3px;
+    margin-right: -7px;
     padding: 20px 40px 20px 40px;
     background-color: white;
     border: solid;

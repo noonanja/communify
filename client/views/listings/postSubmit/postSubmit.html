@@ -8,28 +8,28 @@
 
 <div class="mainPostPage"> 
     <div id="rightbar">
-        <div class="div3">
+        <div class="div3 categorySection">
             <div class="div4">
                 Category
-                <button class = "buttonListings dropdown forSale">
+                <button class = "buttonListings dropdown forSale" id="forSale">
                   <a href="#" data-toggle="dropdown" class="dropdown-toggle" id ="listingDropdown"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;For Sale</a>
                   <div class="dropdown-menu multi-column">
               <div class="container-fluid">
                 <div class="row-fluid">
                   <div class="span6">
-                    <ul class="dropdown-menu" id="menu1">
+                    <ul class="dropdown-menu" >
                         <li class = "forSaleOption">
                         {{#each forSale1}}
-                        <a role="menuitem" tabindex="-1" href="#" class =  "option">{{> listingPostSubmit}}</a>
+                        <a role="menuitem" tabindex="-1" href="#" class =  "option" id="menu1">{{> listingPostSubmit}}</a>
                         {{/each}}  
                     </li>
                     </ul>
                   </div>
                   <div class="span6">
-                    <ul class="dropdown-menu" id="menu1">
+                    <ul class="dropdown-menu" id="menu2">
                       <li class = "forSaleOption">
                       {{#each forSale2}}
-                        <a role="menuitem" tabindex="-1" href="#" class = "option">{{> listingPostSubmit}}</a>
+                        <a role="menuitem" tabindex="-1" href="#" class = "option" id="menu1">{{> listingPostSubmit}}</a>
                         {{/each}}
                     </li>
                     </ul>
@@ -39,32 +39,32 @@
             </div>
 
             </button>
-            <button class = "buttonListings dropdown housing">
+            <button class = "buttonListings dropdown housing" id="housing">
                   <a href="#" data-toggle="dropdown" class="dropdown-toggle" id ="listingDropdown"><i class="fa fa-home"></i>&nbsp;&nbsp;Housing</a>
-                  <ul class="dropdown-menu" id="menu1">
-                    <li class = "housingOption">
+                  <ul class="dropdown-menu" id="menu3">
+                    <li role="menuitem" tabindex="-1" href="#" class = "option" id="menu2">
                         {{#each housing}}
-                        <a role="menuitem" tabindex="-1" href="#" class = "option">{{> listingPostSubmit}}</a>
+                        <a role="menuitem" tabindex="-1" href="#" class = "option" id="menu2">{{> listingPostSubmit}}</a>
                         {{/each}}
                     </li>
                 </ul>
             </button>
-            <button class = "buttonListings dropdown community">
+            <button class = "buttonListings dropdown community" id="community">
                   <a href="#" data-toggle="dropdown" class="dropdown-toggle" id ="listingDropdown"><i class="fa fa-users"></i>&nbsp;&nbsp;Community</a>
-                  <ul class="dropdown-menu" id="menu1">
+                  <ul class="dropdown-menu" id="menu4">
                     <li class = "communityOption">
                         {{#each community}}
-                        <a role="menuitem" tabindex="-1" href="#" class = "option">{{> listingPostSubmit}}</a>
+                        <a role="menuitem" tabindex="-1" href="#" class = "option" id="menu3">{{> listingPostSubmit}}</a>
                         {{/each}}
                     </li>
                 </ul>
             </button>
-            <button class = "buttonListings dropdown jobs">
+            <button class = "buttonListings dropdown jobs" id = "jobs">
                   <a href="#" data-toggle="dropdown" class="dropdown-toggle" id ="listingDropdown"><i class="fa fa-briefcase"></i>&nbsp;&nbsp;Jobs</a>
                   <ul class="dropdown-menu" id="menu1">
                     <li class = "jobsOption">
                         {{#each jobs}}
-                        <a role="menuitem" tabindex="-1" href="#" class = "option">{{> listingPostSubmit}}</a>
+                        <a role="menuitem" tabindex="-1" href="#" class = "option" id="menu4">{{> listingPostSubmit}}</a>
                         {{/each}}
                     </li>
                 </ul>
@@ -97,61 +97,16 @@
   </div>
 
 <body>
- 
-<script>
-var bool = false;
-$( ".option" ).click(function() {
-  if (!bool) {
-  var htmlString = $( this ).text();
-  $( this ).text( htmlString );
-  var div = document.createElement("div");
-  div.style.display = "inline";
-  div.style.marginLeft = "-15px";
-  div.style.padding = "22px 10px 22px 10px";
-  div.style.background = "white";
-  div.style.color = "rgb(230,230,230)";
-  div.style.border = "1px solid rgb(230,230,230)";
-  div.style.fontSize = "15px";
-  div.innerHTML = "&#9654;";
-  var div2 = document.createElement("div");
-  div2.style.display = "inline";
-  div2.style.marginLeft = "-12px";
-  div2.style.padding = "22px 45px 22px 45px";
-  div2.style.background = "white";
-  div2.style.border = "1px solid rgb(230,230,230)";
-  div2.style.borderLeft = "none";
-  div2.style.fontSize = "15px";
-  div2.innerHTML = htmlString;
-  $( ".div4" ).append(div);
-  $( ".div4" ).append( div2);
-  bool = !bool;
-  $( ".dropdown" ).css("background", "rgb(230,230,230)");
-  $( ".dropdown:hover .dropdown-menu" ).css("display", "none");
-} else {
 
-}
-});
-$( " .forSaleOption " ).click(function() {
-  $( ".housing" ).slideUp();
-  $( ".community" ).slideUp();
-  $( ".jobs" ).slideUp();
-});
-$( " .housingOption " ).click(function() {
-  $( ".forSale" ).slideUp();
-  $( ".community" ).slideUp();
-  $( ".jobs" ).slideUp();
-});
-$( " .communityOption " ).click(function() {
-  $( ".forSale" ).slideUp();
-  $( ".housing" ).slideUp();
-  $( ".jobs" ).slideUp();
-});
-$( " .jobsOption " ).click(function() {
-  $( ".forSale" ).slideUp();
-  $( ".housing" ).slideUp();
-  $( ".community" ).slideUp();
-});
-</script>
- 
+
+
+
+
+
+
+
+<!-- <button id="1" onClick="reply_click(this.id)">B1</button>
+<button id="2" onClick="reply_click(this.id)">B2</button>
+<button id="3" onClick="reply_click(this.id)">B3</button> -->
 </body>
 </template>
