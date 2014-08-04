@@ -172,103 +172,103 @@ if (Listings.find().count() === 0) {
 }
 // ===============================================================
  
-if (Posts.find().count() === 0) {
+// if (Posts.find().count() === 0) {
   
-  var tomId = Meteor.users.insert({
-    profile: { name: 'Tom Coleman' }
-  });
-  for (var i = 0; i < 4; i++) {
-    var post = {
-      category: 'Animals',
-      authors: 'Jake Noonan',
-      title: 'Test post #' + i,
-      emails: 'noonanja@wharton.upenn.edu',
-      description: 'This is a description. Act quickly before this post is gone.',
-      price: null,
-      userId: tomId, 
-      // username: user.username, 
-      submitted: new Date().getTime(), 
-      flagged: false
-    }
-    Posts.insert(post);
-    // update the count for this category (Listing title)
-    var id = Listings.findOne({title: post.category})._id;
-    Listings.update(id, {$inc: {count: 1}});
-  };
+//   var tomId = Meteor.users.insert({
+//     profile: { name: 'Tom Coleman' }
+//   });
+//   for (var i = 0; i < 4; i++) {
+//     var post = {
+//       category: 'Animals',
+//       authors: 'Jake Noonan',
+//       title: 'Test post #' + i,
+//       emails: 'noonanja@wharton.upenn.edu',
+//       description: 'This is a description. Act quickly before this post is gone.',
+//       price: null,
+//       userId: tomId, 
+//       // username: user.username, 
+//       submitted: new Date().getTime(), 
+//       flagged: false
+//     }
+//     Posts.insert(post);
+//     // update the count for this category (Listing title)
+//     var id = Listings.findOne({title: post.category})._id;
+//     Listings.update(id, {$inc: {count: 1}});
+//   };
 
-  for (var i = 0; i < 24; i++) {
-    var post = {
-      category: 'Subleases',
-      authors: 'Jake Noonan',
-      title: 'Test post #' + i,
-      emails: 'noonanja@wharton.upenn.edu',
-      description: 'This is a description. Act quickly before this post is gone.',
-      price: null,
-      userId: tomId, 
-      // username: user.username, 
-      submitted: new Date().getTime(), 
-      flagged: false
-    }
-    Posts.insert(post);
-    // update the count for this category (Listing title)
-    var id = Listings.findOne({title: post.category})._id;
-    Listings.update(id, {$inc: {count: 1}});
-  };
+//   for (var i = 0; i < 24; i++) {
+//     var post = {
+//       category: 'Subleases',
+//       authors: 'Jake Noonan',
+//       title: 'Test post #' + i,
+//       emails: 'noonanja@wharton.upenn.edu',
+//       description: 'This is a description. Act quickly before this post is gone.',
+//       price: null,
+//       userId: tomId, 
+//       // username: user.username, 
+//       submitted: new Date().getTime(), 
+//       flagged: false
+//     }
+//     Posts.insert(post);
+//     // update the count for this category (Listing title)
+//     var id = Listings.findOne({title: post.category})._id;
+//     Listings.update(id, {$inc: {count: 1}});
+//   };
 
-  for (var i = 0; i < 11; i++) {
-    var post = {
-      category: 'Bikes',
-      authors: 'Jake Noonan',
-      title: 'Test post #' + i,
-      emails: 'noonanja@wharton.upenn.edu',
-      description: 'This is a description. Act quickly before this post is gone.',
-      price: null,
-      userId: tomId, 
-      // username: user.username, 
-      submitted: new Date().getTime(), 
-      flagged: false
-    }
-    var postId = Posts.insert(post);
-    // update the count for this category (Listing title)
-    var id = Listings.findOne({title: post.category})._id;
-    Listings.update(id, {$inc: {count: 1}});
-  };
+//   for (var i = 0; i < 11; i++) {
+//     var post = {
+//       category: 'Bikes',
+//       authors: 'Jake Noonan',
+//       title: 'Test post #' + i,
+//       emails: 'noonanja@wharton.upenn.edu',
+//       description: 'This is a description. Act quickly before this post is gone.',
+//       price: null,
+//       userId: tomId, 
+//       // username: user.username, 
+//       submitted: new Date().getTime(), 
+//       flagged: false
+//     }
+//     var postId = Posts.insert(post);
+//     // update the count for this category (Listing title)
+//     var id = Listings.findOne({title: post.category})._id;
+//     Listings.update(id, {$inc: {count: 1}});
+//   };
 
-  for (var i = 0; i < 6; i++) {
-    var post = {
-      category: 'Events',
-      authors: 'Jake Noonan',
-      title: 'Test post #' + i,
-      emails: 'noonanja@wharton.upenn.edu',
-      description: 'This is a description. Act quickly before this post is gone.',
-      price: null,
-      userId: tomId, 
-      // username: user.username, 
-      submitted: new Date().getTime(), 
-      flagged: false
-    }
-    var postId = Posts.insert(post);
-    // update the count for this category (Listing title)
-    var id = Listings.findOne({title: post.category})._id;
-    Listings.update(id, {$inc: {count: 1}});
-  };
+//   for (var i = 0; i < 6; i++) {
+//     var post = {
+//       category: 'Events',
+//       authors: 'Jake Noonan',
+//       title: 'Test post #' + i,
+//       emails: 'noonanja@wharton.upenn.edu',
+//       description: 'This is a description. Act quickly before this post is gone.',
+//       price: null,
+//       userId: tomId, 
+//       // username: user.username, 
+//       submitted: new Date().getTime(), 
+//       flagged: false
+//     }
+//     var postId = Posts.insert(post);
+//     // update the count for this category (Listing title)
+//     var id = Listings.findOne({title: post.category})._id;
+//     Listings.update(id, {$inc: {count: 1}});
+//   };
 
-  for (var i = 0; i < 102; i++) {
-    var post = {
-      category: 'Books',
-      authors: 'Jake Noonan',
-      title: 'Test post #' + i,
-      emails: 'noonanja@wharton.upenn.edu',
-      description: 'This is a description. Act quickly before this post is gone.',
-      price: null,
-      userId: tomId, 
-      // username: user.username, 
-      submitted: new Date().getTime(), 
-      flagged: false
-    }
-    var postId = Posts.insert(post);
-    // update the count for this category (Listing title)
-    var id = Listings.findOne({title: post.category})._id;
-    Listings.update(id, {$inc: {count: 1}});
-  };
-}
+//   for (var i = 0; i < 102; i++) {
+//     var post = {
+//       category: 'Books',
+//       authors: 'Jake Noonan',
+//       title: 'Test post #' + i,
+//       emails: 'noonanja@wharton.upenn.edu',
+//       description: 'This is a description. Act quickly before this post is gone.',
+//       price: null,
+//       userId: tomId, 
+//       // username: user.username, 
+//       submitted: new Date().getTime(), 
+//       flagged: false
+//     }
+//     var postId = Posts.insert(post);
+//     // update the count for this category (Listing title)
+//     var id = Listings.findOne({title: post.category})._id;
+//     Listings.update(id, {$inc: {count: 1}});
+//   };
+// }

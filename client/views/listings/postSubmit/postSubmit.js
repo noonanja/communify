@@ -88,6 +88,8 @@ Template.postSubmit.events({
   div.style.fontSize = "19px";
   div.innerHTML = "Sub-Category";
   var div2 = document.createElement("button");
+  divv.attr("id","subCategory");
+  console.log(divv.attr("id","subCategory"));
   div2.style.display = "inline";
   div2.style.marginLeft = "5px";
   div2.style.padding = "20px 40px 20px 40px";
@@ -114,14 +116,3 @@ Template.postSubmit.events({
 
 
 });
-// var bool = false;
-
-
-
-
-
-// $('#button').click(function() {
-  
-  
-
-// });
