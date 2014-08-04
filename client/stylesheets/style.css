@@ -1,3 +1,38 @@
+
+/* SIGN UP MODAL */
+.modal-footer {
+    padding: 10px;
+}
+
+.col-md-4 {
+    width:auto;
+}
+
+.modal {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.modal-body {
+    padding:0;
+
+}
+
+.containerListings {
+    background-color: #edefed;
+}
+
+.modal-dialog {
+    max-width: 325px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.modal-content{
+    background-color: rgba(255,255,255,.95);
+    max-width: 325px;
+}
+
+
 /* POST PAGE */ 
 
 .rightCaret {
@@ -226,6 +261,7 @@
 .container {
     width: auto;
     margin-left: 15px;
+
 }
 
 #postListing {
