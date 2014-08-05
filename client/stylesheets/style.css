@@ -1188,10 +1188,19 @@ body {
   min-height:100%;
 }
 /*SEARCH STYLES=========================================*/
-#search {
-    color: blue;
+#srch-term {
+    color: black;
+    text-align: center;
+    font-size: 14px;
+    height: 34px;
+    width: 100%;
 }
-
+.searchIcon {
+    border-radius: 0px;
+}
+.dropdown-menuSearch{
+    width: 100%;
+}
 
 /* Styling for post page===========================================*/
 #sidebar {
