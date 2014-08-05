@@ -1,11 +1,58 @@
 
 
 /* LISTING PAGE */
+#contentwrapper{
+float: left;
+width: 100%;
+}
 
-@media (min-width: 768px) { .navbar-form .input-group .input-group-addon, .navbar-form .input-group .input-group-btn, .navbar-form .input-group .form-control {
+#contentcolumn{
+margin-left: 23px; /*Set left margin to LeftColumnWidth*/
+}
+
+#leftcolumn{
+float: left;
+width: 23px; /*Width of left column*/
+margin-left: -100%;
+margin-top: 5px;
+}
+
+.glyphicon {
+    top: 0px;
+    line-height: 0;
+}
+.glyphicon-search {
+    font-size: 23px;
+    display: inline;
+    vertical-align: middle;
+    
+}
+
+.searchListings {
+    font-size: 20px;
+    border: none;
+    box-shadow: none;
+
+}
+
+.searchListings:focus {
+    font-size: 20px;
+    border: none;
+    box-shadow: none;
+
+}
+
+/*@media (min-width: 998px) {
+.searchListings {
+    max-width: 92%;
+    margin-left: 0px;
+
+}
+}*/
+/*@media (min-width: 768px) { .navbar-form .input-group .input-group-addon, .navbar-form .input-group .input-group-btn, .navbar-form .input-group .form-control {
     width:190px;
 }
-}
+}*/
 .navbar-form {
     margin-top: 0px;
     margin-bottom: 0px;
@@ -294,16 +341,11 @@
 /* END OF POST PAGE */
 
 
-@media (min-width: 768px) {
-    .container {
-        margin-left: 15px;
-        padding-left: 0px;
-    }
-}
+
 
 .container {
     width: auto;
-    margin-left: 15px;
+    margin-left: 0px;
 
 }
 

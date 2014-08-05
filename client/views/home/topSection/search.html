@@ -1,0 +1,46 @@
+<template name ="search">
+{{> leaderboard}}
+</template>
+
+<template name="leaderboard">
+    <form class="navbar-form" role="search">
+        <div class="input-group">
+        <div class="search-input dropdown dropdown-toggle btn-default" data-toggle="dropdown" style="display: -webkit-inline-box">
+                {{> esInput index="postsSearch" id="srch-term" placeholder=" Search listings" convertnumber=true }}
+                <div class="input-group-btn">
+                    <button class="btn btn-default searchIcon" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                </div>
+                <ul class="dropdown-menu dropdown-menuSearch">
+                    <li class = "jobsOption">
+                        {{#ifEsIsSearching index="postsSearch" id="search" logic="OR" }}
+                        <a role="menuitem" tabindex="-1" href="#" class = "option"> 
+                           Searching...
+                       </a>
+                       {{/ifEsIsSearching}}
+
+                       {{#if inputIsNotEmpty}}    
+                       {{#esEach index="postsSearch" id="search" options=esOptions}}
+                       <a role="menuitem" tabindex="-1" href="#" class = "option">
+                        {{> player}}
+                    </a>
+                    {{/esEach}}
+
+                    {{#ifEsHasNoResults index="postsSearch" id="search" logic="OR" }}
+                    <span style="margin-left: 10px">No results found!</span>
+                    {{/ifEsHasNoResults}}                            
+                    {{/if}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</form>   
+
+
+
+
+</template>
+
+<template name="player">
+    <span style="cursor: pointer"><strong>{{title}}</strong></span>
+    {{description}}
+</template>
