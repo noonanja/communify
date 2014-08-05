@@ -1,102 +1,98 @@
 <template name="postSubmit">
-    {{postContext}}
+  {{postContext}}
   <div class = "minWidthFix">
     <div class = "titlePost">
-       <h3 class = "postPageTitle">Submit a Listing</h3>
-       <p class = "postPageTitle"> And stop asking everyone you know for everything you need</p>
+     <h3 class = "postPageTitle">Submit a Listing</h3>
+     <p class = "postPageTitle"> And stop asking everyone you know for everything you need</p>
    </div>
 
-<div class="mainPostPage"> 
+   <div class="mainPostPage"> 
     <div id="rightbar">
-        <div class="div3 categorySection">
-            <div class="div4">
-                Category
-                <button class = "buttonListings dropdown forSale" id="forSale">
-                  <a href="#" data-toggle="dropdown" class="dropdown-toggle" id ="listingDropdown"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;For Sale</a>
-                  <div class="dropdown-menu multi-column">
+      <div class="div3 categorySection">
+        <div class="div4">
+          Category
+          <button class = "buttonListings dropdown forSale" id="forSale">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle" id ="listingDropdown"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;For Sale</a>
+            <div class="dropdown-menu multi-column">
               <div class="container-fluid">
                 <div class="row-fluid">
                   <div class="span6">
                     <ul class="dropdown-menu" >
-                        <li class = "forSaleOption">
+                      <li class = "forSaleOption">
                         {{#each forSale1}}
                         <a role="menuitem" tabindex="-1" href="#" class =  "option" id="menu1">{{> listingPostSubmit}}</a>
                         {{/each}}  
-                    </li>
+                      </li>
                     </ul>
                   </div>
                   <div class="span6">
                     <ul class="dropdown-menu" id="menu2">
                       <li class = "forSaleOption">
-                      {{#each forSale2}}
+                        {{#each forSale2}}
                         <a role="menuitem" tabindex="-1" href="#" class = "option" id="menu1">{{> listingPostSubmit}}</a>
                         {{/each}}
-                    </li>
+                      </li>
                     </ul>
                   </div>
                 </div>
               </div>
             </div>
+          </button>
+          <button class = "buttonListings dropdown housing" id="housing">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle" id ="listingDropdown"><i class="fa fa-home"></i>&nbsp;&nbsp;Housing</a>
+            <ul class="dropdown-menu" id="menu3">
+              <li role="menuitem" tabindex="-1" href="#" class = "option" id="menu2">
+                {{#each housing}}
+                <a role="menuitem" tabindex="-1" href="#" class = "option" id="menu2">{{> listingPostSubmit}}</a>
+                {{/each}}
+              </li>
+            </ul>
+          </button>
+          <button class = "buttonListings dropdown community" id="community">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle" id ="listingDropdown"><i class="fa fa-users"></i>&nbsp;&nbsp;Community</a>
+            <ul class="dropdown-menu" id="menu4">
+              <li class = "communityOption">
+                {{#each community}}
+                <a role="menuitem" tabindex="-1" href="#" class = "option" id="menu3">{{> listingPostSubmit}}</a>
+                {{/each}}
+              </li>
+            </ul>
+          </button>
+          <button class = "buttonListings dropdown jobs" id = "jobs">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle" id ="listingDropdown"><i class="fa fa-briefcase"></i>&nbsp;&nbsp;Jobs</a>
+            <ul class="dropdown-menu" id="menu1">
+              <li class = "jobsOption">
+                {{#each jobs}}
+                <a role="menuitem" tabindex="-1" href="#" class = "option" id="menu4">{{> listingPostSubmit}}</a>
+                {{/each}}
+              </li>
+            </ul>
+          </button>
+        </div>
+      </div>
+   <form>
+      <div class="div3 titleDiv">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Title
+        <!-- since forms kind of mess things up we added some style -->
+        <input style="margin-right: 70px" name="title" type="text" value="" placeholder="Acct. 102 Textbook, Roommate Wanted..." class = " titleInputPost"/>
+        Price
+        <input name="price" type="text" value="" placeholder="$25" class = "inputPost price"/> 
+      </div>
 
-            </button>
-            <button class = "buttonListings dropdown housing" id="housing">
-                  <a href="#" data-toggle="dropdown" class="dropdown-toggle" id ="listingDropdown"><i class="fa fa-home"></i>&nbsp;&nbsp;Housing</a>
-                  <ul class="dropdown-menu" id="menu3">
-                    <li role="menuitem" tabindex="-1" href="#" class = "option" id="menu2">
-                        {{#each housing}}
-                        <a role="menuitem" tabindex="-1" href="#" class = "option" id="menu2">{{> listingPostSubmit}}</a>
-                        {{/each}}
-                    </li>
-                </ul>
-            </button>
-            <button class = "buttonListings dropdown community" id="community">
-                  <a href="#" data-toggle="dropdown" class="dropdown-toggle" id ="listingDropdown"><i class="fa fa-users"></i>&nbsp;&nbsp;Community</a>
-                  <ul class="dropdown-menu" id="menu4">
-                    <li class = "communityOption">
-                        {{#each community}}
-                        <a role="menuitem" tabindex="-1" href="#" class = "option" id="menu3">{{> listingPostSubmit}}</a>
-                        {{/each}}
-                    </li>
-                </ul>
-            </button>
-            <button class = "buttonListings dropdown jobs" id = "jobs">
-                  <a href="#" data-toggle="dropdown" class="dropdown-toggle" id ="listingDropdown"><i class="fa fa-briefcase"></i>&nbsp;&nbsp;Jobs</a>
-                  <ul class="dropdown-menu" id="menu1">
-                    <li class = "jobsOption">
-                        {{#each jobs}}
-                        <a role="menuitem" tabindex="-1" href="#" class = "option" id="menu4">{{> listingPostSubmit}}</a>
-                        {{/each}}
-                    </li>
-                </ul>
-            </button>
-        </div>
-    </div>
-        <div class="div3 titleDiv">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Title
-            <input name="title" type="text" value="" placeholder="Acct. 102 Textbook, Roommate Wanted..." class = "inputPost title"/>
-                Price
-            <input name="price" type="text" value="" placeholder="$25" class = "inputPost price"/>
-        </div>
-        <div class="div3 descDiv">Description
-          <div class = "textArea"><textarea name="description" type="text" value="" placeholder="   Used for one semester, in good condition" class = "inputPost descriptionInput"></textarea></div>
-        </div>
-        <div class="div3">
-          Reply-To
-            <input name="emails" type="text" value="" placeholder="Jake Noonan" class = "inputPost replyName name"/>
-            Reply-To Email
-            <input name="authors" type="text" value="" placeholder="noonanja@wharton.upenn.edu" class = "inputPost replyEmail"/>
-
-</div>
+      <div class="div3 descDiv">Description
+        <div class = "textArea"><textarea name="description" type="text" value="" placeholder="Used for one semester, in good condition" class = "inputPost descriptionInput"></textarea></div>
+      </div>
+      <div class="div3">
+        Reply-To
+        <input name="emails" type="text" value="" placeholder="Jake Noonan" class = "inputPost replyName name"/>
+        Reply-To Email
+        <input name="authors" type="text" value="" placeholder="noonanja@wharton.upenn.edu" class = "inputPost replyEmail"/>
+      </div>
       <div class = "continue">
-        <button class = "buttonListings">
-            <a id ="continue">Continue</a>
-        </button>
+        <input type="submit" value="Post and continue" class="buttonListings"/>
       </div>
-      </div>
+    </form>
     </div>
   </div>
-
-<body>
-
-</body>
+</div>
 </template>

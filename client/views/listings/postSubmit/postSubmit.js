@@ -24,22 +24,15 @@ Template.postSubmit.helpers({
 });
 
 Template.postSubmit.events({
-  'click #continue': function(e) {
+  'submit form': function(e) {
     e.preventDefault();
-    //console.log($(e.target).find('[name=title]').val());
     var post = {
-      // category: $(e.target).find('[name=category]').val(),
-      // title: $(e.target).find('[name=title]').val(),
-      // authors: $(e.target).find('[name=authors]').val(),
-      // emails: $(e.target).find('[name=emails]').val(),
-      // description: $(e.target).find('[name=description]').val(),
-      // price: $(e.target).find('[name=price]').val() this need to be a number
       category: $("#subCategory").text(),
-      authors: 'Jake Noonan',
-      title: 'Book wanted',
-      emails: 'noonanja@wharton.upenn.edu',
-      description: 'I want an animal for a Roommate!',
-      price: null
+      title: $(e.target).find('[name=title]').val(),
+      authors: $(e.target).find('[name=authors]').val(),
+      emails: $(e.target).find('[name=emails]').val(),
+      description: $(e.target).find('[name=description]').val(),
+      price: $(e.target).find('[name=price]').val() 
     }
     
     Meteor.call('post', post, function(error, id) {
@@ -54,7 +47,6 @@ Template.postSubmit.events({
       }
     });
   },
-
 
 "click .option": function(e) {
   e.preventDefault();

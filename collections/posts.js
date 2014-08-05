@@ -30,10 +30,16 @@ Meteor.methods({
     if (!postAttributes.title)
       throw new Meteor.Error(422, 'Please name this listing');
 
-      // ensure the post has a title
+      // ensure the post has a category
     if (!postAttributes.category)
       throw new Meteor.Error(422, 'Please choose a category for this listing');
+
+    if (!postAttributes.authors)
+      throw new Meteor.Error(422, 'Please give a name for this listing!');
     
+     if (isNaN(postAttributes.price))
+      throw new Meteor.Error(422, 'Please only use integers for pricing');
+
     // check that there are no previous posts with the same link
     if (postAttributes._id && postWithSameID) {
       throw new Meteor.Error(302, 
