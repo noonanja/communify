@@ -1,6 +1,9 @@
 var POST_HEIGHT = 80;
 var Positions = new Meteor.Collection(null);
 
+// Whenever you use a cursor with forEach(), map(), or fetch(), 
+// you’ll need to rewind the cursor afterwards before it’s ready to be used again.
+
 Template.postsList.helpers({ 
 	postsWithRank: function() {
 		Posts.find({category: this.title}).rewind();
@@ -10,6 +13,7 @@ Template.postsList.helpers({
 		});
 	},
 	moreResults: function() {
+		Posts.find().rewind();
 		return parseInt(Session.get('limit')) == Posts.find().fetch().length;
 	},
 	attributes: function() {
@@ -32,6 +36,9 @@ Template.postsList.helpers({
 
 		return attributes;
 	},
+	ownPost: function() {
+    return this.userId == Meteor.userId();
+    },
 	dataEntries: function() {
 		Meteor.subscribe('singlemyData', this._id);
 		return myFiles.find({'metadata.postId': this._id});
