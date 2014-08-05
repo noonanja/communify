@@ -1,83 +1,79 @@
 <template name ="leftBarListingPage">
   <!--left-->
   <div class="col-md-3" id="leftCol">
-    {{>search}} 
-    <h3 class = "categoryHeading">
+    
+    <!-- <h3 class = "categoryHeading">
       Category List
-    </h3>
+    </h3> -->
     <div class="panel-group" id="accordion">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-              For Sale
-            </a>          </h4>
-        </div>
-        <div id="collapseOne" class="panel-collapse collapse">
-          <div class="panel-body">
-            <p class="text-muted" style="list-style: none">
-              {{#each forSale}}
-              {{> listing}}
-              {{/each}}
-            </p> 
-          </div>
-        </div>
-      </div>
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-             Housing
-           </a>
-         </h4>
-       </div>
-       <div id="collapseTwo" class="panel-collapse collapse">
-        <div class="panel-body">
-          <p class="text-muted" style="list-style: none">
-              {{#each housing}}
-              {{> listing}}
-              {{/each}}
-            </p> 
-        </div>
-      </div>
+      {{>search}} 
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          For Sale
+        </a>
+      </h4>
     </div>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-            Community
-          </a>
-        </h4>
-      </div>
-      <div id="collapseThree" class="panel-collapse collapse">
-        <div class="panel-body">
-          <p class="text-muted" style="list-style: none">
-              {{#each community}}
-              {{> listing}}
-              {{/each}}
-            </p> 
-        </div>
-      </div>
-    </div>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
-            Jobs
-          </a>
-        </h4>
-      </div>
-      <div id="collapseFour" class="panel-collapse collapse">
-        <div class="panel-body">
-          <p class="text-muted" style="list-style: none">
-              {{#each jobs}}
-              {{> listing}}
-              {{/each}}
-            </p> 
-        </div>
+    <div id="collapseOne" class="panel-collapse collapse">
+      <div class="panel-body">
+        {{#each forSale}}
+             {{> listingListingPage}}
+        {{/each}}
+
       </div>
     </div>
   </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+          Housing
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse">
+      <div class="panel-body">
+        {{#each housing}}
+              {{> listingListingPage}}
+              {{/each}}
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+          Community
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse">
+      <div class="panel-body">
+        {{#each community}}
+              {{> listingListingPage}}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+          Jobs
+        </a>
+      </h4>
+    </div>
+    <div id="collapseFour" class="panel-collapse collapse">
+      <div class="panel-body">
+        {{#each jobs}}
+              {{> listingListingPage}}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>
+    
 
   </div> <!--/left -->     
 </template>      

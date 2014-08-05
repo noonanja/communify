@@ -1,16 +1,38 @@
+
+
 /* LISTING PAGE */
 
+@media (min-width: 768px) { .navbar-form .input-group .input-group-addon, .navbar-form .input-group .input-group-btn, .navbar-form .input-group .form-control {
+    width:190px;
+}
+}
+.navbar-form {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+.listingPageContainer {
+    margin-top: 80px;
+}
+
+#LI_1 {
+    list-style: none;
+}
 .panel-heading .accordion-toggle:after {
-    /* symbol for "opening" panels */
-    font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
-    content: "\e113";    /* adjust as needed, taken from bootstrap.css */
-    float: right;        /* adjust as needed */
-    color: black;         /* adjust as needed */
+    /* symbol for "opening" panels */
+    font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
+    content: "\e113";    /* adjust as needed, taken from bootstrap.css */
+    float: right;        /* adjust as needed */
+    color: black;         /* adjust as needed */
 }
 .panel-heading .accordion-toggle.collapsed:after {
-    /* symbol for "collapsed" panels */
-    content: "\e114";    /* adjust as needed, taken from bootstrap.css */
+    /* symbol for "collapsed" panels */ /* essential for enabling glyphicon */
+    content: "\e114";    /* adjust as needed, taken from bootstrap.css */
+    /* adjust as needed, taken from bootstrap.css */
 }
+
+
 
 .panel-group .panel + .panel {
     margin-top: 0px;
@@ -25,9 +47,9 @@
     padding: 10px;
 }
 
-.col-md-4 {
+/*.col-md-4 {
     width:auto;
-}
+}*/
 
 .modal {
     margin-right: auto;
@@ -1314,4 +1336,6 @@ border-color: #eed3d7;
     display: block;
     float: right;
     margin-top: 7px; }
+
+
 
