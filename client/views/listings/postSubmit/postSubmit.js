@@ -24,24 +24,16 @@ Template.postSubmit.helpers({
 });
 
 Template.postSubmit.events({
-  'click #continue': function(e) {
+  'submit form': function(e) {
     e.preventDefault();
-    //console.log($(e.target).find('[name=title]').val());
     var post = {
-      // category: $(e.target).find('[name=category]').val(),
-      // title: $(e.target).find('[name=title]').val(),
-      // authors: $(e.target).find('[name=authors]').val(),
-      // emails: $(e.target).find('[name=emails]').val(),
-      // description: $(e.target).find('[name=description]').val(),
-      // price: $(e.target).find('[name=price]').val() this need to be a number
-      category: 'Animals',
-      authors: 'Jake Noonan',
-      title: 'Book wanted',
-      emails: 'noonanja@wharton.upenn.edu',
-      description: 'I want an animal for a Roommate!',
-      price: null
+      category: $("#subCategory").text(),
+      title: $(e.target).find('[name=title]').val(),
+      authors: $(e.target).find('[name=authors]').val(),
+      emails: $(e.target).find('[name=emails]').val(),
+      description: $(e.target).find('[name=description]').val(),
+      price: $(e.target).find('[name=price]').val() 
     }
-
     
     Meteor.call('post', post, function(error, id) {
       if (error) {
@@ -55,7 +47,6 @@ Template.postSubmit.events({
       }
     });
   },
-
 
 "click .option": function(e) {
   e.preventDefault();
@@ -87,9 +78,7 @@ Template.postSubmit.events({
   div.style.marginLeft = "25px";
   div.style.fontSize = "19px";
   div.innerHTML = "Sub-Category";
-  var div2 = document.createElement("button");
-  divv.attr("id","subCategory");
-  console.log(divv.attr("id","subCategory"));
+  var div2 = document.createElement("button"); 
   div2.style.display = "inline";
   div2.style.marginLeft = "5px";
   div2.style.padding = "20px 40px 20px 40px";
@@ -97,6 +86,10 @@ Template.postSubmit.events({
   div2.style.border = "1px solid rgb(230,230,230)";
   div2.style.fontSize = "15px";
   div2.innerHTML = htmlString;
+
+  // To submit the post
+  $(div2).attr("id","subCategory");
+
   $( ".div4" ).append(divv);
   $( ".div4" ).append(div);
   $( ".div4" ).append( div2);

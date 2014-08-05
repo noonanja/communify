@@ -12,7 +12,8 @@
       "font-awesome": {},
       "fileCollection": {},
       "numeral": {},
-      "jquery-cookie": {}
+      "jquery-cookie": {},
+      "easy-search": {}
     },
     "packages": {
       "bootstrap-3": {
@@ -32,8 +33,8 @@
       },
       "spin": {
         "git": "https://github.com/SachaG/meteor-spin.git",
-        "tag": "v2.0.3",
-        "commit": "23c1145472a710d5c93fa4beaca4e576caeb2f24"
+        "tag": "v2.0.4",
+        "commit": "f7b1e12a7caff1283cdb3671a393c182d0ae9862"
       },
       "accounts-entry": {
         "git": "https://github.com/Differential/accounts-entry.git",
@@ -59,6 +60,11 @@
         "git": "https://github.com/BenjaminRH/meteor-jquery-cookie.git",
         "tag": "v0.1.0",
         "commit": "084bc5bf612639008efe03f3948e816df44c0f36"
+      },
+      "easy-search": {
+        "git": "https://github.com/matteodem/meteor-easy-search.git",
+        "tag": "v1.0.1",
+        "commit": "438ad150d933f860462ce731965194f7f115d251"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
