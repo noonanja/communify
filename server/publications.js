@@ -11,5 +11,6 @@ Meteor.publish('singlePost', function(id) {
   return id && Posts.find(id);
 });
 
-
-
+Meteor.publish('postsSearch', function() { 
+	return Posts.find();
+});

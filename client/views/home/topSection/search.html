@@ -1,12 +1,33 @@
 <template name ="search">
-	
-	<form class="navbar-form" role="search">
-		<div class="input-group">
-			<input type="text" class="form-control" placeholder="Search classify" name="srch-term" id="srch-term">
-				<div class="input-group-btn">
-					<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
-				</div>
-		</div>
-	</form>
+	{{> leaderboard}}
+</template>
 
+<template name="leaderboard">
+    <div class="search-input">
+        {{> esInput index="postsSearch" id="search" placeholder=" Search listings" convertnumber=true }}
+        <a class="fa fa-2x fa-search" style="color:black; background-color:gray"></a>
+    </div>    
+
+    {{#ifEsIsSearching index="postsSearch" id="search" logic="OR" }}
+        <div>Searching...</div>
+    {{/ifEsIsSearching}}
+
+    <div class="leaderboard">
+        {{#if inputIsNotEmpty}}
+            {{#esEach index="postsSearch" id="search" options=esOptions}}
+                {{> player}}
+            {{/esEach}}
+
+            {{#ifEsHasNoResults index="postsSearch" id="search" logic="OR" }}
+                No results found!
+            {{/ifEsHasNoResults}}
+        {{/if}}
+    </div>
+
+</template>
+
+
+<template name="player">
+    <p style="cursor: pointer"><strong>{{title}}</strong></p>
+    {{description}}
 </template>

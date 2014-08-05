@@ -21,6 +21,7 @@
 }
 
 /* SIGN UP MODAL */
+
 .modal-footer {
     padding: 10px;
 }
@@ -1186,6 +1187,11 @@ body {
   min-width: 100%;
   min-height:100%;
 }
+/*SEARCH STYLES=========================================*/
+#search {
+    color: blue;
+}
+
 
 /* Styling for post page===========================================*/
 #sidebar {
@@ -1325,5 +1331,4 @@ border-color: #eed3d7;
   .post .discuss {
     display: block;
     float: right;
-    margin-top: 7px; }
-
+    margin-top: 7px; } 
