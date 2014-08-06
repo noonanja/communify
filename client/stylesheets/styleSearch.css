@@ -1,43 +1,39 @@
-.modalContentSearching {
-	background-color: rgba(255,255,255,.95);
-	position: relative;
-	background-color: #fff;
+.closingSearch{
+	font-size: 35px;
+	margin-right: 25px;
+	margin-left: 96%;
+	display: inline-block;
+}
+
+.esc {
+	margin-left: -7px;
+	font-size: 16px;
+	position: fixed;
+}
+#customModal {
+	max-width: 100%;
+	margin: 0px;
+	margin-left: 5%;
+	margin-top: 2%;
+	height: 90%;
+	width: 90%;
+
+	opacity: 1;
+	background-color: rgba(241, 241, 241, 0.97);
 	background-clip: padding-box;
 	border: 1px solid #999;
 	border: 1px solid rgba(0, 0, 0, .2);
-	border-radius: 6px;
-	outline: none;
+	border-radius: 3px;
 	-webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
 	box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
 }
 
-.modalDialogSearching {
-	max-width: 90%;
-    max-height: 85%;
-	width: auto;
-	box-sizing: border-box;
-	margin: auto;
-	position: relative;
+@media (min-width: 768px) {
+	#customModal  {
+		margin: 0px;
+		margin-left: 5%;
+		margin-top: 2%;
+		height: 90%;
+		width: 90%;
+	}
 }
-
-.modalSearching {
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: 1050;
-	display: none;
-	overflow: auto;
-	overflow-y: scroll;
-	-webkit-overflow-scrolling: touch;
-	outline: 0;
-}
-
-.closeSearching {
-	font-size: 25px;
-	margin: 15px;
-	margin-left: 98%;
-}
-
-
