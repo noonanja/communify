@@ -1,32 +1,19 @@
-<template name="searching">
-
-<div class="searching">search page</div>
-
-
-
-</template>
-
 <template name ="modalSearching">
   <!-- Modal (modal is being rendered in 'home' template)-->
-  <div class="modalSearching fade" id="myModalSearching" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">                                             
-      <div class="modal-content">                                          
-        <!-- <div class="modal-header">  
-        <h4>Create an Account</h4>   
-        </div>   -->                                                         
-        {{> modalBodySearching}} 
+  <div class="modalSearching fade modalDialogSearching" id="myModalSearching" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modalDialogSearching">                                             
+      <div class="modalContentSearching">                                                      
+       {{> modalBodySearching}} 
       </div>
     </div>
   </div> 
-
 </template>
+
+
+
 
 <template name = "modalBodySearching">
    <div class="modal-body" >                                        
-          
-
-        <div class="modal-footer">                   
-          <a href="#" class="btn closing" data-dismiss="modalSearching">Close</a>
-        </div> 
+ <a href="#" class="closeSearching" data-dismiss="modal">X</a>   
   </div>
 </template>

@@ -1,5 +1,3 @@
-
-
 /* LISTING PAGE */
 #contentwrapper{
 float: left;
@@ -373,6 +371,7 @@ body {
     overflow-x: hidden;
     font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
     min-width: 800px;
+    height: 100%;
 }
 
 .text-muted {
@@ -1002,6 +1001,7 @@ aside.clients img {
 
 
 /*HOME PAGE (I think?)========================================*/
+
 .page-scroll:hover {
     cursor: pointer;
 }
