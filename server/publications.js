@@ -14,3 +14,4 @@ Meteor.publish('singlePost', function(id) {
 Meteor.publish('postsSearch', function() { 
 	return Posts.find();
 });
+

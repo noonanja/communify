@@ -1,15 +1,3 @@
-.closingSearch{
-	font-size: 35px;
-	margin-right: 25px;
-	margin-left: 96%;
-	display: inline-block;
-}
-
-.esc {
-	margin-left: -7px;
-	font-size: 16px;
-	position: fixed;
-}
 #customModal {
 	max-width: 100%;
 	margin: 0px;
@@ -36,4 +24,44 @@
 		height: 90%;
 		width: 90%;
 	}
+}
+
+.closingSearch{
+	margin-right: 25px;
+	font-size: 35px;
+    display: table-caption;
+}
+
+.closingSearchAlign{
+	text-align: -webkit-right;
+    margin: 0px 15px;
+}
+
+.esc {
+	margin-left: -7px;
+	font-size: 16px;
+	position: fixed;
+}
+
+.searchTopMargin {
+   text-align: center;
+   margin-top: 9%;
+   display: -webkit-inline-box;
+}
+
+.centerSearchContainer{
+	text-align: center;
+}
+
+#srch-termModal {
+	background-color: rgba(241, 241, 241, 0.97);
+	border: none;
+	opacity: 1.1;
+	outline: none;
+	font-size: 25px;
+	margin-left: 5px;
+}
+
+.bottomSearch {
+	vertical-align: text-bottom;
 }

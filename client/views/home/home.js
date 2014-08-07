@@ -11,5 +11,10 @@ Template.home.events({
     $('html, body').animate({
         scrollTop: $("#contact").offset().top
     }, 1000);
+   },
+   'click #loadSearch': function(e) {
+    e.preventDefault;
+    console.log('click');
+    Meteor.subscribe("postsSearch");
    }
 });
