@@ -2,48 +2,72 @@
 
   <!-- Modal (modal is being rendered in 'home' template)-->
   <div class="modal fade" id="myModalSearching" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog" id="customModal">                                             
 
-      <div class="closingSearchAlign">
-       <div class="closingSearch">
-        <a href="#" data-dismiss="modal">X <span class="esc">[esc]</span></a> 
-      </div>
-    </div>
-
-
-    <div class="centerSearchContainer">
-    <div class="searchTopMargin">
-        <i class = "glyphicon glyphicon-search bottomSearch"></i>
-        <div class="search-input">
-          {{> esInput index="postsSearch" id="srch-termModal" convertnumber=true}}
+    <div class="modal-dialog" id="customModal">     
+      <div>      
+        <div class="modal-header">
+          <div class="closingSearchAlign">
+           <div class="closingSearch">
+            <a href="#" data-dismiss="modal">X <span class="esc">[esc]</span></a> 
+          </div>
+        </div>
+        <div class="centerSearchContainer">
+          {{#unless inputIsNotEmpty}}
+          <div class="searchListings"> Search all listings. </div>
+          {{/unless}}
+          <div class="searchTopMargin">
+            {{#ifEsIsSearching index="postsSearch" id="search" logic="OR" }}
+            <i class="fa fa-2x fa-circle-o-notch fa-spin"></i>
+            {{else}}
+            <i class = "glyphicon glyphicon-search bottomSearch"></i>
+            {{/ifEsIsSearching}}
+            <div class="search-input">
+              {{> esInput index="postsSearch" id="srch-termModal" convertnumber=true}}
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    
-            <div>
-            {{#if inputIsNotEmpty}}
-            {{#esEach index="postsSearch" id="search" options=esOptions}}
-                lallalall {{title}} --> {{description}}
-            {{/esEach}}
 
-            {{#ifEsHasNoResults index="postsSearch" id="search" logic="OR" }}
-                No results found!
-            {{/ifEsHasNoResults}}
-        {{else}}
-            Search for a name (e.g. Peter)
-        {{/if}}
-          </div>
+    <div class="section group">
+     {{#if inputIsNotEmpty}}
+     {{#esEach index="postsSearch" id="search" options=esOptions}}
+     <div class="col span_1_of_2">
+      <div class="searchSpacing">{{> player}}</div>
+    </div>
+    {{/esEach}}
 
-
-
+    {{#ifEsHasNoResults index="postsSearch" id="search" logic="OR" }}
+    No results found!
+    {{/ifEsHasNoResults}}
+    {{/if}}
   </div>
+
+</div>
 </div> 
 
 </template>
 
 
-
 <template name="player">
-  <span style="cursor: pointer"><strong>{{title}}</strong></span>
-  {{description}}
+  <div class="postsSearch">
+  <div class="searchContent">
+
+{{#if forSaleC}}
+  <i class="fa fa-shopping-cart"></i>
+{{/if}}
+  {{#if housingC}}
+    <i class="fa fa-home"></i>
+  {{/if}}
+     {{#if communityC}}
+     <i class="fa fa-users"></i>
+     {{/if}}
+     {{#if jobsC}}
+     <i class="fa fa-briefcase"></i>
+     {{/if}}
+
+  <h3 class="searchTitle"><a href="{{pathFor 'postPage'}}" data-dismiss="modal">{{title}}</a></h3>
+  <div class="searchDescription">{{description}}</div>
+  </div>
+  </div>
 </template>

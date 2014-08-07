@@ -1,67 +1,243 @@
-#customModal {
-	max-width: 100%;
-	margin: 0px;
-	margin-left: 5%;
-	margin-top: 2%;
-	height: 90%;
-	width: 90%;
-
-	opacity: 1;
-	background-color: rgba(241, 241, 241, 0.97);
-	background-clip: padding-box;
-	border: 1px solid #999;
-	border: 1px solid rgba(0, 0, 0, .2);
-	border-radius: 3px;
-	-webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
-	box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
-}
-
-@media (min-width: 768px) {
-	#customModal  {
+	#customModal {
+		font-family: sans-serif,"Helvetica Neue",Helvetica;
+		max-width: 100%;
 		margin: 0px;
 		margin-left: 5%;
 		margin-top: 2%;
 		height: 90%;
 		width: 90%;
+		overflow: scroll;
+		opacity: 1;
+		background-clip: padding-box;
+		border: 1px solid #999;
+		border: 1px solid rgba(0, 0, 0, .2);
+		border-radius: 3px;
+		-webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+		box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+
+		background-color: rgb(197,197,200);
+		background-image: -webkit-gradient(radial, 50% 50%,200,50% 50%,20, from(rgb(255,255,230)), to(rgb(197,197,200)));
+		background-image: -webkit-radial-gradient(50% 50%, rgb(255,255,230), rgb(197,197,200));
+		background-image: -moz-radial-gradient(50% 50%, rgb(255,255,230), rgb(197,197,200));
+		background-image: -ms-radial-gradient(50% 50%, rgb(255,255,230), rgb(197,197,200));
+		background-image: radial-gradient(50% 50%, rgb(255,255,230), rgb(197,197,200));
+		background-repeat: no-repeat;
 	}
-}
 
-.closingSearch{
-	margin-right: 25px;
-	font-size: 35px;
-    display: table-caption;
-}
+	@media (min-width: 768px) {
+		#customModal  {
+			margin: 0px;
+			margin-left: 5%;
+			margin-top: 2%;
+			height: 90%;
+			width: 90%;
+		}
+	}
 
-.closingSearchAlign{
-	text-align: -webkit-right;
-    margin: 0px 15px;
-}
+	.closingSearch{
+		margin-right: 25px;
+		font-size: 35px;
+		display: table-caption;
+	}
 
-.esc {
-	margin-left: -7px;
-	font-size: 16px;
-	position: fixed;
-}
+	.closingSearchAlign{
+		text-align: -webkit-right;
+		margin: 0px 15px;
+	}
 
-.searchTopMargin {
-   text-align: center;
-   margin-top: 9%;
-   display: -webkit-inline-box;
-}
+	.esc {
+		margin-left: -7px;
+		font-size: 16px;
+		position: fixed;
+	}
 
-.centerSearchContainer{
-	text-align: center;
-}
+	.searchTopMargin {
+		text-align: center;
+		display: -webkit-inline-box;
+		margin-top: 15px;
+	}
 
-#srch-termModal {
-	background-color: rgba(241, 241, 241, 0.97);
-	border: none;
-	opacity: 1.1;
-	outline: none;
-	font-size: 25px;
-	margin-left: 5px;
-}
+	.centerSearchContainer{
+		text-align: center;
+		margin-top: 3%;
+		padding-right: 25px;
+	}
 
-.bottomSearch {
-	vertical-align: text-bottom;
-}
+	.searchListings{
+		font-size: 20px;
+        /*since the search bar is padded*/
+		margin-left: 25px;
+	}
+
+	#srch-termModal {
+		width: 100%;
+		padding-left: 4px;
+		border: none;
+		letter-spacing: 1px;
+		outline: none;
+		font-size: 25px;
+		margin-left: 5px;
+		background-color: white;
+        z-index: 10;
+	    -webkit-border-radius: 2px;
+	    -moz-border-radius: 2px;
+	    -ms-border-radius: 2px;
+	    -o-border-radius: 2px;
+	    border-radius: 2px;
+	    padding: 0px;
+	    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+	    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+	    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15); 
+	}
+
+	.bottomSearch {
+		vertical-align: text-bottom;
+	}
+
+.postSearchSearch {
+	  
+	  -webkit-border-radius: 3px;
+	  -moz-border-radius: 3px;
+	  -ms-border-radius: 3px;
+	  -o-border-radius: 3px;
+	  border-radius: 3px;
+	  padding: 0px;
+	  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+	  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+	  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15); }
+	  
+	.postsSearch {
+	  /* For modern browsers */
+	  /* For IE 6/7 (trigger hasLayout) */
+	  *zoom: 1;
+	  margin-left: 15px;
+	  margin-right: 15px;
+	  opacity: .9;
+	  }
+	  .postSearch:before, .postSearch:after {
+	    content: "";
+	    display: table; }
+	  .postSearch:after {
+	    clear: both; }
+	  .postSearch.invisible {
+	    opacity: 0; }
+	  .postSearch.instant {
+	    -webkit-transition: none;
+	    -moz-transition: none;
+	    -o-transition: none;
+	    transition: none; }
+	  .postSearch.animate{
+	    -webkit-transition: all 300ms 0ms;
+	    -webkit-transition-delay: ease-in;
+	    -moz-transition: all 300ms 0ms ease-in;
+	    -o-transition: all 300ms 0ms ease-in;
+	    transition: all 300ms 0ms ease-in; }
+	  .postSearch .postSearch-content {
+	    float: left; }
+	    .postSearch .postSearch-content h3 {
+	      margin: 0;
+	      line-height: 1.4;
+	      font-size: 18px; }
+	      .postSearch .postSearch-content h3 a {
+	        display: inline-block;
+	        margin-right: 5px; }
+	      .postSearch .postSearch-content h3 span {
+	        font-weight: normal;
+	        font-size: 14px;
+	        display: inline-block;
+	        color: #aaaaaa; }
+	    .postSearch .postSearch-content p {
+	      margin: 0; }
+
+	
+
+	/*  SECTIONS  */
+	.section {
+		clear: both;
+		padding: 0px;
+		margin: 0px;
+		margin-right: 1.5%;
+	}
+
+	/*  COLUMN SETUP  */
+	.col {
+		display: block;
+		float:right;
+	}
+	.col:first-child { margin-left: 0; }
+
+
+	/*  GROUPING  */
+	.group:before,
+	.group:after {
+		content:"";
+		display:table;
+	}
+	.group:after {
+		clear:both;
+	}
+	.group {
+		zoom:1; /* For IE 6/7 */
+	}
+
+
+	/*  GRID OF TWO   ============================================================================= */
+
+	.span_2_of_2 {
+		margin-top: 4%;
+		width: 100%;
+	}
+
+	.span_1_of_2 {
+		width: 49.2%;
+	}
+
+	/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+	@media only screen and (max-width: 480px) {
+		.span_2_of_2 {
+			width: 100%; 
+		}
+		.span_1_of_2 {
+			width: 100%; 
+		}
+	}
+
+	/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+	@media only screen and (max-width: 480px) {
+		.col { 
+			margin: 1% 0 1% 0%;
+		}
+	}
+
+	.searchSpacing {
+		margin: 10px;
+		overflow: hidden;
+		white-space: nowrap;
+		background-color: white;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		-ms-border-radius: 3px;
+		-o-border-radius: 3px;
+		border-radius: 3px;
+		padding: 0px;
+		-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+		-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+	}
+
+	.searchContent {
+		display: -webkit-box;
+		overflow-x: auto;
+		margin-right: 8px;
+	}
+
+	.searchDescription{
+		margin-left: 10px;
+		font-size: 18px;
+		margin-top: 23px;
+	}
+	.searchTitle{
+		letter-spacing: 1px;
+	}

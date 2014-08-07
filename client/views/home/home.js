@@ -14,7 +14,6 @@ Template.home.events({
    },
    'click #loadSearch': function(e) {
     e.preventDefault;
-    console.log('click');
     Meteor.subscribe("postsSearch");
    }
 });

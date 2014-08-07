@@ -27,6 +27,7 @@ Template.postSubmit.events({
   'submit form': function(e) {
     e.preventDefault();
     var post = {
+      parentCategory: 'For Sale',
       category: $("#subCategory").text(),
       title: $(e.target).find('[name=title]').val(),
       authors: $(e.target).find('[name=authors]').val(),
@@ -89,6 +90,7 @@ Template.postSubmit.events({
 
   // To submit the post
   $(div2).attr("id","subCategory");
+  $(divv).attr("id","parentCategory");
 
   $( ".div4" ).append(divv);
   $( ".div4" ).append(div);

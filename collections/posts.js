@@ -11,7 +11,7 @@ Posts.deny({
   update: function(userId, post, fieldNames) {
     // may only edit the following fields:
     return (_.without(fieldNames, 'emails','authors',
-              'description','price','title','category').length > 0);
+              'description','price','title','category','parentCategory').length > 0);
   }
 });
 
@@ -47,7 +47,7 @@ Meteor.methods({
         postWithSameID._id);
     }
     // pick out the whitelisted keys
-     var post = _.extend(_.pick(postAttributes, 'category', 'title', 
+     var post = _.extend(_.pick(postAttributes, 'parentCategory', 'category', 'title', 
     	               'authors','emails','description','price'), {
       userId: user._id, 
       username: user.username, 
