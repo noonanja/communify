@@ -43,6 +43,10 @@ Template.postsList.helpers({
 		Meteor.subscribe('singlemyData', this._id);
 		return myFiles.find({'metadata.postId': this._id});
 	},
+	dataEntries1: function() {
+		Meteor.subscribe('singlemyData', this._id);
+		return myFiles.find({'metadata.postId': this._id}, {limit: 1});
+	},
 	isImage: function() {
 		return imageTypes[this.contentType] != null;
 	},

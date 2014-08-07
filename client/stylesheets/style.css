@@ -11,6 +11,21 @@
     text-align: center;
 }*/
 
+@media (min-width: 998px) {
+.col-lg-8 {
+width: 66.66666667%;
+}
+}
+
+@media (min-width: 998px) {
+.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, /*.col-lg-12*/ {
+float: left;
+}
+}
+
+.carouselPost {
+    height: 500px;
+}
 .text-info {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -34,10 +49,18 @@
 display: block;
 width: 100% \9;
 max-width: 100%;
+
 height: inherit;
 margin-left: auto;
 margin-right: auto;
 }
+/*.carouselMain {
+display: block;
+width: 100% \9;
+max-width: 100%;
+height: auto;
+min-height: 100%;
+}*/
 
 .containerPostPage {
     margin-top: 30px;
@@ -457,6 +480,10 @@ body {
     overflow-x: hidden;
     font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
     min-width: 800px;
+}
+
+.background {
+    min-height: 100%;
 }
 
 .text-muted {
@@ -1313,6 +1340,13 @@ body {
 /* Declare heights because of positioning of img element */
 .carousel .item {
   height: 500px;
+  /*background-color: #777;*/
+}
+.carouselPost {
+    height: 400px;
+}
+.carouselPost .item {
+  height: 400px;
   /*background-color: #777;*/
 }
 .carousel-inner > .item > img {
