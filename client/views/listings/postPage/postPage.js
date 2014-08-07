@@ -1,4 +1,5 @@
 var incr = 0;
+var incr2 = 0;
 Template.postPage.helpers({
   posts: function() {
     return Posts.find({postId: this._id});
@@ -24,6 +25,12 @@ Template.postPage.helpers({
     incr= incr + 1;
     
     return incr;
+  },
+  incr2: function() {
+    
+    incr2= incr2 + 1;
+    
+    return incr2;
   }
 });
 

@@ -7,17 +7,37 @@
     border: none;
 
 }*/
+/*.postTitle {
+    text-align: center;
+}*/
+
+.text-info {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: black;
+    font-size: 18px;
+
+}
+.dottedDragDropDiv {
+    border: 2px dashed gray;
+    background-color: rgb(250,250,250);
+
+}
+.dragDropDiv {
+    padding-left: 0px;
+    padding-right: 0px;
+}
  .selected img {
     opacity:0.5;
     }
-/*.img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+.img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-postPage > .item > img, .carousel-postPage > .item > a > img {
 display: block;
 width: 100% \9;
 max-width: 100%;
 height: inherit;
 margin-left: auto;
 margin-right: auto;
-}*/
+}
 
 .containerPostPage {
     margin-top: 30px;

@@ -9,18 +9,17 @@
                 <!-- Blog Post -->
 
                 <!-- Title -->
-                <h1>{{ title }}</h1>
+                <h1 class = "postTitle">{{ title }}</h1>
 
                 <!-- Author -->
-                <p class="lead">
-                    by <a href="#">{{authors}}</a>
+                <p class="lead postTitle">
+                    posted by <a href="#">{{authors}}</a>
                 </p>
 
                 <hr>
 
                 <!-- Date/Time -->
                 <p><span class="glyphicon glyphicon-time"></span> Posted on August 24, 2013 at 9:00 PM</p>
-
                 
 <hr>
                 <!-- Preview Image -->
@@ -32,35 +31,26 @@
         <div class="col-md-12" id="carousel-bounding-box">
             <div id="myCarousel" class="carousel slide">
                 <!-- main slider carousel items -->
-                <div class="carousel-inner">
+                <div class="carousel-inner carousel-postPage">
+                    {{ #each dataEntries }}
                     <div class="active item" data-slide-number="0">
-                        <img src="http://placehold.it/1200x480&amp;text=one" class="img-responsive">
+                        <img src="{{link}}" class="img-responsive">
                     </div>
-                    <div class="item" data-slide-to="1">
-                        <img src="http://placehold.it/1200x480&amp;text=two" class="img-responsive">
+                    {{ /each }}
+                    {{ #each dataEntries2 }}
+                    <div class="item" data-slide-to="{{incr}}">
+                        <img src="{{link}}" class="img-responsive">
                     </div>
-                    <div class="item" data-slide-number="2">
-                        <img src="http://placehold.it/1200x480&amp;text=three" class="img-responsive">
-                    </div>
-                    <div class="item" data-slide-number="3">
-                        <img src="http://placehold.it/1200x480&amp;text=four" class="img-responsive">
-                    </div>
-                    <div class="item" data-slide-number="4">
-                        <img src="http://placehold.it/1200x480&amp;text=five" class="img-responsive">
-                    </div>
-                    <div class="item" data-slide-number="5">
-                        <img src="http://placehold.it/1200x480&amp;text=six" class="img-responsive">
-                    </div>
-                    <div class="item" data-slide-number="6">
-                        <img src="http://placehold.it/1200x480&amp;text=seven" class="img-responsive">
-                    </div>
-                    <div class="item" data-slide-number="7">
-                        <img src="http://placehold.it/1200x480&amp;text=eight" class="img-responsive">
-                    </div>
+                    {{ /each }}
+                   
                 </div>
-                <!-- main slider carousel nav controls --> <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>
-
-                <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>
+                <!-- main slider carousel nav controls --> 
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="sr-only">Next</span>
+      </a>
             </div>
         </div>
     </div>
@@ -68,91 +58,24 @@
 <div class="col-md-12 " id="slider-thumbs">
     <!-- thumb navigation carousel items -->
     <ul class="list-inline">
+        {{ #each dataEntries }}
         <li> <a id="carousel-selector-0" class="selected">
-        <img src="http://placehold.it/80x60&amp;text=one" class="img-responsive">
+        <img class="img-thumbnail" alt="[ preview of {{shortFilename 16}} will display here ]" src="{{link}}" width="125">
+      
+        </a>
+        </li>
+        {{ /each }}
+        {{ #each dataEntries2 }}
+        <li> <a id="carousel-selector-{{incr2}}">
+        <img class="img-thumbnail" alt="[ preview of {{shortFilename 16}} will display here ]" src="{{link}}" width="125">
       </a>
 
         </li>
-        <li> <a id="carousel-selector-1">
-        <img src="http://placehold.it/80x60&amp;text=two" class="img-responsive">
-      </a>
-
-        </li>
-        <li> <a id="carousel-selector-2">
-        <img src="http://placehold.it/80x60&amp;text=three" class="img-responsive">
-      </a>
-
-        </li>
-        <li> <a id="carousel-selector-3">
-        <img src="http://placehold.it/80x60&amp;text=four" class="img-responsive">
-      </a>
-
-        </li>
-        <li> <a id="carousel-selector-4">
-        <img src="http://placehold.it/80x60&amp;text=five" class="img-responsive">
-      </a>
-
-        </li>
-        <li> <a id="carousel-selector-5">
-        <img src="http://placehold.it/80x60&amp;text=six" class="img-responsive">
-      </a>
-
-        </li>
-        <li> <a id="carousel-selector-6">
-        <img src="http://placehold.it/80x60&amp;text=seven" class="img-responsive">
-      </a>
-
-        </li>
-        <li> <a id="carousel-selector-7">
-        <img src="http://placehold.it/80x60&amp;text=eight" class="img-responsive">
-      </a>
-
-        </li>
+        {{ /each}}
+        
     </ul>
 </div>
-<!--/main slider carousel-->
-  <!-- <div id="myCarousel" class="carousel" data-ride="carousel">
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        {{ #each dataEntries2 }}
-        
-        <li data-target="#myCarousel" data-slide-to="{{incr}}"></li>
-        {{/each }}
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        {{ #each dataEntries }}
-        <div class="item active">
-          
-          <img src="{{link}}">
-         
-        </div>
-        {{/each }}
 
-        {{ #each dataEntries2 }}
-        <div class="item">
-          <img src="{{link}}">
-        </div>
-        {{/each }}
-        <div class="item">
-          <img class = "background" src="/resources/upenn3.jpg" alt="Third slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>classify <strong>Penn</strong></h1>
-              <p>The best way to buy and sell things, find housing, engage with and find jobs in the your college community.</p>
-              {{#unless currentUser}}
-              <p><a class="btn btn-lg btn-primary" data-toggle="modal" data-target="#myModal">Sign up today</a></p>
-              {{/unless}}
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="sr-only">Next</span>
-      </a>
-    </div> -->
   <hr>
                 
 
@@ -166,58 +89,27 @@
                 <!-- Blog Comments -->
 
                 <!-- Comments Form -->
-                <div class="well">
-                    <h4>Leave a Comment:</h4>
+                <p class="lead">Send a message</p>
+                
+                  <!-- <p class="lead">Description</p> -->
+                    <h5>Message {{authors}} about this post</h5>
                     <form role="form">
                         <div class="form-group">
                             <textarea class="form-control" rows="3"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
-                </div>
+                
 
                 <hr>
 
                 <!-- Posted Comments -->
 
                 <!-- Comment -->
-                <div class="media">
-                    <a class="pull-left" href="#">
-                        <img class="media-object" src="http://placehold.it/64x64" alt="">
-                    </a>
-                    <div class="media-body">
-                        <h4 class="media-heading">Start Bootstrap
-                            <small>August 25, 2014 at 9:30 PM</small>
-                        </h4>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                    </div>
-                </div>
+               
 
                 <!-- Comment -->
-                <div class="media">
-                    <a class="pull-left" href="#">
-                        <img class="media-object" src="http://placehold.it/64x64" alt="">
-                    </a>
-                    <div class="media-body">
-                        <h4 class="media-heading">Start Bootstrap
-                            <small>August 25, 2014 at 9:30 PM</small>
-                        </h4>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                        <!-- Nested Comment -->
-                        <div class="media">
-                            <a class="pull-left" href="#">
-                                <img class="media-object" src="http://placehold.it/64x64" alt="">
-                            </a>
-                            <div class="media-body">
-                                <h4 class="media-heading">Nested Start Bootstrap
-                                    <small>August 25, 2014 at 9:30 PM</small>
-                                </h4>
-                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                            </div>
-                        </div>
-                        <!-- End Nested Comment -->
-                    </div>
-                </div>
+                
 
             </div>
 
@@ -226,55 +118,29 @@
 
                 <!-- Blog Search Well -->
                 <div class="well">
-                    <h4>Blog Search</h4>
-                    <div class="input-group">
-                        <input type="text" class="form-control">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">
-                                <span class="glyphicon glyphicon-search"></span>
-                        </button>
-                        </span>
-                    </div>
-                    <!-- /.input-group -->
-                </div>
+                <div class="form-group">
+            <h4 class = "postPageTitle">      
+             <div>Search classify</div>
+           </h4>
+           <div id="contentwrapper">
+            <div id="contentcolumn">
+              <div class="innertube"><input type="text" class="form-control searchListings" placeholder="" id="searchList" required data-validation-required-message="Please enter your name."></div>
+            </div>
+          </div>
+          <div id="leftcolumn">
+            <div class="innertube"><i class = "glyphicon glyphicon-search"></i></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <h4 class = "postPageTitle">      
+           <div>Category List</div> 
+         </h4>
+         {{> leftBarListingPage }}
+       </div> 
+      </div>
 
                 <!-- Blog Categories Well -->
-                <div class="well">
-                    <h4>Blog Categories</h4>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <ul class="list-unstyled">
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-6">
-                            <ul class="list-unstyled">
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- /.row -->
-                </div>
-
-                <!-- Side Widget Well -->
-                <div class="well">
-                    <h4>Side Widget Well</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
-                </div>
+              
 
             </div>
 
@@ -288,62 +154,7 @@
 
     </div>
 <!--main-->
-<div class="container">
-	<div class="row">
-   
-<!--      {{> leftBarListingPage}} -->
-   <div class="container">
-  <div class="row">
-    <div class = "titlePost">
-     <h2 class = "postPageTitle">      
-       <div>{{title}}</div> 
-     </h2>
-   </div>
- </div>
- <div class="row">
-  <div class="col-lg-12">
-    <form name="sentMessage" id="contactForm" novalidate>
-      <div class="row">
-        <div class="col-md-8 leftBar">
-          <p>
-       <div class="posts">
-<h2 id="sec1"> 
-          <div class="listingPageHeader">
-           <div style= "text-transform:capitalize">{{category}} </div> 
-           <div class="smallListings"> &nbsp; listings &nbsp;</div>
-           -> {{title}} </div>
-           <p>
-  
-          {{> postItemPostPage}}
-       
-        </p>
-        </h2>
-       {{> postsList}}
-     </div>
-   </p>
-                 
-     </div>
-     <div class="col-md-4">
-      <div class="form-group">
-          <div class = "contactDiv">
-        <input type="submit" value="Contact {{authors}}" class = "contactName"/>
-      </div>
-          <h4 class = "postPageTitle">      
-           <div>Category List</div> 
-         </h4>
-         {{> leftBarListingPage }}
-       </div>    
- </div>
- <div class="clearfix"></div>
-
-</div>
-</form>
-</div>
-</div>
-</div>
-      <!--right--><!--/right-->
-  	</div><!--/row-->
-</div><!--/container-->
+<!--/container-->
 
 
 

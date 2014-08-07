@@ -1,20 +1,86 @@
 <template name="postContinue">
 <!--main-->
+ <div class="container containerPostPage">
+
+        <div class="row">
+
+            <!-- Blog Post Content Column -->
+            <div class="col-lg-8">
+
+                <!-- Blog Post -->
+
+                <!-- Title -->
+                <h1 class = "postTitle">{{ title }}</h1>
+
+                <!-- Author -->
+                <p class="lead postTitle">
+                    posted by <a href="#">{{authors}}</a>
+                </p>
+
+                <hr>
+
+                <!-- Date/Time -->
+                <p><span class="glyphicon glyphicon-time"></span> Posted on August 24, 2013 at 9:00 PM</p>
+                
+<hr>
+                <!-- Preview Image -->
+                <!-- thumb navigation carousel -->
+
+<!-- main slider carousel -->
+
+                
+
+                <!-- Post Content -->
+
+                <p class="lead">Description</p>
+                <p>{{description}}</p>
+
+                <hr>
+
+                <!-- Blog Comments -->
+
+                <!-- Comments Form -->
+                
+
+                <!-- Posted Comments -->
+
+                <!-- Comment -->
+               
+
+                <!-- Comment -->
+                
+
+            </div>
+
+            <!-- Blog Sidebar Widgets Column -->
+            <div class="col-md-4">
+
+                <!-- Blog Search Well -->
+                
+
+                <!-- Blog Categories Well -->
+              
+
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+
+        <!-- Footer -->
+        
+
+    </div>
 <div class="container">
   <div class="row">
    
    
       <!--right-->
       <div class="col-md-9">
-        <h2 id="sec1"> 
-          <div class="listingPageHeader">
-           <div style= "text-transform:capitalize">{{category}} </div> 
-           <div class="smallListings"> &nbsp; listings &nbsp;</div>
-           -> {{title}} </div>
-        </h2>
+        
         <p>
   
-          {{> postItemPostContinue}}
+         
           {{> gallery }}
         </p>
   
@@ -24,8 +90,10 @@
 </template>
 
 <template name="gallery">
-    <div class="container panel panel-default">
-    <div class="panel-heading"><h4>Add Images</h4></div>
+  <p class="lead">Add Images</p>
+    <div class="container panel panel-default dragDropDiv">
+    
+      
     <div class="panel-body fileDrop">
       <div class="row equal">
         {{#each dataEntries}}
@@ -52,7 +120,7 @@
           </div>
         {{else}}
           <div class="col-sm-12">
-            <div class="container">
+            <div class="container dottedDragDropDiv">
               <p class="lead text-info text-center ">No images added, drag some image files here to upload</p>
             </div>
           </div>
