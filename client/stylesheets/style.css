@@ -1,6 +1,52 @@
+/* POST PAGE */
 
+/*img-thumbnail {
+    border: none;
+}
+.thumbnail {
+    border: none;
+
+}*/
+ .selected img {
+    opacity:0.5;
+    }
+/*.img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+display: block;
+width: 100% \9;
+max-width: 100%;
+height: inherit;
+margin-left: auto;
+margin-right: auto;
+}*/
+
+.containerPostPage {
+    margin-top: 30px;
+}
+.contactDiv {
+    text-align: center;
+}
+.contactName {
+    position:relative;
+    margin-right: -7px;
+    padding: 10px 20px 10px 20px;
+    background-color: white;
+   border: none;
+    /*border-width: 1px;
+    border-color: rgb(230,230,230);*/
+    font-size: 15px;
+}
+
+.contactName:hover {
+    z-index: 10;
+    /*border-color: black;*/
+}
 
 /* LISTING PAGE */
+.leftBar {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+/*rgba(0, 0, 0, 0.05);*/
+
 #contentwrapper{
 float: left;
 width: 100%;
@@ -15,6 +61,22 @@ float: left;
 width: 23px; /*Width of left column*/
 margin-left: -100%;
 margin-top: 5px;
+}
+
+
+
+@media (max-width: 998px) { 
+    #contentcolumn{
+margin-left: 50%; /*Set left margin to LeftColumnWidth*/
+}
+
+#leftcolumn{
+float: right;
+width: 50%; /*Width of left column*/
+margin-right: 20px;
+/*margin-left: -100%;*/
+margin-top: 5px;
+}
 }
 
 .glyphicon {
@@ -32,6 +94,7 @@ margin-top: 5px;
     font-size: 20px;
     border: none;
     box-shadow: none;
+    background-color: transparent;
 
 }
 
@@ -39,6 +102,7 @@ margin-top: 5px;
     font-size: 20px;
     border: none;
     box-shadow: none;
+    background-color: transparent;
 
 }
 
@@ -1229,14 +1293,13 @@ body {
 /* Declare heights because of positioning of img element */
 .carousel .item {
   height: 500px;
-  background-color: #777;
+  /*background-color: #777;*/
 }
 .carousel-inner > .item > img {
-  position: absolute;
+ 
   top: 0;
   left: 0;
-  min-width: 100%;
-  min-height:100%;
+  
 }
 
 /* Styling for post page===========================================*/

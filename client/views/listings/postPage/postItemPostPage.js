@@ -1,4 +1,4 @@
-  Template.postItemPostPage.helpers({
+Template.postItemPostPage.helpers({
   dataEntries: function() {
     return myFiles.find({'metadata.postId': this._id});
   },
