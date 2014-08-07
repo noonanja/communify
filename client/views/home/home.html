@@ -1,6 +1,6 @@
 <template name = "home">
 {{>modal}}
-<!-- {{>modalSearching}} -->
+{{>modalSearching}}
 
 
 <!-- Navigation -->
@@ -10,7 +10,7 @@
             <div class="navbar-header page-scroll">
 
                 <a class="logo page-scroll" href="/">logo</a>
-                <a class="fa fa-search search"> search</a>
+                <a class="fa fa-search search" style="margin-left: 15px" data-toggle="modal" data-target="#myModalSearching"> search</a>
 
             </div>
               {{> errors}}
@@ -114,8 +114,10 @@
       </div>
     </div>
   </div> 
-
 </template>
+
+
+
 
 <template name = "modalBody">
    <div class="modal-body" >                                        
@@ -126,5 +128,7 @@
         </div> 
   </div>
 </template>
+
+
 
 
