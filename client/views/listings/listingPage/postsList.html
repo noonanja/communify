@@ -1,24 +1,38 @@
 <template name="postsList">
   {{#each postsWithRank}}
   <!-- Since our animation (from sorting and limiting number displayed) will affect our DOM element’s CSS attributes and classes, we’ll add a dynamic {{attributes}} helper. -->
-  <div class="post" {{attributes}}>
-    <div class="post-content">
+  
+  <div style="width: 100%; display: table;">
+    <div style="display: table-row">
+      {{#each dataEntries1}}
+    {{#if isImage}}
+        <div style="width: 150px; display: table-cell;"> <!-- <div class="thumbnail">
+         -->
+        <a href="{{link}}"><img class="img-thumbnail" alt="[ preview of {{shortFilename 16}} will display here ]" src="{{link}}" width="150px"></a>
+        <div class="caption text-center"><a href="{{link}}?download=true">{{shortFilename 16}}</a></div>
+        <!-- {{else}}
+        <span class="text-muted text-center">No preview</span>
+        -->
+      </div> <!-- </div> -->
+
+      {{/if}}
+{{/each}}
+
+        <div style="display: table-cell;vertical-align:top" class = "divTextPost"> <div class="post" {{attributes}}>
+    <div class="post-content"> 
+
       <h3><a href="{{pathFor 'postPage'}}">{{title}}</a></h3>
+      {{description}} <br>
       {{#if ownPost}} Edit Post {{/if}}
     </div>
     {{#each dataEntries1}}
-    <div class="col-sm-6 col-lg-2">
-      <div class="thumbnail">
-        {{#if isImage}}
-        <a href="{{link}}"><img class="img-thumbnail" alt="[ preview of {{shortFilename 16}} will display here ]" src="{{link}}" width="150"></a>
-        <div class="caption text-center"><a href="{{link}}?download=true">{{shortFilename 16}}</a></div>
-        {{else}}
-        <span class="text-muted text-center">No preview</span>
-        {{/if}}
-      </div>
-    </div>
+    
     {{/each}}  
-  </div>
+  </div> 
+</div>
+    </div>
+</div>
+<hr>
   {{/each}}
 
   {{#if moreResults}}
