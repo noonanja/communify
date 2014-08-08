@@ -33,12 +33,12 @@
      {{#if inputIsNotEmpty}}
      {{#esEach index="postsSearch" id="search" options=esOptions}}
      <div class="col span_1_of_2"> 
-      <div class="searchSpacing"><div>{{> player}}</div> </div>
+      <div class="searchSpacing"><div class="overflow">{{> player}}</div> </div>
     </div>
     {{/esEach}}
 
     {{#ifEsHasNoResults index="postsSearch" id="search" logic="OR" }}
-    No results found!
+    <div class="noResults"> No listings found, try again? </div>
     {{/ifEsHasNoResults}}
     {{/if}}
   </div>
@@ -52,12 +52,12 @@
 <template name="player">
 <div class="postContent">
 <div class="date">
-        <p style="margin: 0px">{{day}} <span> {{month}} </span></p>
+        <span><div id="month"> {{month}}</div> <p style="margin: 0px; font-size: 26px; line-height: 1; font-weight: 100"> {{day}} </p></span>
+        <!-- <p style="margin: 0px">{{day}} <span> {{month}} </span></p> -->
 </div>
 
   <div class="postsSearch">
     <div class="searchContent">
-    <div>
       <div class="iconSearch">
         {{#if forSaleC}}
         <i class="fa fa-shopping-cart" style="font-size: 2.5em"></i>
@@ -72,7 +72,6 @@
         {{/if}}
         {{/if}}
         {{/if}}  
-      </div>
       </div>
       <h3 class="searchTitle"><a href="{{pathFor 'postPage'}}" data-dismiss="modal">{{title}}</a></h3>
       <div class="searchDescription">{{description}}</div>

@@ -22,8 +22,9 @@ Template.player.helpers({
    },
    month: function() {
       // UTC month dates are from 0 to 11
-      var dayName = ['Jan', 'Feb', 'Mar', 'Apr', 'May',
-                     'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+      var dayName = ['January', 'February', 'March', 'April', 'May',
+                     'June', 'July', 'August', 'September', 'October',
+                      'November', 'December'];
       return dayName[this.submitted.getUTCMonth()];
    }
 });
