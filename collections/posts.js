@@ -51,7 +51,7 @@ Meteor.methods({
     	               'authors','emails','description','price'), {
       userId: user._id, 
       username: user.username, 
-      submitted: new Date().getTime(), 
+      submitted: new Date(), 
       flagged: false
     });
     

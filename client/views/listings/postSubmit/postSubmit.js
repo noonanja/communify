@@ -1,4 +1,5 @@
 var $name;
+var parentCategory;
 
 Template.postSubmit.rendered= function() {
   $name = $(".categorySection").html();
@@ -27,7 +28,7 @@ Template.postSubmit.events({
   'submit form': function(e) {
     e.preventDefault();
     var post = {
-      parentCategory: 'For Sale',
+      parentCategory: parentCategory,
       category: $("#subCategory").text(),
       title: $(e.target).find('[name=title]').val(),
       authors: $(e.target).find('[name=authors]').val(),
@@ -56,15 +57,19 @@ Template.postSubmit.events({
   switch (e.target.id) {
     case "menu1":
         htmlString2 = $(".forSale").html();
+        parentCategory = "forSale";
         break;
     case "menu2":
         htmlString2 = $(".housing").html();
+        parentCategory = "housing";
         break;
     case "menu3":
         htmlString2 = $(".community").html();
+        parentCategory = "community";
         break;
     case "menu4":
         htmlString2 = $(".jobs").html();
+        parentCategory = "jobs";
         break;
 }
   var divv = document.createElement("button");
@@ -90,7 +95,6 @@ Template.postSubmit.events({
 
   // To submit the post
   $(div2).attr("id","subCategory");
-  $(divv).attr("id","parentCategory");
 
   $( ".div4" ).append(divv);
   $( ".div4" ).append(div);
@@ -105,7 +109,6 @@ Template.postSubmit.events({
 },
 "click .button": function(e) {
   e.preventDefault();
-  console.log($name);
   $('.categorySection').html($name);
 }
 
