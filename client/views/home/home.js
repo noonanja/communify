@@ -17,3 +17,9 @@ Template.home.events({
     Meteor.subscribe("postsSearch");
    }
 });
+
+Template.searchVal.helpers({
+  searchVal: function() {
+    return Session.get('searchVal');
+  }
+});

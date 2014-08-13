@@ -62,5 +62,16 @@ Meteor.methods({
     Listings.update(id, {$inc: {count: 1}});
     
     return postId;
+  },
+  remove: function(postAttributes) {
+      var userId = Meteor.user()._id;
+      
+      if(userId != postAttributes.userId)
+        throw new Meteor.Error(422, 'This is not your post!');
+      // update the count for this category (Listing title)
+      var id = Listings.findOne({title: postAttributes.category})._id;
+      Listings.update(id, {$inc: {count: -1}});
+      Posts.remove(postAttributes.currentPostId);
+      return;
   }
 });

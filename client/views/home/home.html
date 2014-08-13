@@ -4,6 +4,14 @@
 {{>leaderboard}}
 </body>
 
+<template name="searchVal">
+   {{#if searchVal}}
+   {{searchVal}}
+   {{else}}
+     search
+   {{/if}}
+</template>
+
 <template name = "home">
 
 <!-- Navigation -->
@@ -13,7 +21,9 @@
             <div class="navbar-header page-scroll">
 
                 <a class="logo page-scroll" href="/">logo</a>
-                <a class="fa fa-search search" data-target="#myModalSearching" data-toggle="modal" id="loadSearch"> search</a>
+                <a class="fa fa-search search" data-target="#myModalSearching" data-toggle="modal" id="loadSearch"> 
+                {{> searchVal}}
+                </a>
 
             </div>
               {{> errors}}

@@ -1,7 +1,11 @@
 Template.player.events({
    'click #postSearchLink': function(e) {
     e.preventDefault;
-   }
+   },
+   'click .searchTitle' : function (e) {
+      e.preventDefault();
+      Router.go('postPage', {_id: this._id});
+    }
 });
 
 Template.player.helpers({
