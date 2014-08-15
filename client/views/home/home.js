@@ -11,11 +11,12 @@ Template.home.events({
     $('html, body').animate({
         scrollTop: $("#contact").offset().top
     }, 1000);
-   },
-   'click #loadSearch': function(e) {
-    e.preventDefault;
-    Meteor.subscribe("postsSearch");
    }
+   // ,
+   // 'click #loadSearch': function(e) {
+   //  e.preventDefault;
+   //  Meteor.subscribe("postsSearch");
+   // }
 });
 
 Template.searchVal.helpers({

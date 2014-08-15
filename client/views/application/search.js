@@ -6,16 +6,15 @@ Template.leaderboard.events({
 }
 });
 
-//  Template.home.helpers({
-//   postsWithRank: function() {
-//         console.log(this.term);
-//         Posts.find({category: this.title}).rewind();
-//         return Posts.find({category: this.title}).map(function(post, index, cursor) {
-//             post._rank = index;
-//             return post;
-//         });
-//     }
-// });
+Template.postsList.helpers({
+  postsWithRank: function() {
+    this.posts.rewind();
+    return this.posts.map(function(post, index, cursor) {
+      post._rank = index;
+      return post;
+    });
+  }
+});
 
 Template.leaderboard.inputIsNotEmpty = function () {
     var searchValue = Session.get('searchValue');
