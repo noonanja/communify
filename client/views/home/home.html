@@ -30,20 +30,23 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
                     <li>
                         <a class="page-scroll">{{> loginButtons}}</a>
                     </li>
                     <li>
-                        <a class="page-scroll" id="listingsScroll">Listings</a>
+                        <div class="adjustTop">
+                        <nav class="cl-effect-21"><a class="page-scroll" id="listingsScroll">Listings</a></nav>
+                        </div>
                     </li>
                     <li>
-                        <a class="page-scroll" id="contactScroll">Contact</a>
+                        <div class="adjustTop">
+                        <nav class="cl-effect-21"><a class="page-scroll" id="contactScroll">Contact</a></nav>
+                        </div>
                     </li>
                     <li>
-                        <a class="page-scroll" href="{{pathFor 'postSubmit'}}">Post a Listing</a>
+                        <div class="adjustTop">
+                        <nav class="cl-effect-21"><a class="page-scroll" href="{{pathFor 'postSubmit'}}">Post a Listing</a></nav>
+                        </div>
                     </li>
                 </ul>
             </div>

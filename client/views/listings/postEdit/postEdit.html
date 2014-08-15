@@ -1,5 +1,5 @@
 <template name="postEdit">
-  <div class="container containerPostPage">
+  <div class="container containerPostPage" id="update">
 
     <div class="row">
 
@@ -7,7 +7,6 @@
         <div class="col-lg-8">
 
             <form>
-
                 <!-- Title -->
                 <h1>
                     <div class="controls">
@@ -19,10 +18,9 @@
                 <p class="lead postTitle">
                     posted by
                     <div class="controls">
-                        <input name="title" type="text" value="{{authors}}" placeholder=""/>
+                        <input name="authors" type="text" value="{{authors}}" placeholder=""/>
                     </div>
                 </p>
-                
             </form>
 
             <hr>
@@ -72,9 +70,10 @@
 
 
   <!-- Post Content -->
-
+  <form>
   <p class="lead">Description</p> 
   <p><div class = "textArea"><textarea name="description" type="text"  placeholder="" class = "inputPost descriptionInput">{{description}}</textarea></div></p>
+  </form>
 
   <hr>
 
@@ -89,7 +88,7 @@
 
 <div class="control-group">
     <div class="controls postEditButtons">
-        <a class="btn btn-default" href="#">Update post</a>
+        <a class="btn btn-default" href="#" id="updatePost">Update post</a>
         <hr>
         <a class="btn btn-danger delete" href="#">Delete post</a>
     </div>

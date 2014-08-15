@@ -16,13 +16,13 @@
           <div class="searchListings"> Search all listings. </div>
           {{/unless}}
           <div class="searchTopMargin">
-            {{#ifEsIsSearching index="postsSearch" id="search" logic="OR" }}
+            {{#if isSearching}}
             <i class="fa fa-2x fa-circle-o-notch fa-spin"></i>
             {{else}}
             <i class = "glyphicon glyphicon-search bottomSearch"></i>
-            {{/ifEsIsSearching}}
-            <div class="search-input">
-              {{> esInput index="postsSearch" id="srch-termModal" convertnumber=true}}
+            {{/if}}
+            <div class="search-input" id="srch-termModal">
+            <input type="text" name="term" value="{{term}}">
             </div>
           </div>
         </div>
@@ -30,17 +30,20 @@
     
 
     <div class="section group">
-     {{#if inputIsNotEmpty}}
-     {{#esEach index="postsSearch" id="search" options=esOptions}}
+     {{#each postsWithRank}}
      <div class="col span_1_of_2"> 
       <div class="searchSpacing"><div class="overflow">{{> player}}</div> </div>
     </div>
-    {{/esEach}}
+    {{/each}}
 
-    {{#ifEsHasNoResults index="postsSearch" id="search" logic="OR" }}
-    <div class="noResults"> No listings found, try again? </div>
-    {{/ifEsHasNoResults}}
+    {{#if nextPath}}
+      <a class="load-more" href="{{nextPath}}">Load more</a>
     {{/if}}
+
+    <!-- {{#ifEsHasNoResults index="postsSearch" id="search" logic="OR" }} -->
+    <div class="noResults"> No listings found, try again? </div>
+    <!-- {{/ifEsHasNoResults}} -->
+    <!-- {{/if}} -->
   </div>
 
 </div>
