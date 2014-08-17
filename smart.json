@@ -10,7 +10,6 @@
     "font-awesome": {},
     "fileCollection": {},
     "numeral": {},
-    "jquery-cookie": {},
-    "easy-search": {}
+    "jquery-cookie": {}
   }
 }

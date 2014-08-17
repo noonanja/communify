@@ -3,24 +3,14 @@ Template.home.events({
   'click #listingsScroll': function(e) {
   	e.preventDefault();
     $('html, body').animate({
-        scrollTop: $("#listings").offset().top
+      scrollTop: $("#listings").offset().top
     }, 1000);
-   },
-   'click #contactScroll': function(e) {
+  },
+  'click #contactScroll': function(e) {
   	e.preventDefault();
     $('html, body').animate({
-        scrollTop: $("#contact").offset().top
+      scrollTop: $("#contact").offset().top
     }, 1000);
-   }
-   // ,
-   // 'click #loadSearch': function(e) {
-   //  e.preventDefault;
-   //  Meteor.subscribe("postsSearch");
-   // }
-});
-
-Template.searchVal.helpers({
-  searchVal: function() {
-    return Session.get('searchVal');
   }
-});
+ });
+

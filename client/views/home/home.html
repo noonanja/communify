@@ -1,7 +1,6 @@
 <body>
 <!-- we render the modals in body so Bootstrap knows where to find them when they are dismissed. -->
 {{>modal}}
-{{>leaderboard}}
 </body>
 
 <template name="searchVal">
@@ -13,7 +12,7 @@
 </template>
 
 <template name = "home">
-
+{{> searchOverlay}}
 <!-- Navigation -->
 <nav class="navbar navbar-default navbar-static-top" role="navigation">
         <div class="container">
@@ -21,10 +20,10 @@
             <div class="navbar-header page-scroll">
 
                 <a class="logo page-scroll" href="/">logo</a>
-                <a class="fa fa-search search" data-target="#myModalSearching" data-toggle="modal" id="loadSearch"> 
+                <a href= "{{pathFor 'search'}}" class="fa fa-search search loadSearch"> 
                 {{> searchVal}}
                 </a>
-
+      
             </div>
               {{> errors}}
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -118,6 +117,8 @@
 
 
 
+<!-- Sign up modal =================================-->
+
 <template name ="modal">
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">                                             
@@ -131,9 +132,6 @@
   </div> 
 </template>
 
-
-
-
 <template name = "modalBody">
    <div class="modal-body" >                                        
           
@@ -143,7 +141,3 @@
         </div> 
   </div>
 </template>
-
-
-
-

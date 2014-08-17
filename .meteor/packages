@@ -17,6 +17,6 @@ iron-router-progress
 fileCollection
 numeral
 jquery-cookie
-easy-search
 standard-app-packages
 spin
+underscore-string-latest
