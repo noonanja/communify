@@ -1,6 +1,7 @@
 <body>
 <!-- we render the modals in body so Bootstrap knows where to find them when they are dismissed. -->
 {{>modal}}
+{{> searchOverlay}}
 </body>
 
 <template name="searchVal">
@@ -12,7 +13,6 @@
 </template>
 
 <template name = "home">
-{{> searchOverlay}}
 <!-- Navigation -->
 <nav class="navbar navbar-default navbar-static-top" role="navigation">
         <div class="container">

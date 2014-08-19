@@ -1,16 +1,31 @@
 Template.searchOverlay.helpers({
   postsWithRank: function() { 
     if (Router.current() && (Router.current().path.indexOf('search') != -1)) {
-    this.posts.rewind();
-    return this.posts.map(function(post, index, cursor) {
-      post._rank = index;
-      return post;
-    });
-  }
-  else return null;
+      Posts.find().rewind();
+      return Posts.find().map(function(post, index, cursor) {
+        post._rank = index;
+        return post;
+      });
+    }
+    else return null;
+  },
+  moreResults: function() {
+    Posts.find().rewind();
+    return parseInt(Session.get('limit')) == Posts.find().fetch().length;
+  },
+  term: function() {
+    if (Router.current() && !_.isUndefined(Router.current().params.term))
+     return Router.current().params.term;
+    else return '';
+  },
+  inputIsNotEmpty: function() {
+   var searchVal = Session.get('searchVal');
+   return searchVal && searchVal.length > 0;
+  },
+  isSearching: function() {
+   return false;
   }
 });
-
 
 Template.searchOverlay.events({
   'keyup .search-input input': function (e) {
@@ -18,18 +33,20 @@ Template.searchOverlay.events({
     var text = $(e.target).val();
     Session.set('searchVal', text);
     Router.go('search', {term: text});
+  },
+  'click .overlay-close': function() {
+    Session.set('limit', 10);
+    Router.go('home');
   }
 });
 
-
-Template.searchOverlay.inputIsNotEmpty = function () {
-  var searchValue = Session.get('searchValue');
-  return searchValue && searchValue.length > 0;
-};
-
-Template.searchOverlay.isSearching = function () {
-  return false;
-};
+// Template.home.rendered = function() {
+//   $(window).on('keydown', function(e) {
+//     if ((e.which == 27) && (Router.current() && (Router.current().path.indexOf('search') > 0))) {
+//   toggleOverlay();
+//  }
+//   });
+// };
 
 Template.player.events({
  'click #postSearchLink': function(e) {

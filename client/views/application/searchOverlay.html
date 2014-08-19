@@ -27,8 +27,8 @@
     </div>
     {{/each}}
 
-    {{#if nextPath}}
-    <a class="load-more" href="{{nextPath}}">Load more</a>
+    {{#if moreResults}}
+      {{> loadMore}}
     {{/if}}
 
     <!-- {{#ifEsHasNoResults index="postsSearch" id="search" logic="OR" }} -->
