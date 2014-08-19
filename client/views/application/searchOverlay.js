@@ -1,5 +1,5 @@
 Template.searchOverlay.helpers({
-  postsWithRank: function() {
+  postsWithRank: function() { 
     if (Router.current() && (Router.current().path.indexOf('search') != -1)) {
     this.posts.rewind();
     return this.posts.map(function(post, index, cursor) {
@@ -11,11 +11,13 @@ Template.searchOverlay.helpers({
   }
 });
 
+
 Template.searchOverlay.events({
   'keyup .search-input input': function (e) {
     e.preventDefault();
-    Session.set('searchVal', $(e.target).val());
-    Router.go('search', {term: $(e.target).val()})
+    var text = $(e.target).val();
+    Session.set('searchVal', text);
+    Router.go('search', {term: text});
   }
 });
 
