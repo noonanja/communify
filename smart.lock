@@ -8,11 +8,11 @@
       },
       "iron-router-progress": {},
       "spin": {},
-      "accounts-entry": {},
       "font-awesome": {},
       "fileCollection": {},
       "numeral": {},
-      "jquery-cookie": {}
+      "jquery-cookie": {},
+      "accounts-entry": {}
     },
     "packages": {
       "bootstrap-3": {
@@ -35,11 +35,6 @@
         "tag": "v2.0.4",
         "commit": "f7b1e12a7caff1283cdb3671a393c182d0ae9862"
       },
-      "accounts-entry": {
-        "git": "https://github.com/Differential/accounts-entry.git",
-        "tag": "v0.8.0",
-        "commit": "cf7f7d0ecc285824bc2748e305f5d693df99b4ae"
-      },
       "font-awesome": {
         "git": "https://github.com/nate-strauser/meteor-font-awesome.git",
         "tag": "v4.1.0",
@@ -59,6 +54,11 @@
         "git": "https://github.com/BenjaminRH/meteor-jquery-cookie.git",
         "tag": "v0.1.0",
         "commit": "084bc5bf612639008efe03f3948e816df44c0f36"
+      },
+      "accounts-entry": {
+        "git": "https://github.com/Differential/accounts-entry.git",
+        "tag": "v0.8.1",
+        "commit": "3102c0641cab394ce4c3e54b655c85ec1610c092"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

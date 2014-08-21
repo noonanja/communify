@@ -1,3 +1,0 @@
-IronRouterProgress.configure({
-  enabled: false
-});

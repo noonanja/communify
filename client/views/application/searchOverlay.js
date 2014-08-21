@@ -18,6 +18,9 @@ Template.searchOverlay.helpers({
      return Router.current().params.term;
     else return '';
   },
+  noResults: function() {
+    return Posts.find().count() == 0 && Router.current() && !_.isUndefined(Router.current().params.term)
+  },
   inputIsNotEmpty: function() {
    var searchVal = Session.get('searchVal');
    return searchVal && searchVal.length > 0;
@@ -36,8 +39,16 @@ Template.searchOverlay.events({
   },
   'click .overlay-close': function() {
     Session.set('limit', 10);
+    Session.set('searchVal', '');
     Router.go('home');
   }
+});
+
+Template.loadMoreSearch.events({
+  "click": function(event) {  
+    event.preventDefault();
+    Session.set("limit", Session.get("limit") + 8);
+  }  
 });
 
 // Template.home.rendered = function() {

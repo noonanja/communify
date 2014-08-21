@@ -1159,7 +1159,7 @@ aside.clients img {
 
 section#contact {
     background-color: #222;
-    background-image: url(../img/map-image.png);
+    /*background-image: url(../img/map-image.png);*/
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -1537,5 +1537,13 @@ border-color: #eed3d7;
     float: right;
     margin-top: 7px; }
 
+.postEditButtons {
+    display: inline-table;
+    spacing: 5px;
+}
+
+.topBarListing {
+    background-color: rgb(3,27,81);
+}
 
 

@@ -19,3 +19,7 @@ Meteor.publish('postsSearch', function() {
 Meteor.publish('searchPosts', function(term, options) {
   return Posts.search(term, options);
 })
+
+Meteor.publish('notifications', function() {
+  return Notifications.find({userId: this.userId});
+});

@@ -1,3 +1,24 @@
+Template.postPage.events({
+  'submit form': function(e, template) {
+    e.preventDefault();
+    var $body = $(e.target).find('[name=body]');
+    var comment = {
+      postId: template.data._id,
+      body: $body.val()
+    };
+    
+    Meteor.call('message', comment, function(error, commentId) {
+      if (error){
+        throwError(error.reason);
+      } else {
+        // message sent !!
+        $body.val('');
+      }
+    });
+  }
+});
+
+
 var incr = 0;
 var incr2 = 0;
 Template.postPage.helpers({
@@ -12,7 +33,6 @@ Template.postPage.helpers({
   },
   numberEntries: function() {
     var total= myFiles.find({'metadata.postId': this._id}).count();
-
   },
   isImage: function() {
     return imageTypes[this.contentType] != null;
@@ -21,15 +41,11 @@ Template.postPage.helpers({
     return myFiles.baseURL + "/" + this.md5
   },
   incr: function() {
-    
-    incr= incr + 1;
-    
+    incr = incr + 1;
     return incr;
   },
   incr2: function() {
-    
-    incr2= incr2 + 1;
-    
+    incr2 = incr2 + 1;
     return incr2;
   }
 });

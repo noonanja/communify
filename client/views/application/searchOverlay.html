@@ -13,32 +13,36 @@
         {{else}}
         <i class = "glyphicon glyphicon-search bottomSearch"></i>
         {{/if}}
-        <div class="search-input" id="srch-termModal">
-          <input type="text" name="term" value="{{term}}">
+        <div class="search-input">
+          <input type="text" id="srch-termModal" name="term" value="{{term}}">
         </div>
       </div>
     </div>
     <!-- </div> -->
     
-    <div class="section group">
+    <div class="section group bodySearchSpacing">
      {{#each postsWithRank}}
      <div class="col span_1_of_2"> 
       <div class="searchSpacing"><div class="overflow">{{> player}}</div> </div>
     </div>
     {{/each}}
+    </div>
 
     {{#if moreResults}}
-      {{> loadMore}}
+    <div class="loadMoreSearchContainer">
+      {{> loadMoreSearch}}
+    </div>
     {{/if}}
 
-    <!-- {{#ifEsHasNoResults index="postsSearch" id="search" logic="OR" }} -->
-    <div class="noResults"> No listings found, try again? </div>
-    <!-- {{/ifEsHasNoResults}} -->
-    <!-- {{/if}} -->
-  </div>
+  {{#if noResults}}
+  <div class="noResults"> No listings found, try again? </div>
+  {{/if}}
 </div>
 </template>
 
+<template name ="loadMoreSearch">
+  <a class="btn btn-default"> See more </a>
+</template>
 
 
 

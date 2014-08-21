@@ -6,10 +6,10 @@
     },
     "iron-router-progress": {},
     "spin": {},
-    "accounts-entry": {},
     "font-awesome": {},
     "fileCollection": {},
     "numeral": {},
-    "jquery-cookie": {}
+    "jquery-cookie": {},
+    "accounts-entry": {}
   }
 }

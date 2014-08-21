@@ -1,158 +1,156 @@
 <template name="postPage">
   <div class="container containerPostPage">
 
-        <div class="row">
+    <div class="row">
 
-            <!-- Blog Post Content Column -->
-            <div class="col-lg-8">
+        <!-- Blog Post Content Column -->
+        <div class="col-lg-8">
 
-                <!-- Blog Post -->
+            <!-- Blog Post -->
 
-                <!-- Title -->
-                <h1 class = "postTitle">{{ title }}</h1>
+            <!-- Title -->
+            <h1 class = "postTitle">{{ title }}</h1>
 
-                <!-- Author -->
-                <p class="lead postTitle">
-                    posted by <a href="#">{{authors}}</a>
-                </p>
+            <!-- Author -->
+            <p class="lead postTitle">
+                posted by <a href="#">{{authors}}</a>
+            </p>
 
-                <hr>
+            <hr>
 
-                <!-- Date/Time -->
-                <p><span class="glyphicon glyphicon-time"></span> Posted on August 24, 2013 at 9:00 PM</p>
-                
-<hr>
-                <!-- Preview Image -->
-                <!-- thumb navigation carousel -->
+            <!-- Date/Time -->
+            <p><span class="glyphicon glyphicon-time"></span> Posted on August 24, 2013 at 9:00 PM</p>
 
-<!-- main slider carousel -->
-<div class="row">
-    <div class="col-md-12" id="slider">
-        <div class="col-md-12" id="carousel-bounding-box">
-            <div id="myCarousel" class="carousel slide carouselPost">
-                <!-- main slider carousel items -->
-                <div class="carousel-inner carousel-postPage">
-                    {{ #each dataEntries }}
-                    <div class="active item itemPost" data-slide-number="0">
-                        <img src="{{link}}" class="img-responsive">
-                    </div>
-                    {{ /each }}
-                    {{ #each dataEntries2 }}
-                    <div class="item" data-slide-to="{{incr}}">
-                        <img src="{{link}}" class="img-responsive">
-                    </div>
-                    {{ /each }}
-                   
-                </div>
-                <!-- main slider carousel nav controls --> 
-                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="sr-only">Next</span>
-      </a>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="col-md-12 " id="slider-thumbs">
-    <!-- thumb navigation carousel items -->
-    <ul class="list-inline">
-        {{ #each dataEntries }}
-        <li> <a id="carousel-selector-0" class="selected">
-        <img class="img-thumbnail" alt="[ preview of {{shortFilename 16}} will display here ]" src="{{link}}" width="125">
-      
-        </a>
-        </li>
-        {{ /each }}
-        {{ #each dataEntries2 }}
-        <li> <a id="carousel-selector-{{incr2}}">
-        <img class="img-thumbnail" alt="[ preview of {{shortFilename 16}} will display here ]" src="{{link}}" width="125">
-      </a>
+            <hr>
+            <!-- Preview Image -->
+            <!-- thumb navigation carousel -->
 
-        </li>
-        {{ /each}}
-        
-    </ul>
-</div>
+            <!-- main slider carousel -->
+            <div class="row">
+                <div class="col-md-12" id="slider">
+                    <div class="col-md-12" id="carousel-bounding-box">
+                        <div id="myCarousel" class="carousel slide carouselPost">
+                            <!-- main slider carousel items -->
+                            <div class="carousel-inner carousel-postPage">
+                                {{ #each dataEntries }}
+                                <div class="active item itemPost" data-slide-number="0">
+                                    <img src="{{link}}" class="img-responsive">
+                                </div>
+                                {{ /each }}
+                                {{ #each dataEntries2 }}
+                                <div class="item" data-slide-to="{{incr}}">
+                                    <img src="{{link}}" class="img-responsive">
+                                </div>
+                                {{ /each }}
 
-  <hr>
-                
-
-                <!-- Post Content -->
-
-                <p class="lead">Description</p>
-                <p>{{description}}</p>
-
-                <hr>
-
-                <!-- Blog Comments -->
-
-                <!-- Comments Form -->
-                <p class="lead">Send a message</p>
-                
-                  <!-- <p class="lead">Description</p> -->
-                    <h5>Message {{authors}} about this post</h5>
-                    <form role="form">
-                        <div class="form-group">
-                            <textarea class="form-control" rows="3"></textarea>
+                            </div>
+                            <!-- main slider carousel nav controls --> 
+                            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                <span class="sr-only">Next</span>
+                            </a>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-                
-
-                <hr>
-
-                <!-- Posted Comments -->
-
-                <!-- Comment -->
-               
-
-                <!-- Comment -->
-                
-
+                    </div>
+                </div>
             </div>
+            <div class="col-md-12 " id="slider-thumbs">
+                <!-- thumb navigation carousel items -->
+                <ul class="list-inline">
+                    {{ #each dataEntries }}
+                    <li> <a id="carousel-selector-0" class="selected">
+                        <img class="img-thumbnail" alt="[ preview of {{shortFilename 16}} will display here ]" src="{{link}}" width="125">
 
-            <!-- Blog Sidebar Widgets Column -->
-            <div class="col-md-4">
+                    </a>
+                </li>
+                {{ /each }}
+                {{ #each dataEntries2 }}
+                <li> <a id="carousel-selector-{{incr2}}">
+                    <img class="img-thumbnail" alt="[ preview of {{shortFilename 16}} will display here ]" src="{{link}}" width="125">
+                </a>
 
-                <!-- Blog Search Well -->
-                <div class="well">
-                <div class="form-group">
+            </li>
+            {{ /each}}
+
+        </ul>
+    </div>
+
+    <hr>
+
+
+    <!-- Post Content -->
+    <p class="lead">Description</p>
+    <p>{{description}}</p>
+    <hr>
+
+    <!-- Blog Comments -->
+
+    <!-- Comments Form -->
+    <p class="lead">Send a message</p>
+
+    <!-- <p class="lead">Description</p> -->
+    <h5>Message {{authors}} about this post</h5>
+    <form role="form">
+        <div class="form-group">
+            <textarea class="form-control" name="body" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+
+    <hr>
+
+    <!-- Posted Comments -->
+
+    <!-- Comment -->
+
+
+    <!-- Comment -->
+
+
+</div>
+
+<!-- Blog Sidebar Widgets Column -->
+<div class="col-md-4">
+
+    <!-- Blog Search Well -->
+    <div class="well">
+        <div class="form-group">
             <h4 class = "postPageTitle">      
-             <div>Search classify</div>
+               <div>Search classify</div>
            </h4>
            <div id="contentwrapper">
             <div id="contentcolumn">
               <div class="innertube"><input type="text" class="form-control searchListings" placeholder="" id="searchList" required data-validation-required-message="Please enter your name."></div>
-            </div>
           </div>
-          <div id="leftcolumn">
-            <div class="innertube"><i class = "glyphicon glyphicon-search"></i></div>
-          </div>
-        </div>
-        <div class="form-group">
-          <h4 class = "postPageTitle">      
-           <div>Category List</div> 
-         </h4>
-         {{> leftBarListingPage }}
-       </div> 
       </div>
-
-                <!-- Blog Categories Well -->
-              
-
-            </div>
-
-        </div>
-        <!-- /.row -->
-
-       
-
-        <!-- Footer -->
-        
-
+      <div id="leftcolumn">
+        <div class="innertube"><i class = "glyphicon glyphicon-search"></i></div>
     </div>
+</div>
+<div class="form-group">
+  <h4 class = "postPageTitle">      
+     <div>Category List</div> 
+ </h4>
+ {{> leftBarListingPage }}
+</div> 
+</div>
+
+<!-- Blog Categories Well -->
+
+
+</div>
+
+</div>
+<!-- /.row -->
+
+
+
+<!-- Footer -->
+
+
+</div>
 <!--main-->
 <!--/container-->
 

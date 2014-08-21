@@ -14,3 +14,11 @@ Template.home.events({
   }
  });
 
+Template.home.rendered = function() {
+  document.title = "Classify";
+  return $("<meta>", {
+    name: "description",
+    content: "The best way to buy, sell, find housing and jobs, and engage in your college community"
+  }).appendTo("head");
+};
+

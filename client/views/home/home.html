@@ -17,20 +17,19 @@
 <nav class="navbar navbar-default navbar-static-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-
-                <a class="logo page-scroll" href="/">logo</a>
+            <div class="navbar-header">
+                <a class="logo" href="/">logo</a>
                 <a href= "{{pathFor 'search'}}" class="fa fa-search search loadSearch"> 
                 {{> searchVal}}
                 </a>
-      
             </div>
               {{> errors}}
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="page-scroll">{{> loginButtons}}</a>
+                    <li class="dropdown"> 
+                        <a class="page-scroll"> {{> nav}} 
+                        {{> notifications}}</a>
                     </li>
                     <li>
                         <div class="adjustTop">
@@ -62,7 +61,7 @@
           <div class="container">
             <div class="carousel-caption">
               <h1>classify <strong>Penn</strong></h1>
-              <p>Buy, sell, find housing and jobs, and engage in the your college community.</p>
+              <p>Buy, sell, find housing and jobs, and engage in your college community.</p>
               {{#unless currentUser}}
               <p><a class="btn btn-lg btn-primary" data-toggle="modal" data-target="#myModal">Sign up today</a></p>
               {{/unless}}
@@ -74,7 +73,7 @@
           <div class="container">
             <div class="carousel-caption">
               <h1>classify <strong>Penn</strong></h1>
-              <p>Buy, sell, find housing and jobs, and engage in the your college community.</p>
+              <p>Buy, sell, find housing and jobs, and engage in your college community.</p>
               {{#unless currentUser}}
               <p><a class="btn btn-lg btn-primary" data-toggle="modal" data-target="#myModal">Sign up today</a></p>
               {{/unless}}
@@ -86,7 +85,7 @@
           <div class="container">
             <div class="carousel-caption">
               <h1>classify <strong>Penn</strong></h1>
-              <p>Buy, sell, find housing and jobs, and engage in the your college community.</p>
+              <p>Buy, sell, find housing and jobs, and engage in your college community.</p>
               {{#unless currentUser}}
               <p><a class="btn btn-lg btn-primary" data-toggle="modal" data-target="#myModal">Sign up today</a></p>
               {{/unless}}

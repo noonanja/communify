@@ -6,11 +6,6 @@
 bootstrap-3
 less
 coffeescript
-accounts-base
-accounts-entry
-accounts-ui-unstyled
-accounts-password
-simple-form
 font-awesome
 iron-router
 iron-router-progress
@@ -20,3 +15,6 @@ jquery-cookie
 standard-app-packages
 spin
 underscore-string-latest
+accounts-entry
+accounts-base
+accounts-password
