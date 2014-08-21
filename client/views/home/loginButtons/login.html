@@ -24,7 +24,9 @@
     {{/if}}
     <div class="userNavFooter">
       <div id="login-buttons-logout">logout</div>
-      <div class="btn btn-default btn-success">my place</div>
+      <div class="btn btn-default btn-success">my place
+       <i class="fa fa-refresh"></i>
+      </div>
     </div>
   </div>
  </div>
@@ -33,6 +35,7 @@
 <template name="login">
 <div class="dropdown-menu dropdown-menu-custom">
  <form class="form-2" id="login-form" action="action">
+        {{> signInError}}
         <p class="float">
           <label for="login"><i class="fa fa-university"></i><span style="margin-left: 2px">School Email</span></label>
           <input type="email" id="login-email" name="login" placeholder="Email" class="loginEmail">
@@ -72,8 +75,14 @@
 
 <template name="notification">
   <li>
-    <div href="{{notificationPostPath}}" class="notification">
-      <strong>{{commenterName}}</strong> sent you a message
-    </div>
+    <a href="{{notificationPostPath}}">
+      <div class="notification"><strong>{{commenterName}}</strong> sent you a message</div>
+    </a>
   </li>
+</template>
+
+<template name="signInError">
+{{#if error}}
+  <div class='alertLogin'>{{error}}</div>
+  {{/if}}
 </template>

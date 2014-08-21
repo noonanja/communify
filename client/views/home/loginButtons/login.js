@@ -1,6 +1,3 @@
-// for convenience
-var loginButtonsSession = Accounts._loginButtonsSession;
-
 var isValidPassword = function(val, field) {
   if (val.length >= 6) {
     return true;
@@ -23,18 +20,20 @@ Template.login.events({
       , password = t.find('#login-password').value;
 
         // Trim and validate your fields here.... 
-        email = trimInput(email);
+        // email = trimInput(email);
 
         // If validation passes, supply the appropriate fields to the
         // Meteor.loginWithPassword() function.
         Meteor.loginWithPassword(email, password, function(err){
-          if (err)
+          if (err) {
           // The user might not have been found, or their passwword
           // could be incorrect. Inform the user that their
-          // login attempt has failed. 
-          console.log('naa');
-          else
-            console.log('gucci');
+          // login attempt has failed.           
+          Session.set('entryError', err.reason);
+          }
+          else {
+            Session.set('entryError', undefined);
+          }
         });
         return false; 
       }
@@ -121,6 +120,11 @@ Template.nav.helpers({
  }
 });
 
+Template.signInError.helpers({
+   error: function() {
+    return Session.get('entryError');
+   }
+});
 
 Template.login.rendered = function() {
   $(function(){

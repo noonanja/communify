@@ -1,10 +1,10 @@
 /*For the triangle on sign in box*/
 .dropdown-menu-custom:before {
- position: absolute;
- top: -7px;
- left: 9px;
- display: inline-block;
- content: '';
+   position: absolute;
+   top: -7px;
+   left: 9px;
+   display: inline-block;
+   content: '';
 }
 
 .dropdown-menu-custom:after {
@@ -47,6 +47,7 @@
 }
 
 .dropdown-menu-custom {
+    border: none;
     background-color: transparent;
     top: 90%;
 }
@@ -251,13 +252,13 @@
 }
 
 @media(max-width: 767px) {
-   .dropdown-menu-custom .dropdown-menu {
+ .dropdown-menu-custom .dropdown-menu {
     right: auto;
-    }
-    .dropdown-menu-custom::after, .dropdown-menu.pull-right:after {
+}
+.dropdown-menu-custom::after, .dropdown-menu.pull-right:after {
     right: 232px;
     /*left: auto;*/
-   }
+}
 }
 
 .userNav {
@@ -291,8 +292,8 @@
 }
 
 .noNew {
-   margin-top: 8px;
-   margin-bottom: 8px;    
+ margin-top: 8px;
+ margin-bottom: 8px;    
 }
 .loginFooter {
     text-transform: none;
@@ -308,7 +309,7 @@
     color: black;
     text-transform: none;
     margin-left: 15px;
-    margin-right: 40%;
+    margin-right: 37%;
     margin-top: 8px;
 }
 .userNavFooter {
@@ -319,3 +320,20 @@
     width: 100%;
     display: -webkit-inline-box;
 }
+
+
+.alertLogin {
+    text-transform: none;
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    font-size: 12px;
+    text-align: center;
+    width: 90%;
+    margin-left: 15px;
+}
+
