@@ -39,7 +39,6 @@ Template.searchOverlay.events({
   },
   'click .overlay-close': function() {
     Session.set('limit', 10);
-    Session.set('searchVal', '');
     Router.go('home');
   }
 });
@@ -93,10 +92,3 @@ month: function() {
       return dayName[this.submitted.getUTCMonth()];
     }
   });
-
-Template.searchVal.helpers({
-  searchVal: function() {
-    return Session.get('searchVal');
-  }
-});
-

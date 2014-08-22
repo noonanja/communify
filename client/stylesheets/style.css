@@ -245,7 +245,7 @@ margin-top: 5px;
 }
 .continue {
     margin-top: 30px;
-    margin-left: 320px;
+    margin-left: 273px;
 }
 
 .descDiv {
@@ -304,13 +304,14 @@ margin-top: 5px;
     border-width: 1px;
     border-color: rgb(230,230,230);
     margin-left: 0px;
-
 }
+
 .descriptionInput {
     width: 645px;
     text-align: left;
-    height: 60px;
+    height: 90px;
     resize: vertical;
+    padding: 5px;
 }
 .replyName {
     width: 190px;
@@ -349,7 +350,6 @@ margin-top: 5px;
 }
 #listingDropdown {
     color: black;
-
 }
 
 #listingDropdown:hover {
@@ -420,7 +420,6 @@ margin-top: 5px;
     border: solid;
     border-width: 1px;
     border-color: rgb(230,230,230);
-
 }
 
 .mainPostPage {

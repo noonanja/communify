@@ -23,22 +23,7 @@ Template.gallery.helpers({
     if (w == null) {
       w = 16;
     }
-    return shorten(this.filename, w);
+    // .trunc is defined in home.js
+    return this.filename.trunc(w, true);
   }
 });
-
-var shorten;
-shorten = function(name, w) {
-  if (w == null) {
-    w = 16;
-  }
-  if (w % 2) {
-    w++;
-  }
-  w = (w - 2) / 2;
-  if (name.length > w) {
-    return name.slice(0, +w + 1 || 9e9) + '...' + name.slice(-w - 1);
-  } else {
-    return name;
-  }
-};
