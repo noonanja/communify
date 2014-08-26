@@ -1,0 +1,104 @@
+<template name="postEdit">
+  <div class="container containerPostPage" id="update">
+
+    <div class="row">
+
+        <!-- Blog Post Content Column -->
+        <div class="col-lg-8">
+
+            <form>
+                <!-- Title -->
+                <h1>
+                    <div class="controls">
+                        <input name="title" type="text" value="{{title}}" placeholder=""/>
+                    </div>
+                </h1>
+
+                <!-- Author -->
+                <p class="lead postTitle">
+                    posted by
+                    <div class="controls">
+                        <input name="authors" type="text" value="{{authors}}" placeholder=""/>
+                    </div>
+                </p>
+            </form>
+
+            <hr>
+            <!-- Preview Image -->
+            <!-- thumb navigation carousel -->
+
+            
+            <p class="lead">Add Images</p>
+            <div class="container panel panel-default dragDropDiv">
+
+
+                <div class="panel-body fileDrop">
+                  <div class="row equal">
+                    {{#each dataEntries}}
+                    <div class="col-sm-6 col-lg-2">
+                        <button type="button" class="close del-file" aria-hidden="true">&times;</button>
+                        <div class="thumbnail">
+                          {{#if isImage}}
+                          <a href="{{link}}"><img class="img-thumbnail" alt="[ preview of {{shortFilename 16}} will display here ]" src="{{link}}" width="150"></a>
+                          <div class="caption text-center"><a href="{{link}}?download=true">{{shortFilename 16}}</a></div>
+                          {{else}}
+                          <span class="text-muted text-center">No preview</span>
+                          {{/if}}
+                      </div>
+                      {{#if length}}
+
+                      {{else}}
+                      {{uploadStatus}}
+                      <div class="progress">
+                        <div class="progress-bar" role="progressbar" min-width="60px" aria-valuenow="{{uploadProgress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{uploadProgress}}%;">
+                            <span class="text-muted">{{uploadProgress}}%</span>
+                        </div>
+                    </div>
+                    {{/if}}
+                </div>
+                {{else}}
+                <div class="col-sm-12">
+                    <div class="container dottedDragDropDiv">
+                      <p class="lead text-info text-center ">Drag some image files here to upload</p>
+                  </div>
+              </div>
+              {{/each}}
+          </div>
+      </div>
+  </div>
+  <hr>
+
+
+  <!-- Post Content -->
+  <form>
+  <p class="lead">Description</p> 
+  <p><div class = "textArea"><textarea name="description" type="text"  placeholder="" class = "inputPost descriptionInput">{{description}}</textarea></div></p>
+  </form>
+
+  <hr>
+
+</div>
+
+</div>
+<!-- /.row -->
+
+
+
+
+
+<div class="control-group">
+    <div class="controls postEditButtons">
+        <a class="btn btn-default" href="#" id="updatePost">Update post</a>
+        <hr>
+        <a class="btn btn-danger delete" href="#">Delete post</a>
+    </div>
+</div>
+
+</div>
+<!--main-->
+<!--/container-->
+
+
+
+</template>
+

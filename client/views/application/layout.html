@@ -1,9 +1,12 @@
 <template name="layout">
+
     {{> yield region="topBar"}}
     {{> errors}}
-
+    
+    
+    <!-- where most of the stuff is rendered -->
     {{> yield}}
-
+    <!--  -->
 
     <div id="footer">
     	<div class="bottom">

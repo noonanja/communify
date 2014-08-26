@@ -52,7 +52,7 @@
 	}
 
 	.esc {
-		margin-left: -7px;
+		margin-left: -4px;
 		font-size: 16px;
 		position: fixed;
 	}
@@ -77,12 +77,16 @@
 
 	#srch-termModal {
 		width: 100%;
-		padding-left: 4px;
 		border: none;
 		letter-spacing: 1px;
+		padding-left: 5px;
 		outline: none;
 		font-size: 25px;
 		margin-left: 5px;
+		padding: 0px;
+	    padding-left: 4px;
+	    padding-top: 3px;
+	    padding-bottom: 3px;
 		background-color: white;
         z-index: 10;
 	    -webkit-border-radius: 2px;
@@ -90,7 +94,6 @@
 	    -ms-border-radius: 2px;
 	    -o-border-radius: 2px;
 	    border-radius: 2px;
-	    padding: 0px;
 	    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
 	    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
 	    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15); 
@@ -243,13 +246,18 @@
        font-size: 18px;
        margin-top: 18px;
 	}
-	.searchTitle{
+	.searchTitle {
 		letter-spacing: 1px;
 		margin-top: 15px;
+		color: rgb(64,64,64);
+	}
+	.searchTitle:hover {
+        font-weight: 400px;
+        color: black;
 	}
 
     .iconSearch{
-        margin-top: 14px;
+        margin-top: 10px;
         margin-right: 9px;
     }
 
@@ -261,44 +269,63 @@
     .date {
         padding: 16px 0 0 0;
     }
-    .date p span {
+    .date  span {
     	padding: 9px 0 3px 0;
     }
 }
 
-    .date p span {
-	background: rgb(26,41,119); 
-	background: linear-gradient(top, rgb(26,41,119) 0%, rgb(173, 175, 194) 100%);
-	background: -moz-linear-gradient(top, rgb(26,41,119) 0%, rgb(173, 175, 194) 100%);
-	background: -webkit-linear-gradient(top, rgb(26,41,119) 0%, rgb(173, 175, 194) 100%);
-	font-size: 18px; font-weight: bold; color: #fff; text-transform: uppercase; 	
+    .date span #month {
+	/*background: rgb(12, 81, 145); 
+	background: linear-gradient(top, rgb(12, 81, 145) 0%, rgb(173, 175, 194) 100%);
+	background: -moz-linear-gradient(top, rgb(12, 81, 145) 0%, rgb(173, 175, 194) 100%);
+	background: -webkit-linear-gradient(top, rgb(12, 81, 145) 0%, rgb(173, 175, 194) 100%);*/
+	font-size: 12px; 
+	/*font-weight: bold; */
+	color: rgb(12, 81, 145); 
+	/*text-transform: uppercase; 	*/
 	display: block;
-	border-radius: 0 0 2px 2px;
+/*	border-radius: 0 0 2px 2px;
 	-moz-border-radius: 0 0 2px 2px;
-	-webkit-border-radius: 0 0 2px 2px;
-	padding: 2px 2px 2px 2px;
+	-webkit-border-radius: 0 0 2px 2px;*/
+	padding: 0px 2px 0px 5px;
 }
-.date p {
-	font-family: Helvetica, sans-serif; 
-	font-size: 20px; text-align: center; color: #9e9e9e; 
+.date p span {
+	font-family: Helvetica Neue; 
+	font-size: 22px; text-align: center; color: #9e9e9e; 
 	line-height: 1.2;
 }
 
 .date {
 	display: inline-table;
+	text-align: center;
 	width: 35px; 
+	margin-left: 2px;
+    margin-top: 4px;
 	/*height: 160px; */
 	margin-right: 7px;
-	background: #fcfcfc; 
+	/*background: #fcfcfc; 
 	background: linear-gradient(top, #fcfcfc 0%,#dad8d8 100%); 
 	background: -moz-linear-gradient(top, #fcfcfc 0%, #dad8d8 100%); 
-	background: -webkit-linear-gradient(top, #fcfcfc 0%,#dad8d8 100%); 
-	border: 1px solid #d2d2d2;
+	background: -webkit-linear-gradient(top, #fcfcfc 0%,#dad8d8 100%); */
+	/*border: 1px solid #d2d2d2;
 	border-radius: 2px;
 	-moz-border-radius: 2px;
 	-webkit-border-radius: 2px;
 	box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
 	-moz-box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
-	-webkit-box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0px 0px 15px rgba(0,0,0,0.1);*/
+}
+
+.overflow{
+	text-overflow: ellipsis;
+    /* Required for text-overflow to do anything */
+    white-space: nowrap;
+    overflow: hidden;
+    margin-right: 5px;
+}
+
+.noResults {
+	text-align: center;
+	font-family: 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 

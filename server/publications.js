@@ -15,3 +15,7 @@ Meteor.publish('postsSearch', function() {
 	return Posts.find();
 });
 
+// for more precise search solution
+Meteor.publish('searchPosts', function(term, options) {
+  return Posts.search(term, options);
+})
