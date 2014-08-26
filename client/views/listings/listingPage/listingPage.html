@@ -1,59 +1,63 @@
 <template name="listingPage">
-{{> topBarListingPage}}
- <div class="container">
-  <div class="row">
-    <div class = "titlePost">
-     <h2 class = "postPageTitle">      
-       <div>{{title}}</div> 
-     </h2>
+  {{> topBarListingPage}}
+  <div class="container">
+    <div class="row">
+      <div class = "titlePost">
+       <h2 class = "postPageTitle">
+         {{#if title}}      
+         <div>{{title}}</div> 
+         {{else}}
+         <!-- Since the user could type in something weird into the url -->
+         <div> Sorry, we don't know what listings you're looking for!</div>
+         {{/if}}  
+       </h2>
+     </div>
    </div>
- </div>
- <div class="row">
-  <div class="col-lg-12">
-    <form name="sentMessage" id="contactForm" novalidate>
-      <div class="row">
-        <div class="col-md-4 leftBar">
+   <div class="row">
+    <div class="col-lg-12">
+      <form name="sentMessage" id="contactForm" novalidate>
+        <div class="row">
+          <div class="col-md-4 leftBar">
+            <div class="form-group">
+              {{#if title}}
+              <h4 class = "postPageTitle">      
+               <div>Search {{title}}</div>
+             </h4>
+             <div id="contentwrapper">
+              <div id="contentcolumn">
+                <div class="innertube"><input type="text" class="form-control searchListingPage" placeholder="" id="searchList"></div>
+              </div>
+            </div>
+            <div id="leftcolumn">
+              <div class="innertube"><i class = "glyphicon glyphicon-search"></i></div>
+            </div>
+            {{/if}}
+          </div>
           <div class="form-group">
             <h4 class = "postPageTitle">      
-             <div>Search {{title}}</div>
+             <div>Category List</div> 
            </h4>
-           <div id="contentwrapper">
-            <div id="contentcolumn">
-              <div class="innertube"><input type="text" class="form-control searchListings" placeholder="" id="searchList" required data-validation-required-message="Please enter your name."></div>
-            </div>
-          </div>
-          <div id="leftcolumn">
-            <div class="innertube"><i class = "glyphicon glyphicon-search"></i></div>
-          </div>
+           {{> leftBarListingPage }}
+         </div>         
+       </div>
+       <div class="col-md-8">
+        <p>
+         <div class="posts">
+
+          <h4 class = "postPageTitle"> 
+            {{#if title}}     
+            <div>Latests Listings</div> 
+            {{/if}} 
+          </h4>
+          {{> postsList}}
         </div>
-        <div class="form-group">
-          <h4 class = "postPageTitle">      
-           <div>Category List</div> 
-         </h4>
-         {{> leftBarListingPage }}
-       </div>         
-     </div>
-     <div class="col-md-8">
-      <p>
-       <div class="posts">
+      </p>
+    </div>
+    <div class="clearfix"></div>
 
-        <h4 class = "postPageTitle">      
-         <div>Latests Listings</div> 
-       </h4>
-       {{> postsList}}
-     </div>
-   </p>
- </div>
- <div class="clearfix"></div>
-
-</div>
+  </div>
 </form>
 </div>
 </div>
 </div>
-
-
-    <script type="text/javascript">
-    document.getElementById('searchList').focus()
-    </script>
-  </template>
+</template>

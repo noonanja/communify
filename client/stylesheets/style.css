@@ -136,15 +136,15 @@ margin-top: 5px;
     
 }
 
-.searchListings {
+.searchListingPage {
     font-size: 20px;
+    padding-left: 20px;
     border: none;
     box-shadow: none;
     background-color: transparent;
-
 }
 
-.searchListings:focus {
+.searchListingPage:focus {
     font-size: 20px;
     border: none;
     box-shadow: none;

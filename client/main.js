@@ -1,8 +1,1 @@
-Meteor.subscribe('listings');
-
-
-
-  
-
-
-
+Meteor.subscribe("listings");
